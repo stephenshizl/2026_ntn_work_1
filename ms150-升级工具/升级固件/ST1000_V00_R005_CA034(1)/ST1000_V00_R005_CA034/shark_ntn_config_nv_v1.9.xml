@@ -1,0 +1,295 @@
+<!-- type: (U8,U16,U32,S8,S16,S32,STRING) -->
+<NB_UE_Config_NV>
+	<Magic>
+	    <Magic id="1" value="16842752" type="U32" range="16842752,16842752" note=""/>
+	</Magic>
+	<Version>
+		<CurrentVersion value="1.6" type="STRING" length="4" range="1.0,9.9"/>
+	</Version>
+	<Common>
+		<!--  platform -->
+		<Pageflag value="4294967055" type="U32" range="0,4294967295" note=""/>
+		<nv_DebugMode value="1" type="U8" range="0,1" note="Debug mode or not"/>
+		<nv_OpenMCU value="0" type="U8" range="0,1" note="OpenMCU mode or not"/>
+		<nv_OpenCoap value="1" type="U8" range="0,1" note="OpenCoap or not"/>
+		<nv_AutoTestFlag value="0" type="U8" range="0,1" note="Auto test mode open or not"/>
+		
+		<nv_PsmMode value="1" type="U8" range="0,1" note="Psm mode open/close"/>
+		<nv_EdrxModeOpen value="0" type="U8" range="0,1" note="Edrx mode open/close"/>
+		<nv_IdrxModeOpen value="0" type="U8" range="0,1" note="Idrx mode open/close"/>
+		<nv_OpenLog value="1" type="U8" range="0,1" note="Log info open/close"/>
+		
+		<nv_LogLevel_mc value="7" type="U8" range="0,7" note=""/>
+		<nv_LogLevel_usim value="5" type="U8" range="0,7" note=""/>
+		<nv_LogLevel_esm value="5" type="U8" range="0,7" note=""/>
+		<nv_LogLevel_emm value="5" type="U8" range="0,7" note=""/>
+		<nv_LogLevel_rrc value="5" type="U8" range="0,7" note=""/>
+		<nv_LogLevel_dmac value="5" type="U8" range="0,7" note=""/>
+		<nv_LogLevel_umac value="5" type="U8" range="0,7" note=""/>
+		<nv_LogLevel_l1c value="5" type="U8" range="0,7" note=""/>
+		<nv_LogLevel_drlc value="5" type="U8" range="0,7" note=""/>
+		<nv_LogLevel_urlc value="5" type="U8" range="0,7" note=""/>
+		<nv_LogLevel_dpdcp value="5" type="U8" range="0,7" note=""/>
+		<nv_LogLevel_updcp value="5" type="U8" range="0,7" note=""/>
+		<nv_LogLevel_sms value="5" type="U8" range="0,7" note=""/>
+		<nv_UsimType value="1" type="U8" range="0,1" note=""/>
+		<nv_Uart0Print value="0" type="U8" range="0,7" note=""/>
+		<nv_resetNvValueFlag value="0" type="U8" range="0,65535" note=""/>
+		
+		<MsgPrintLevel  value="1" type="U8" range="0,1" note=""/>
+		<nv_plReserve2  value="1" type="U8" range="0,1" note=""/>
+		<cptestSRAMadc  value="1366" type="U16" range="0,4095" note=""/>
+		<cptesttemp25adc  value="1148" type="U16" range="0,4095" note=""/>
+		<cptesttemp85adc  value="1375" type="U16" range="0,4095" note=""/>
+		
+		<!-- ? NAS -->
+		<nv_AutoStart value="1" type="U8" range="0,1" note=""/>
+		<nv_AutoAttach value="1" type="U8" range="0,1" note=""/>
+		<nv_PlmnMode value="0" type="U8" range="0,1" note=""/>
+		<nv_PdnType value="3" type="U8" range="1,5" note="1 IPV4, 2 IPV6, 3 IPV4V6, 5 nonIP "/>
+		<nv_ApnName value="" type="STRING" length="32" range="32 octet" note="Access Point Name"/>
+		
+		<nv_DnsMode value="1" type="U32" range="0,1" note="is mandatory usage or not"/>
+		<nv_DnsIpv4Address value="" type="STRING" length="16" range="0.0.0.0,255.255.255.255" note="Ipv4 dns address"/>
+		<nv_SecondDnsIpv4Address value="" type="STRING" length="16" range="0.0.0.0,255.255.255.255" note="Ipv4 dns address"/>
+		
+		<nv_PsmWaitTimeValue value="30" type="U8" range="0,255" note=""/>
+		<nv_NasCiotConfig value="176" type="U8" range="0,255" note=""/>
+		<nv_NasCiotCfgSecond value="2" type="U8" range="0,7" note=""/>
+		<nv_PingRetrans value="1" type="U8" range="0,7" note=""/>
+		
+		<nv_rfMode  value="2" type="U8" range="0,255" note=""/>
+		<nv_ueMode  value="1" type="U8" range="0,1" note=""/>
+		<nv_PlmnSearchPowerLevel  value="1" type="U8" range="0,1" note=""/>
+		<nv_nasReserve4  value="0" type="U8" range="0,1" note=""/>
+		<nv_nasReserve5  value="0" type="U16" range="0,1" note=""/>
+		<nv_nasReserve6  value="0" type="U16" range="0,1" note=""/>
+		
+		<!--  RRC -->
+		<band1 value="0" type="U8" range="0,7" note=""/>
+		<band3 value="0" type="U8" range="0,7" note=""/>
+		<band5 value="1" type="U8" range="0,7" note=""/>
+		<band8 value="1" type="U8" range="0,7" note=""/>
+		
+		<multiToneSupported value="1" type="U8" range="0,7" note=""/>
+		<multiCarrierSupported value="0" type="U8" range="0,7" note=""/>
+		<U8accessStratumRelease value="4" type="U8" range="0,7" note=""/>
+		<U8RohcSupport value="0" type="U8" range="0,7" note=""/>
+		
+		<nv_MinReleaseDelay value="100" type="U16" range="0,65535" note=""/>
+		<reserve15 value="0" type="U8" range="0,7" note=""/>		
+		<nv_PsmrMode value="0" type="U8" range="0,7" note="0 close, 1 open "/>
+		
+		
+		<lockEearfcnMode value="0" type="U8" range="0,7" note=""/>
+		<lockEearfcnNum value="0" type="U8" range="0,7" note=""/>
+		<nv_rrcReserve1 value="0" type="U16" range="0,7" note=""/>
+		<lockEearfcn1 value="3792" type="U32" range="0,4294967295" note=""/>
+		<lockEearfcn2 value="0" type="U32" range="0,42949672955" note=""/>
+		<lockEearfcn3 value="0" type="U32" range="0,4294967295" note=""/>
+		<lockEearfcn4 value="3451" type="U32" range="0,4294967295" note=""/>
+		<lockEearfcn5 value="3460" type="U32" range="0,4294967295" note=""/>
+		<lockEearfcn6 value="3500" type="U32" range="0,4294967295" note=""/>
+		
+		<bandScanOptimize value="0" type="U8" range="0,7" note=""/>
+		<nonSkyloLab value="1" type="U8" range="0,7" note=""/>
+		<cellBarSecond  value="15" type="U8" range="0,255" note=""/>
+		<doublebandsupport  value="0" type="U8" range="0,1" note=""/>
+		
+		<nv_twoharqsupport  value="0" type="U8" range="0,1" note=""/>
+		<nbiotRai  value="0" type="U8" range="0,1" note=""/>
+		<rrcUeCapability1  value="1283" type="U16" range="0,65535" note=""/>
+		<rrcUeCapability2  value="768" type="U16" range="0,65535" note=""/>
+		
+		
+		<!-- L2 -->
+		<nv_RachMaxNum value="10" type="U8" range="0,255" note=""/>
+		<nv_UmacDataInactiveTimer value="120" type="U8" range="0,255" note=""/>
+		
+		<nv_l2Reserve1  value="0" type="U8" range="0,1" note=""/>
+		<nv_l2Reserve2  value="0" type="U8" range="0,1" note=""/>
+		<nv_l2Reserve3  value="0" type="U8" range="0,1" note=""/>
+		<nv_l2Reserve4  value="0" type="U8" range="0,1" note=""/>
+		<nv_l2Reserve5  value="0" type="U16" range="0,1" note=""/>
+		<nv_l2Reserve6  value="1" type="U16" range="0,1" note=""/>
+		
+		<!--  L1C -->
+		<PhyLogBitMap value="0" type="U8" range="0,7" note=""/>
+		<PhyTxMaxPwrMode value="0" type="S8" range="0,7" note=""/>
+		<PhyNvPctRrmOpen value="0" type="U8" range="0,7" note=""/>
+		<PhyNvLpcOpen value="0" type="U8" range="0,7" note=""/>
+		
+		<phyNpdcchErrDecThr1 value="20" type="U8" range="0,255" note=""/>
+		<phyNpdcchErrDecThr2 value="8" type="U8" range="0,255" note=""/>
+		<PssCtime value="32" type="U8" range="0,255" note=""/>
+		<PssFtime value="2" type="U8" range="0,7" note=""/>
+		
+		<Ssstime value="4" type="U8" range="0,7" note=""/>
+		<RatCaculate value="1" type="U8" range="0,7" note=""/>
+		<CellInterval value="4" type="U8" range="0,7" note=""/>
+		<CdrxModeOpen value="1" type="U8" range="0,7" note=""/>
+		
+		<PdcchReport value="2" type="U8" range="0,7" note=""/>
+		<CTNon100KFlag  value="0" type="U8" range="0,1" note=""/>
+		<PhyNpusch15DelayTs value="92" type="S16" range="0,255" note=""/>
+		
+		<PhyNpusch375DelayTs value="108" type="S16" range="0,255" note=""/>
+		<PhyNprachDelayTs value="53" type="S16" range="0,255" note=""/>
+		
+		<timeAgcMode value="1" type="U8" range="0,7" note=""/>
+		<agcSubfNum value="4" type="U8" range="0,7" note=""/>
+		<agcGainFixCtrl value="0" type="U8" range="0,7" note=""/>
+		<agcGainFixValue value="60" type="U8" range="0,255" note=""/>
+		
+		<phySkyloTestFlag value="0" type="U8" range="0,7" note=""/>
+		<phyPdcchPreNumSubfn value="4" type="U8" range="0,7" note=""/>
+		<phyNtnDopFTaOffFlag value="0" type="U8" range="0,255" note=""/>
+		<phyScaleOpen value="1" type="U8" range="0,1" note=""/>
+		
+		<PhyLeoFlag value="0" type="U8" range="0,1" note=""/>
+		<phyLeoSateTerminalFlag value="0" type="U8" range="0,255" note=""/>
+		<U16LpcAheadT value="100" type="U16" range="0,65535" note=""/>
+		
+		<U16BootT value="46" type="U16" range="0,65535" note=""/>
+		<nv_NewPaFlag  value="1" type="U8" range="0,1" note=""/>
+		<dcxoAdjustFlag  value="1" type="U8" range="0,1" note=""/>
+		
+		<dcxoAdjustTempFlag  value="1" type="U8" range="0,1" note=""/>
+		<testMode  value="0" type="U8" range="0,1" note=""/>
+		<txPower  value="0" type="U16" range="0,1" note=""/>
+		
+		<phyTdTargetPower  value="48" type="U16" range="0,255" note=""/>
+		<ulTaControl value="1" type="U8" range="0,65535" note=""/>
+		<idrxDeep value="1" type="U8" range="0,65535" note=""/>
+		
+		<rsrpError value="0" type="S16" range="0,65535" note=""/>
+		<phyFixGainMode value="0" type="U16" range="0,65535" note=""/>
+		<phyOverloadDetect value="0" type="U16" range="0,65535" note=""/>
+		<phySpectrumShiftFlag value="1" type="U16" range="0,65535" note=""/>
+		
+		<u16SlpcWakeupPre value="424" type="U16" range="0,65535" note=""/>
+		<nv_l1cReserve2  value="0" type="U16" range="0,1" note=""/>
+		
+		<!--  new fanpin start-->
+	    <band8_preEarfcnDis1 value="0" type="U32" range="0,4294967295" note=""/>
+	    <band8_preEarfcnDis2 value="0" type="U32" range="0,4294967295" note=""/>
+	    <band8_preEarfcnDis3 value="0" type="U32" range="0,4294967295" note=""/>
+	    <band8_preEarfcnDis4 value="0" type="U32" range="0,4294967295" note=""/>
+	    <band8_preEarfcnDis5 value="0" type="U32" range="0,4294967295" note=""/>
+	    <band8_preEarfcnDis6 value="0" type="U32" range="0,4294967295" note=""/>
+	    
+	    <band8_preEarfcnSer1_start value="0" type="U32" range="0,4294967295" note=""/>
+	    <band8_preEarfcnSer1_len value="0" type="U8" range="0,255" note=""/>
+	    <band8_preEarfcnSer1_gap value="1" type="U8" range="0,255" note=""/>
+	    <nv_newReserve1  value="0" type="U16" range="0,1" note=""/>
+	    
+	    <band8_preEarfcnSer2_start value="0" type="U32" range="0,4294967295" note=""/>
+	    <band8_preEarfcnSer2_len value="0" type="U8" range="0,255" note=""/>
+	    <band8_preEarfcnSer2_gap value="0" type="U8" range="0,255" note=""/>
+	    <nv_newReserve2  value="0" type="U16" range="0,1" note=""/>
+	    
+	    <band8_preEarfcnSer3_start value="0" type="U32" range="0,4294967295" note=""/>
+	    <band8_preEarfcnSer3_len value="0" type="U8" range="0,255" note=""/>
+	    <band8_preEarfcnSer3_gap value="0" type="U8" range="0,255" note=""/>
+	    <nv_newReserve3  value="0" type="U16" range="0,1" note=""/>
+	    
+	    <band5_preEarfcnDis1 value="0" type="U32" range="0,4294967295" note=""/>
+	    <band5_preEarfcnDis2 value="0" type="U32" range="0,4294967295" note=""/>
+	    <band5_preEarfcnDis3 value="0" type="U32" range="0,4294967295" note=""/>
+	    <band5_preEarfcnDis4 value="0" type="U32" range="0,4294967295" note=""/>
+	    <band5_preEarfcnDis5 value="0" type="U32" range="0,4294967295" note=""/>
+	    <band5_preEarfcnDis6 value="0" type="U32" range="0,4294967295" note=""/>
+	    
+	    <band5_preEarfcnSer1_start value="0" type="U32" range="0,4294967295" note=""/>
+	    <band5_preEarfcnSer1_len value="0" type="U8" range="0,255" note=""/>
+	    <band5_preEarfcnSer1_gap value="1" type="U8" range="0,255" note=""/>
+	    <nv_newReserve4  value="0" type="U16" range="0,1" note=""/>
+	    
+	    <band5_preEarfcnSer2_start value="0" type="U32" range="0,4294967295" note=""/>
+	    <band5_preEarfcnSer2_len value="0" type="U8" range="0,255" note=""/>
+	    <band5_preEarfcnSer2_gap value="2" type="U8" range="0,255" note=""/>
+	    <nv_newReserve5  value="0" type="U16" range="0,1" note=""/>
+	    
+	    <band5_preEarfcnSer3_start value="0" type="U32" range="0,4294967295" note=""/>
+	    <band5_preEarfcnSer3_len value="0" type="U8" range="0,255" note=""/>
+	    <band5_preEarfcnSer3_gap value="0" type="U8" range="0,255" note=""/>
+	    <nv_newReserve6  value="0" type="U16" range="0,1" note=""/>
+	    
+		<!--  new fanpin end-->
+		
+		<!--  Other -->
+		<nv_TelecomMode value="0" type="U8" range="0,1" note=""/>
+		<nv_otherReserve1  value="0" type="U8" range="0,1" note=""/>
+		<nv_otherReserve2  value="0" type="U8" range="0,1" note=""/>
+		<nv_otherReserve3  value="0" type="U8" range="0,1" note=""/>
+		
+		<BaudValue value="115200" type="U32" range="0,4294967295" note=""/>
+		<nv_otherReserve1  value="0" type="U8" range="0,1" note=""/>
+		<nv_echoMode  value="1" type="U8" range="0,1" note=""/>
+		<nv_otherReserve3  value="0" type="U8" range="0,1" note=""/>
+		<nv_otherReserve4  value="20" type="U8" range="0,255" note=""/>
+		
+		<nv_otherReserve5  value="17" type="U16" range="0,255" note=""/>
+		<nv_otherReserve6  value="1" type="U16" range="0,1" note=""/>
+		<nv_b5_v24_base_comp value="50" type="S16" range="0,65535" note=""/>
+		<nv_b5_v23_base_comp value="100" type="S16" range="0,65535" note=""/>
+		<nv_b5_v22_base_comp value="150" type="S16" range="0,65535" note=""/>
+		<nv_b8_v24_base_comp value="50" type="S16" range="0,65535" note=""/>
+		<nv_b8_v23_base_comp value="100" type="S16" range="0,65535" note=""/>
+		<nv_b8_v22_base_comp value="150" type="S16" range="0,65535" note=""/>
+		<nv_b5_lowTemp_base_comp value="0" type="S16" range="0,65535" note=""/>
+		<nv_b8_lowTemp_base_comp value="0" type="S16" range="0,65535" note=""/>
+		
+		<uart_rx_pu_en  value="0" type="U8" range="0,1" note=""/>
+		<u8oosSLeepFlag  value="0" type="U8" range="0,1" note=""/>
+		<nv_selCust  value="2" type="U16" range="0,2" note=""/>
+		
+		<nv_cfun0slp  value="0" type="U8" range="0,2" note=""/>
+		  <ucBand23Support value="1" type="U8" range="0,1" note=""/>
+	    <ucBand255Support value="1" type="U8" range="0,1" note=""/>
+	    <ucNtnBandSupport value="54" type="U8" range="0,255" note=""/>
+	    
+	    <ucNTNSupport value="1" type="U8" range="0,1" note=""/>
+	    <ucDisContiCoverSupport value="0" type="U8" range="0,1" note=""/>
+	    <ucNTNConnEPCSupport value="0" type="U8" range="0,1" note=""/>
+	    <ucNTNTaRptSupport value="0" type="U8" range="0,1" note=""/>
+	    
+	    <ucNTNPURTDelaySupport value="0" type="U8" range="0,1" note=""/>
+	    <ucNTNOffsetTimingEnhSupport value="0" type="U8" range="0,1" note=""/>
+	    <ucNTNScenaSupport value="0" type="U8" range="0,1" note=""/>
+	    <ucNTNSegPrecompenGapsSupport value="0" type="U8" range="0,1" note=""/>
+	    
+	    <ucLocaType value="0" type="U8" range="0,1" note=""/>
+	    <nv_ntnReserve1  value="0" type="U8" range="0,1" note=""/>
+	    <nv_ntnReserve2  value="0" type="U8" range="0,1" note=""/>
+	    <nv_ntnReserve3  value="0" type="U8" range="0,1" note=""/>
+	    
+	    <iLatitude value="0" type="S32" range="-6386985,386985" note=""/>
+	    <iLongitude value="0" type="S32" range="-6386985,386985" note=""/>
+	    <iAltitude value="0" type="S32" range="-6386985,386985" note=""/>
+	    
+		<ucEDTSupport value="0" type="U8" range="0,1" note=""/>
+		<ucLocationBasedMeasTriggerEFCSuppor value="0" type="U8" range="0,1" note=""/>
+        <ucLocationBasedMeasTriggerEMCSupport value="0" type="U8" range="0,1" note=""/>
+        <ucTimeBasedMeasTriggerSupport value="0" type="U8" range="0,1" note=""/>
+        
+        <ucRRCHarqDisableSingleTBSupport value="1" type="U8" range="0,1" note=""/>
+        <ucOverriddenHarqDisableSingleTBSupport value="0" type="U8" range="0,1" note=""/>
+        <ucDCIHarqDisableSingleTBSupport value="1" type="U8" range="0,1" note=""/>
+        <ucRRCHarqDisableMultiTBSupport value="0" type="U8" range="0,1" note=""/>
+        
+        <ucOverriddenHarqDisableMultiTBSupport value="0" type="U8" range="0,1" note=""/>
+        <ucDCIHarqDisableMultiTBSupport value="0" type="U8" range="0,1" note=""/>
+        <ucUplinkHarqModeBSingleTBSupport value="1" type="U8" range="0,1" note=""/>
+        <ucUplinkHarqModeBMultiTBSupport value="0" type="U8" range="0,1" note=""/>
+        
+        <ucHarqEnhScenarioSuppo value="1" type="U8" range="0,2" note=""/>
+        <ucTriggeredGNSSFixSupport value="0" type="U8" range="0,1" note=""/>
+        <ucAutonomousGNSSFixSupport value="0" type="U8" range="0,1" note=""/>
+        <ucUplinkTxExtensionSupport value="0" type="U8" range="0,1" note=""/>
+        
+        <ucGNSSEnhScenarioSupport value="1" type="U8" range="0,2" note=""/>		
+		<ucSkyloTestFlag  value="1" type="U8" range="0,1" note=""/>
+		<PageCRC  value="50" type="U8" range="0,65535" note=""/>
+	</Common>
+</NB_UE_Config_NV>

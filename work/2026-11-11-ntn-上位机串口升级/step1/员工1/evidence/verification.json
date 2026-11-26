@@ -1,0 +1,105 @@
+{
+  "status": "PASS_OFFLINE_ONLY",
+  "hardware_tested": false,
+  "vectors": {
+    "C0": "C0 3F",
+    "46": "46 B9",
+    "55": "55 AA",
+    "5009": "50 09 A6",
+    "5004": "50 04 AB",
+    "B0": "B0 4F",
+    "575680001806000001": "57 56 80 00 18 06 00 00 01 61",
+    "575680002400000200": "57 56 80 00 24 00 00 02 00 58",
+    "EB00000000": "EB 00 00 00 00 14",
+    "2000000000": "20 00 00 00 00 DF",
+    "20004C4000": "20 00 4C 40 00 D3",
+    "20004C5000": "20 00 4C 50 00 C3",
+    "20004C6000": "20 00 4C 60 00 F3"
+  },
+  "packages": [
+    {
+      "version": "CA033",
+      "images": {
+        "e31": {
+          "path": "ms150-升级工具\\升级固件\\ST1000_V00_R005_CA033(1)\\ST1000_V00_R005_CA033\\E31\\SHARK-NTN_E31_CHIP_ST1000_V00-R005-CA033_20261010144323\\SHARK-NTN_E31_CHIP_ST1000_V00-R005-CA033_20261010144323.bin",
+          "size": 2503207,
+          "size_hex": "0x263227",
+          "sha256": "45df6733f1e680ea78e10d273c56626e08d329733c4ca3c23958b5354a2f78d2",
+          "offset": "0x28000",
+          "partition_size": "0x380000",
+          "data_end_exclusive": "0x28b227",
+          "erase_end_exclusive": "0x28c000",
+          "sectors_4k": 612,
+          "chunks_4k": 612,
+          "last_chunk_size": 551
+        },
+        "dsp": {
+          "path": "ms150-升级工具\\升级固件\\ST1000_V00_R005_CA033(1)\\ST1000_V00_R005_CA033\\DSP\\SHARK-NTN_DSP_CHIP_ST1000_V00-R005-CA033_20261010144802.bin",
+          "size": 74519,
+          "size_hex": "0x12317",
+          "sha256": "12d95de609a7275394e412d51535f94241cd4a752fabc3d1a2ab176e667e2589",
+          "offset": "0x3a8000",
+          "partition_size": "0x60000",
+          "data_end_exclusive": "0x3ba317",
+          "erase_end_exclusive": "0x3bb000",
+          "sectors_4k": 19,
+          "chunks_4k": 19,
+          "last_chunk_size": 791
+        }
+      },
+      "e31_dsp_total": 2577726,
+      "serial_8n1_payload_min_seconds": {
+        "115200": 223.761,
+        "1500000": 17.185
+      }
+    },
+    {
+      "version": "CA034",
+      "images": {
+        "e31": {
+          "path": "ms150-升级工具\\升级固件\\ST1000_V00_R005_CA034(1)\\ST1000_V00_R005_CA034\\E31\\SHARK-NTN_E31_CHIP_ST1000_V00-R005-CA034_20261104111216\\SHARK-NTN_E31_CHIP_ST1000_V00-R005-CA034_20261104111216.bin",
+          "size": 2509271,
+          "size_hex": "0x2649d7",
+          "sha256": "020a16241006c5b7267fc851435d7b10f1ddef5ccd8a0ca0e1f50ef6b77472b0",
+          "offset": "0x28000",
+          "partition_size": "0x380000",
+          "data_end_exclusive": "0x28c9d7",
+          "erase_end_exclusive": "0x28d000",
+          "sectors_4k": 613,
+          "chunks_4k": 613,
+          "last_chunk_size": 2519
+        },
+        "dsp": {
+          "path": "ms150-升级工具\\升级固件\\ST1000_V00_R005_CA034(1)\\ST1000_V00_R005_CA034\\DSP\\SHARK-NTN_DSP_CHIP_ST1000_V00-R005-CA034_20261104111608.bin",
+          "size": 74519,
+          "size_hex": "0x12317",
+          "sha256": "336c1e450fabe14c9ba344f30f751bbf4e76b88593c79a8b9e7106f1fe4dd2a7",
+          "offset": "0x3a8000",
+          "partition_size": "0x60000",
+          "data_end_exclusive": "0x3ba317",
+          "erase_end_exclusive": "0x3bb000",
+          "sectors_4k": 19,
+          "chunks_4k": 19,
+          "last_chunk_size": 791
+        }
+      },
+      "e31_dsp_total": 2583790,
+      "serial_8n1_payload_min_seconds": {
+        "115200": 224.287,
+        "1500000": 17.225
+      }
+    }
+  ],
+  "checks": [
+    "XOR golden vectors",
+    "image/partition and erase bounds",
+    "archive BIN matches extracted BIN",
+    "CA033/034 boot and NV equality"
+  ],
+  "limitations": [
+    "No serial/board test",
+    "No target flash table read",
+    "No NV binary conversion",
+    "No proof of boot rollback"
+  ]
+}

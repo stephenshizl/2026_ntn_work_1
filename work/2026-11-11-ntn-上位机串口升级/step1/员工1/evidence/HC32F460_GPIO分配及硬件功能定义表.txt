@@ -1,0 +1,81 @@
+GPIO引脚分配表 | A1=智联安铱星NTN物联网智能终端 - HC32F460 MCU GPIO管脚分配及硬件功能定义表
+GPIO引脚分配表 | A2=主控MCU型号: HC32F460 (QFN48 / LQFP48封装) | 原理图版本: 20260924 | 生成日期: 2026-10-13
+GPIO引脚分配表 | A3=引脚序号
+(Pin No.) | B3=引脚名称
+(Pin Name) | C3=原理图网络标号
+(Net Name) | D3=I/O方向与类型
+(Direction/Type) | E3=HC32复用功能
+(Func Mux) | F3=连接器件与外设
+(Connected Device) | G3=推荐默认状态
+(Default State) | H3=功能描述与硬件控制逻辑
+(Function Description) | I3=推荐BSP软件宏定义
+(Recommended Macro)
+GPIO引脚分配表 | A4=1 | B4=PH2 | C4=RNSS_PWREN | D4=输出 (GPO) | E4=Func0 (GPIO) | F4=U1 (SGM2032-ADJ LDO, Pin 3 EN) | G4=低电平 (Low) | H4=北斗/GPS模块供电使能。高电平使能LDO输出3.3V为UM220供电；低电平关闭模组电源以降低待机功耗。 | I4=RNSS_PWR_PIN / RNSS_PWR_ACTIVE_LEVEL=1
+GPIO引脚分配表 | A5=2 | B5=PC13 | C5=RNSS_RST | D5=输出 (GPO) | E5=Func0 (GPIO) | F5=U14 (UM220-IV-M, Pin 9 NRST 经 R136 1K) | G5=高电平 (High) | H5=北斗/GPS模块硬件复位引脚。低电平有效，平时保持高电平，复位时输出至少100ms低电平脉冲。 | I5=RNSS_RST_PIN / RNSS_RST_ACTIVE_LEVEL=0
+GPIO引脚分配表 | A6=3 | B6=PC14-OSC32_OUT | C6=NC (悬空) | D6=悬空 (NC) | E6=Func0 (GPIO) | F6=未连接 (板载未焊接外部RTC晶振) | G6=浮空输入 (Floating) | H6=低速外部晶振输出引脚，悬空未用。RTC使用内部时钟源LRC。 | I6=MCU_PIN_NC
+GPIO引脚分配表 | A7=4 | B7=PC15-OSC32_IN | C7=NC (悬空) | D7=悬空 (NC) | E7=Func0 (GPIO) | F7=未连接 (板载未焊接外部RTC晶振) | G7=浮空输入 (Floating) | H7=低速外部晶振输入引脚，悬空未用。RTC使用内部时钟源LRC。 | I7=MCU_PIN_NC
+GPIO引脚分配表 | A8=5 | B8=PH0-OSC_IN | C8=NC (悬空) | D8=悬空 (NC) | E8=Func0 (GPIO) | F8=未连接 (板载未焊接外部主晶振) | G8=浮空输入 (Floating) | H8=高速外部晶振输入引脚，悬空未用。系统时钟采用芯片内部高速晶振HRC (典型值16MHz/20MHz倍频至200MHz)。 | I8=MCU_PIN_NC
+GPIO引脚分配表 | A9=6 | B9=PH1-OSC_OUT | C9=NC (悬空) | D9=悬空 (NC) | E9=Func0 (GPIO) | F9=未连接 (板载未焊接外部主晶振) | G9=浮空输入 (Floating) | H9=高速外部晶振输出引脚，悬空未用。 | I9=MCU_PIN_NC
+GPIO引脚分配表 | A10=7 | B10=NRST | C10=NRST | D10=复位输入 (Reset In) | E10=NRST硬件复位 | F10=RC复位电路 (R49 10K上拉, C32 1uF接地) | G10=外部上拉 (High) | H10=MCU芯片主硬件复位引脚，低电平复位。上电RC自动复位，支持外部复位。 | I10=SYSTEM_NRST
+GPIO引脚分配表 | A11=8 | B11=VSSA/VREFL | C11=GND | D11=电源/地 (Power GND) | E11=模拟地 | F11=系统主地 (GND) | G11=地电平 (0V) | H11=ADC模拟地与内部参考基准低电平。 | I11=POWER_GND
+GPIO引脚分配表 | A12=9 | B12=VDDA/VREFH | C12=VDDA | D12=电源供电 (Power 3.3V) | E12=模拟供电 | F12=VCC_MCU_3V3 (经磁珠/电感滤波, 并联滤波电容) | G12=3.3V | H12=ADC模拟电源与内部参考基准高电平供电引脚 (3.3V)。 | I12=POWER_VDDA
+GPIO引脚分配表 | A13=10 | B13=PA0/ADC1_IN0 | C13=MCU_UART1_RX | D13=复用输入 (Func In) | E13=Func33 (USART1_RX) | F13=U4 (SP3232E RS232收发器, Pin 12 R1OUT 经 R5 0R) | G13=串口复用输入 | H13=【串口1-PC端通信】MCU USART1接收引脚。接收PC端通过RS232发送的AT/业务/调试数据。配置波特率115200 8N1。 | I13=BSP_UART1_RX_PIN (PA0) / Func33
+GPIO引脚分配表 | A14=11 | B14=PA1/ADC1_IN1 | C14=MCU_UART1_TX | D14=复用输出 (Func Out) | E14=Func32 (USART1_TX) | F14=U4 (SP3232E RS232收发器, Pin 11 T1IN 经 R6 0R) | G14=串口复用输出 | H14=【串口1-PC端通信】MCU USART1发送引脚。向PC端RS232发送MCU响应或铱星透传数据。配置波特率115200 8N1。 | I14=BSP_UART1_TX_PIN (PA1) / Func32
+GPIO引脚分配表 | A15=12 | B15=PA2/ADC1_IN2 | C15=NC (悬空) | D15=悬空 (NC) | E15=Func0 (GPIO) | F15=未连接 (保留ADC引脚) | G15=浮空/模拟输入 | H15=悬空未用引脚，硬件预留。后续可作为电池电压检测或其他传感器ADC采集引脚。 | I15=MCU_PIN_NC / ADC_SPARE
+GPIO引脚分配表 | A16=13 | B16=PA3/ADC1_IN3 | C16=RNSS_UART2_TX | D16=复用输入 (Func In) | E16=Func37 (USART2_RX) | F16=U14 (UM220 北斗/GPS模组, Pin 2 TXD 经 R137 0R) | G16=串口复用输入 | H16=【串口2-北斗GNSS】MCU USART2接收引脚。接收UM220输出的NMEA-0183经纬度定位数据帧（$GNRMC/$GNGGA等）。配置波特率9600/115200 8N1。 | I16=BSP_UART2_RX_PIN (PA3) / Func37
+GPIO引脚分配表 | A17=14 | B17=PA4/ADC12_IN5 | C17=RNSS_UART2_RX | D17=复用输出 (Func Out) | E17=Func36 (USART2_TX) | F17=U14 (UM220 北斗/GPS模组, Pin 3 RXD 经 R138 1K) | G17=串口复用输出 | H17=【串口2-北斗GNSS】MCU USART2发送引脚。向UM220发送配置指令（工作模式、波特率、回传周期等）。配置波特率9600/115200 8N1。 | I17=BSP_UART2_TX_PIN (PA4) / Func36
+GPIO引脚分配表 | A18=15 | B18=PA5 | C18=NET_OK | D18=输出 (GPO) | E18=Func0 (GPIO) | F18=外部接口 J1 Pin 7 (经ESD保护管ESD5451R) | G18=低电平 (Low) | H18=【状态指示】网络连接/定位状态指示输出。低电平未入网，高电平/常亮表示铱星NTN已成功附着或GPS定位有效。可驱动指示灯或外部信号。 | I18=LED_NET_PIN (PA5) / NET_ACTIVE_LEVEL=1
+GPIO引脚分配表 | A19=16 | B19=PA6 | C19=POWER_OK | D19=输出 (GPO) | E19=Func0 (GPIO) | F19=外部接口 J1 Pin 8 (经ESD保护管ESD5451R) | G19=高电平 (High) | H19=【状态指示】系统电源运行状态指示输出。上电初始化完成后拉高，或作为运行心跳灯（周期闪烁）向外部指示MCU正常工作。 | I19=LED_PWR_PIN (PA6) / PWR_ACTIVE_LEVEL=1
+GPIO引脚分配表 | A20=17 | B20=PA7 | C20=BACKUP | D20=输出/输入 (GPO) | E20=Func0 (GPIO) | F20=外部接口 J1 Pin 1 (经 R39 NC 预留) | G20=低电平/浮空 | H20=外部备用控制信号。原理图R39未焊接，预留给后备电源检测或外部中断输入/控制。 | I20=SPARE_BACKUP_PIN (PA7)
+GPIO引脚分配表 | A21=18 | B21=PB0 | C21=PA_PWREN | D21=输出 (GPO) | E21=Func0 (GPIO) | F21=U8 (LMR14030 DCDC降压芯片, Pin 3 EN) | G21=低电平 (Low) | H21=【射频功放电源控制】NTN铱星发射功放(PA)电源使能。高电平使能DCDC输出4.16V/3.5A大电流供电；NTN发送突发数据时使能，待机接收时拉低关闭以大幅省电。 | I21=NTN_PA_PWR_PIN (PB0) / PA_PWR_ACTIVE_LEVEL=1
+GPIO引脚分配表 | A22=19 | B22=PB1 | C22=QSPI_SSN | D22=复用输出 (Func Out) | E22=Func7 (QSPI_QSSN) | F22=U11 (ZD25WQ16C SPI Flash, Pin 1 /CS) | G22=高电平 (High) | H22=【存储Flash】QSPI / SPI总线片选信号(/CS)。低电平选中Flash芯片进行读写，空闲保持高电平。供后续OTA固件存储及离线数据缓存。 | I22=FLASH_CS_PIN (PB1) / Func7
+GPIO引脚分配表 | A23=20 | B23=PB2 | C23=QSPI_IO3 | D23=双向复用 (Bi-dir) | E23=Func7 (QSPI_QSIO3) | F23=U11 (ZD25WQ16C SPI Flash, Pin 7 IO3/HOLD) | G23=高电平/上拉 | H23=【存储Flash】QSPI数据线3 / 标准SPI模式下的/HOLD信号。 | I23=FLASH_IO3_PIN (PB2) / Func7
+GPIO引脚分配表 | A24=21 | B24=PB10 | C24=QSPI_IO2 | D24=双向复用 (Bi-dir) | E24=Func7 (QSPI_QSIO2) | F24=U11 (ZD25WQ16C SPI Flash, Pin 3 IO2/WP) | G24=高电平/上拉 | H24=【存储Flash】QSPI数据线2 / 标准SPI模式下的写保护/WP信号。 | I24=FLASH_IO2_PIN (PB10) / Func7
+GPIO引脚分配表 | A25=22 | B25=VCAP1 | C25=VCAP1 | D25=内核供电调压 (Regulator) | E25=内部Core电压引脚 | F25=C84 (0.1uF 贴片电容接地) | G25=内部电压 (约1.2V) | H25=MCU内部LDO内核逻辑电压调压器滤波引脚，必须外接0.1uF低ESR瓷片电容接地，不可作GPIO。 | I25=SYSTEM_VCAP1
+GPIO引脚分配表 | A26=23 | B26=VSS | C26=GND | D26=电源/地 (Power GND) | E26=数字地 | F26=系统主地 (GND) | G26=地电平 (0V) | H26=MCU数字逻辑电路地引脚。 | I26=POWER_GND
+GPIO引脚分配表 | A27=24 | B27=VDD | C27=VCC_MCU_3V3 | D27=电源供电 (Power 3.3V) | E27=数字供电 | F27=VCC_MCU_3V3 (并联C22 0.1uF、C23 1uF去耦电容) | G27=3.3V | H27=MCU数字主电源输入引脚 (3.3V)。 | I27=POWER_VDD
+GPIO引脚分配表 | A28=25 | B28=PB12 | C28=QSPI_IO1 | D28=双向复用 (Bi-dir) | E28=Func7 (QSPI_QSIO1) | F28=U11 (ZD25WQ16C SPI Flash, Pin 2 IO1/SO) | G28=复用双向 | H28=【存储Flash】QSPI数据线1 / 标准SPI模式下的从机数据输出 (MISO)。 | I28=FLASH_IO1_PIN (PB12) / Func7
+GPIO引脚分配表 | A29=26 | B29=PB13 | C29=QSPI_IO0 | D29=双向复用 (Bi-dir) | E29=Func7 (QSPI_QSIO0) | F29=U11 (ZD25WQ16C SPI Flash, Pin 5 IO0/SI) | G29=复用双向 | H29=【存储Flash】QSPI数据线0 / 标准SPI模式下的主机数据输出 (MOSI)。 | I29=FLASH_IO0_PIN (PB13) / Func7
+GPIO引脚分配表 | A30=27 | B30=PB14 | C30=QSPI_CLK | D30=复用输出 (Func Out) | E30=Func7 (QSPI_QSCK) | F30=U11 (ZD25WQ16C SPI Flash, Pin 6 CLK) | G30=复用时钟 | H30=【存储Flash】QSPI / SPI高速串行时钟输出信号线 (SCK)。 | I30=FLASH_CLK_PIN (PB14) / Func7
+GPIO引脚分配表 | A31=28 | B31=PB15 | C31=MCU_NTN_PWR_EN | D31=输出 (GPO) | E31=Func0 (GPIO) | F31=Page 1 NTN电源开关控制电路 (MOS管开关电路) | G31=高电平 (High) | H31=【NTN铱星模组主电源】NTN模组主供电使能。高电平导通MOS管，为MS150/ST1000核心基带及射频收发芯片供电；低电平彻底断电。 | I31=NTN_PWR_EN_PIN (PB15) / NTN_PWR_ACTIVE_LEVEL=1
+GPIO引脚分配表 | A32=29 | B32=PA8 | C32=MCU_NTN_RST | D32=输出 (GPO) | E32=Func0 (GPIO) | F32=Page 1 NPN三极管复位控制电路 | G32=低电平 (Low) | H32=【NTN铱星模组复位】模组硬件复位。注意：输出高电平时三极管饱和导通将NTN_RST拉低复位；平时MCU输出低电平，三极管截止，模组正常工作。 | I32=NTN_RST_PIN (PA8) / NTN_RST_ACTIVE_LEVEL=1
+GPIO引脚分配表 | A33=30 | B33=PA9/USB_VBUS | C33=NC (悬空) | D33=悬空 (NC) | E33=Func0 (GPIO) | F33=未连接 (保留USB检测) | G33=浮空输入 | H33=USB VBUS引脚，悬空未用。 | I33=MCU_PIN_NC
+GPIO引脚分配表 | A34=31 | B34=PA10/USB_ID | C34=MCU_NTN_BOOT | D34=输出 (GPO) | E34=Func0 (GPIO) | F34=Page 1 NTN模组 BOOTSEL / 启动模式选择端 | G34=低电平 (Low) | H34=【NTN铱星模组模式】启动模式选择。低电平为正常运行工作模式；高电平时拉高BOOTSEL，NTN模组上电复位后进入Bootloader升级/下载模式。 | I34=NTN_BOOT_PIN (PA10) / NTN_BOOT_ACTIVE_LEVEL=1
+GPIO引脚分配表 | A35=32 | B35=PA11_USB_DM | C35=NC (悬空) | D35=悬空 (NC) | E35=Func0 (GPIO) | F35=未连接 (保留USB差分数据-) | G35=浮空输入 | H35=MCU原生USB Full-Speed D-引脚，悬空未用。 | I35=MCU_PIN_NC
+GPIO引脚分配表 | A36=33 | B36=PA12_USB_DP | C36=NC (悬空) | D36=悬空 (NC) | E36=Func0 (GPIO) | F36=未连接 (保留USB差分数据+) | G36=浮空输入 | H36=MCU原生USB Full-Speed D+引脚，悬空未用。 | I36=MCU_PIN_NC
+GPIO引脚分配表 | A37=34 | B37=PA13/SWDIO | C37=SWDIO | D37=调试双向 (Debug Bi-dir) | E37=SWDIO调试数据线 | F37=调试测试点 T8 | G37=内部上拉 | H37=【在线仿真与烧录】ARM SWD串行调试数据线。连接J-Link/DAP-Link烧录固件及进行断点调试。 | I37=DEBUG_SWDIO
+GPIO引脚分配表 | A38=35 | B38=VSS | C38=GND | D38=电源/地 (Power GND) | E38=数字地 | F38=系统主地 (GND) | G38=地电平 (0V) | H38=MCU数字逻辑电路地引脚。 | I38=POWER_GND
+GPIO引脚分配表 | A39=36 | B39=VDD | C39=VCC_MCU_3V3 | D39=电源供电 (Power 3.3V) | E39=数字供电 | F39=VCC_MCU_3V3 (并联C24 0.1uF、C25 1uF去耦电容, 测试点T9) | G39=3.3V | H39=MCU数字主电源输入引脚 (3.3V)。 | I39=POWER_VDD
+GPIO引脚分配表 | A40=37 | B40=PA14/SWCLK | C40=SWCLK | D40=调试时钟 (Debug In) | E40=SWCLK调试时钟线 | F40=调试测试点 T7 | G40=内部下拉 | H40=【在线仿真与烧录】ARM SWD串行调试时钟线。连接J-Link/DAP-Link进行程序下载与调试控制。 | I40=DEBUG_SWCLK
+GPIO引脚分配表 | A41=38 | B41=PA15 | C41=MCU_WAKEUP_NTN | D41=输出 (GPO) | E41=Func0 (GPIO) | F41=Page 1 NTN模组 Pin 13 WAKEUP_IN | G41=高电平 (High) | H41=【NTN铱星模组唤醒】低功耗休眠与唤醒控制。高电平唤醒NTN模组保持在线；低电平允许NTN模组在无业务时进入Deep Sleep休眠省电。 | I41=NTN_WAKEUP_PIN (PA15) / NTN_WAKEUP_ACTIVE_LEVEL=1
+GPIO引脚分配表 | A42=39 | B42=PB3 | C42=NTN_MCU_STATUS | D42=输入 (GPI) | E42=Func0 (GPIO) | F42=Page 1 NTN模组 Pin 15 NET_STATUS 经 U10电平转换芯片 | G42=浮空/下拉输入 | H42=【NTN状态反馈】NTN模组网络状态监测引脚。MCU通过读取此引脚电平变化（或配置外部中断），实时感知NTN模组工作状态（附着、通信中、异常等）。 | I42=NTN_STATUS_PIN (PB3)
+GPIO引脚分配表 | A43=40 | B43=PB4 | C43=MCU_UART3_TXD | D43=复用输出 (Func Out) | E43=Func32 (USART3_TX) | F43=Page 1 U10 电平转换芯片 -> NTN模组 Pin 32 UART0_RXD (经R4 0R) | G43=串口复用输出 | H43=【串口3-NTN铱星通信】MCU USART3发送引脚。向NTN模组发送AT指令集（如网络查询、卫星注册、短报文发送等）。配置波特率115200 8N1。 | I43=BSP_UART3_TX_PIN (PB4) / Func32
+GPIO引脚分配表 | A44=41 | B44=PB5 | C44=MCU_UART3_RXD | D44=复用输入 (Func In) | E44=Func33 (USART3_RX) | F44=Page 1 U10 电平转换芯片 <- NTN模组 Pin 33 UART0_TXD (经R3 0R) | G44=串口复用输入 | H44=【串口3-NTN铱星通信】MCU USART3接收引脚。接收NTN模组返回的AT指令响应（OK/ERROR/URC主动上报）及卫星下行报文。配置波特率115200 8N1。 | I44=BSP_UART3_RX_PIN (PB5) / Func33
+GPIO引脚分配表 | A45=42 | B45=PB6 | C45=BT_UART4_TXD | D45=复用输出 (Func Out) | E45=Func36 (USART4_TX) | F45=Page 3 U5 (AC6323A蓝牙SoC串口输入端, 经R50 0R) | G45=串口复用输出 | H45=【串口4-蓝牙通信】MCU USART4发送引脚。向AC6323A蓝牙芯片发送透传数据，蓝牙通过SPP协议推送到手机App。配置波特率115200 8N1。 | I45=BSP_UART4_TX_PIN (PB6) / Func36
+GPIO引脚分配表 | A46=43 | B46=PB7 | C46=BT_UART4_RXD | D46=复用输入 (Func In) | E46=Func37 (USART4_RX) | F46=Page 3 U5 (AC6323A蓝牙SoC串口输出端, 经R51 0R) | G46=串口复用输入 | H46=【串口4-蓝牙通信】MCU USART4接收引脚。接收手机App经蓝牙SPP下发给MCU的数据或控制指令。配置波特率115200 8N1。 | I46=BSP_UART4_RX_PIN (PB7) / Func37
+GPIO引脚分配表 | A47=44 | B47=PB11_MD | C47=PB11_MD | D47=模式选择输入 (Mode Pin) | E47=芯片启动模式配置 | F47=模式选择电阻 R16 (10K) | G47=硬件上拉/下拉 | H47=【芯片引导启动模式】HC32F460硬件模式选择管脚(MD)。用于切换从内部Flash启动运行代码还是进入ISP串口下载模式。PCB已做硬件偏置，勿随意改动。 | I47=SYSTEM_MD_PIN
+GPIO引脚分配表 | A48=45 | B48=PB8 | C48=NC (悬空) | D48=悬空 (NC) | E48=Func0 (GPIO) | F48=未连接 | G48=浮空输入 | H48=悬空未用引脚，硬件预留。 | I48=MCU_PIN_NC
+GPIO引脚分配表 | A49=46 | B49=PB9 | C49=MCU_BT_EN | D49=输出 (GPO) | E49=Func0 (GPIO) | F49=Page 3 U9 (SGM2032-ADJ LDO, Pin 3 EN) | G49=高电平 (High) | H49=【蓝牙电源使能】蓝牙模组3.3V供电使能控制。高电平使能U9输出VCC_BT供电给AC6323A；低电平关闭蓝牙电源实现零功耗待机。 | I49=BT_PWR_EN_PIN (PB9) / BT_PWR_ACTIVE_LEVEL=1
+GPIO引脚分配表 | A50=47 | B50=VSS | C50=GND | D50=电源/地 (Power GND) | E50=数字地 | F50=系统主地 (GND) | G50=地电平 (0V) | H50=MCU数字逻辑电路地引脚。 | I50=POWER_GND
+GPIO引脚分配表 | A51=48 | B51=VDD | C51=VCC_MCU_3V3 | D51=电源供电 (Power 3.3V) | E51=数字供电 | F51=VCC_MCU_3V3 (并联C26 1uF、C27 0.1uF去耦电容) | G51=3.3V | H51=MCU数字主电源输入引脚 (3.3V)。 | I51=POWER_VDD
+GPIO引脚分配表 | A52=49 | B52=EPAD | C52=GND | D52=电源/散热地 (Exposed Pad) | E52=芯片底面散热地 | F52=系统主地铜皮 (GND) | G52=地电平 (0V) | H52=QFN48封装底面大面积金属地焊盘，必须可靠焊接在PCB大面积覆铜地上，提供芯片散热和低阻抗接地。 | I52=POWER_EPAD
+外设通道与串口汇总 | A1=HC32F460 串口通道及主要外设架构映射表
+外设通道与串口汇总 | A2=外设模块 | B2=对应芯片/器件 | C2=MCU硬件接口 | D2=TX / MOSI 引脚 | E2=RX / MISO 引脚 | F2=使能/复位/控制引脚与说明
+外设通道与串口汇总 | A3=PC端通信接口 (RS232) | B3=U4 (SP3232E RS232电平转换芯片) | C3=USART1 (Func_Grp1) | D3=PA1 (Pin 11, Func32) | E3=PA0 (Pin 10, Func33) | F3=波特率115200 8N1，连接外部8Pin插座J1，用于PC端透传与通信
+外设通道与串口汇总 | A4=北斗/GPS定位模组 | B4=U14 (和芯星通 UM220-IV-M) | C4=USART2 (Func_Grp1) | D4=PA4 (Pin 14, Func36) | E4=PA3 (Pin 13, Func37) | F4=PH2: LDO供电使能(RNSS_PWREN,高有效)
+PC13: 模组复位(RNSS_RST,低有效脉冲)
+外设通道与串口汇总 | A5=NTN铱星物联网模组 | B5=MS150 / ST1000 卫星基带射频模组 | C5=USART3 (Func_Grp2) | D5=PB4 (Pin 40, Func32) | E5=PB5 (Pin 41, Func33) | F5=PB15: 模组主电源使能(MCU_NTN_PWR_EN,高有效)
+PB0: 功放供电使能(PA_PWREN,高有效)
+PA8: 模组复位(MCU_NTN_RST,高电平脉冲经三极管拉低)
+PA15: 唤醒(MCU_WAKEUP_NTN,高有效)
+PA10: 升级模式(MCU_NTN_BOOT,低=正常,高=Boot)
+PB3: 状态输入(NTN_MCU_STATUS)
+外设通道与串口汇总 | A6=低功耗蓝牙 (BLE) | B6=U5 (杰理 AC6323A 蓝牙SoC) | C6=USART4 (Func_Grp2) | D6=PB6 (Pin 42, Func36) | E6=PB7 (Pin 43, Func37) | F6=PB9: 蓝牙LDO供电使能(MCU_BT_EN,高有效)
+MCU与蓝牙纯串口透明传输，蓝牙通过SPP推送到手机App
+外设通道与串口汇总 | A7=SPI/QSPI存储Flash | B7=U11 (兆易/兆德 ZD25WQ16C 16Mbit) | C7=QSPI / 标准SPI | D7=PB13 (IO0/MOSI), PB2 (IO3/HOLD) | E7=PB12 (IO1/MISO), PB10 (IO2/WP) | F7=PB1: 片选(/CS, QSPI_SSN)
+PB14: 时钟(CLK, QSPI_CLK)
+用于后续OTA固件与离线日志存储
+外设通道与串口汇总 | A8=指示灯与外部接口 | B8=外部指示灯 / 8Pin接插件 J1 | C8=GPIO | D8=PA6 (POWER_OK, Pin 16) | E8=PA5 (NET_OK, Pin 15) | F8=PA6: 电源指示灯/心跳闪烁
+PA5: 网络/定位指示灯
+PA7: BACKUP备用信号(R39预留NC)
+外设通道与串口汇总 | A9=SWD在线仿真与调试 | B9=J-Link / DAP-Link 调试器 | C9=ARM SWD | D9=PA13 (Pin 34, SWDIO数据线) | E9=PA14 (Pin 37, SWCLK时钟线) | F9=板载引出测试点T7(SWCLK)、T8(SWDIO)、T9(3.3V)、T10(GND)

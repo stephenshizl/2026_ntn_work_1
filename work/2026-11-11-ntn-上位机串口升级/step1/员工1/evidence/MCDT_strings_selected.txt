@@ -1,0 +1,123 @@
+0x31d8a0 void __cdecl FTPManager::downloadFile(const class QString &,const class QString &)
+0x329390 CIPHER_BOOT
+0x32b7d7 BootSelect
+0x32cc58 downloadArm
+0x32ce70 action_flash_erasall
+0x32cfc0 menuFlash
+0x32f208 cb_boot
+0x32f210 edit_2BootPath
+0x32f220 bt_pathBoot
+0x32f280 bt_downLoad
+0x32f370 bt_readFlash
+0x32f3f0 bt_wreteFlash
+0x32f480 bt_EraseFlashAll
+0x32f700 BOOT_CHECKED
+0x32fb30 Flash...
+0x32fb48 Flash...
+0x330aa0 pushButtonFlashErase
+0x330be8 btnUpdatePartition
+0x330c70 Partition
+0x330c80 2nd_boot
+0x330d40 Flash 
+0x330e60 sharkSL/customDownload.ini
+0x331030 PARTITION_CHECKED
+0x331060 flashTabWidget
+0x331071                                 QTabWidget#flashTabWidget::pane {
+0x331263                                 QTabWidget#flashTabWidget QTabBar{
+0x33141e                                 QTabWidget#flashTabWidget QTabBar::tab {
+0x3316cd                                 QTabWidget#flashTabWidget QTabBar::tab:hover {
+0x3317c8                                 QTabWidget#flashTabWidget QTabBar::tab:selected {
+0x331ad0 Partition
+0x331b20 void __cdecl BrunProcess5G::on_bt_downLoad_clicked(void)
+0x331b80 2ndBoot File:
+0x331df0 Partition
+0x332006 Flash 0x
+0x3323c8 partition_map
+0x332480 custom_download
+0x3324f8 PARTITIONV%1
+0x3325d0 PARTITIONV101
+0x332608 2nd_boot
+0x333898 EraseFlashDialog
+0x339b20 PageCRC
+0x348950 bass/flashPartition.ini
+0x348968 dolphin/flashPartition.ini
+0x348988 dolphinV3/flashPartition.ini
+0x3489a8 shark/flashPartition.ini
+0x3489c8 sharkNTN/flashPartition.ini
+0x3489e8 sharkdualmode/flashPartition.ini
+0x348a10 sharkSL/flashPartition.ini
+0x348fc8 575680001806000001
+0x348fe0 575680002400000200
+0x34a678 ..\module\function\src\config\rfenvconfig5g_newflash.cpp
+0x34af30 int __cdecl DownLoad::DownLoadDataToRam(const class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > &,unsigned int,int,const class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > &,class std::function<void __cdecl(int,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)>)
+0x34b118 ..\module\function\src\download\Download.cpp
+0x34b170 int __cdecl DownLoad::DownLoadFileToNV(const class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > &)
+0x34b1f8 DownLoad::DownLoadFileToNV
+0x34b318 FLASH_SIZE
+0x34b388 FLASH_SIZE(%1->%2)
+0x34b3e8 [%1][VER]In-Flash:%2<-->Cfg:%3
+0x34b408 [%1][FLASH_SIZE]In-Flash:%2<-->Cfg:%3
+0x34b430 [%1][LENGTH]In-Flash:%2<-->Cfg:%3
+0x34b458 [%1][PRODUCT]In-Flash:%2<-->Cfg:%3
+0x34b480 [%1][BOARD]In-Flash:%2<-->Cfg:%3
+0x34b4a8 [%1][USB_VID]In-Flash:%2<-->Cfg:%3
+0x34b4d0 [%1][USB_PID]In-Flash:%2<-->Cfg:%3
+0x34b4f8 [%1][S_ADDR]In-Flash:%2<-->Cfg:%3
+0x34b520 [%1][S_MV_LENGTH]In-Flash:%2<-->Cfg:%3
+0x34b548 [%1][OFFSET]In-Flash:0x%2<-->Cfg:0x%3
+0x34b570 [%1][SIZE]In-Flash:0x%2<-->Cfg:0x%3
+0x34b598 [%1][MV_LENGTH]In-Flash:0x%2<-->Cfg:0x%3
+0x34b5f0 void __cdecl DownLoad5GNew::UpdateProgress(int,const class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > &,const class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > &)
+0x34b6e0 ..\module\function\src\download\Download5G_newflash.cpp
+0x34b731 partition!
+0x34b779 Partition binary : 
+0x34b848 partition-table struct version
+0x34b868 2nd-boot image start address in flash
+0x34b890 boot_addr
+0x34b8a0 bytes to copy for 2nd-boot (not image size)
+0x34b8d0 boot_load_len
+0x34b8e0 flash size
+0x34b9fa Partition entries(matches partition_tw101) :
+0x34bb40 flash sector size (smallest erase unit)
+0x34bb68 total flash sectors
+0x34bb80 partition-table numbers (not include 2 setup pages)
+0x34bbb8 number of partition entries in current page
+0x34bbf0 Sector number of the config backup partition(refer to config nv one
+0x34bf00 ..\module\function\src\download\NB210Burn.cpp
+0x34c22c Partition:
+0x34c23e Partition
+0x34c470 flash_size :%d M
+0x34c539 sec_boot:    offset=%08X, size=%08X, mv_length=%08X
+0x34fe18 SparseVector: deleting end partition.
+0x4b67b4 ?downloadProgress@QNetworkReply@@QEAAX_J0@Z
+0x4c82d3 onVersionFileDownloaded
+0x4c82eb onFileDownloaded
+0x4c82fc onDownloadProgress
+0x4c85db downloadProgress
+0x4c8602 downloadFinished
+0x4c8613 downloadError
+0x4c8631 cancelDownload
+0x4cbd1b SigEraseFlashFinish
+0x4cbda2 OnEraseFlashFinish
+0x4cbe3f downloadRam_triggered
+0x4cbfaa on_action_flash_erasall_triggered
+0x4ccd41 on_bt_downLoad_clicked
+0x4ccd6e on_bt_pathBoot_clicked
+0x4cce9a on_bt_wreteFlash_clicked
+0x4cceb3 on_bt_readFlash_clicked
+0x4ccf1c on_bt_EraseFlashAll_clicked
+0x4cd3da on_bt_downLoad_clicked
+0x4cd407 on_bt_pathBoot_clicked
+0x4cd5ad on_pushButtonFlashErase_clicked
+0x4cdd08 EraseFlashDialog
+0x4d341d downloadFinished
+0x4d4c38 FlashProgress
+0x4d4cd8 FlashServiceIO
+0x4e0193 FindIndicatorFlash
+0x4e7850 .?AVEraseFlashDialog@@
+0x4e90f0 .?AVDownLoad@@
+0x4e9188 .?AVDownLoad5GNew@@
+0x4e9298 .?AVFlashProgress@@
+0x4e92c0 .?AVFlashServiceIO@@
+0x4e93a8 .?AV?$_Ref_count@VDownLoad@@@std@@
+0x4e93e0 .?AV?$_Ref_count@VDownLoad5GNew@@@std@@

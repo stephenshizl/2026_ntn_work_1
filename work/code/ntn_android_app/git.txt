@@ -1,0 +1,2 @@
+https://github.com/stephenshizl/ntn_android_app.git
+分支:main

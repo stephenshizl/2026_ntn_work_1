@@ -1,0 +1,2 @@
+git clone  github https://github.com/stephenshizl/fw-AC63_BT_SDK.git
+分支:master

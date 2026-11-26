@@ -1,0 +1,4 @@
+ntn_web_app  分支:boot_fix
+ntn_android_app 分支:main
+hc32f460_rtthread_ntn 分支: work_v1_boot_fix
+ble_ac6323a_ntn 分支：master

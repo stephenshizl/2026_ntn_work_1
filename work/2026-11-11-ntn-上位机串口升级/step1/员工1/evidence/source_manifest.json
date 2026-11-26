@@ -1,0 +1,182 @@
+[
+  {
+    "path": "ms150-升级工具\\升级协议\\MS150下载流程(1).pdf",
+    "size": 1074906,
+    "sha256": "2fae72a0c2fb13616b89a92bc8cd96f23d915d960be3cb7fb3e21f1f78df66d9"
+  },
+  {
+    "path": "ms150-升级工具\\升级协议\\MS150操作指导手册(1).pdf",
+    "size": 2952469,
+    "sha256": "085bc0a675621825103882ae348db0d733bbb8e903b6241ef028c3bd82c22575"
+  },
+  {
+    "path": "ms150-升级工具\\升级协议\\MS150远程升级方案(1).pdf",
+    "size": 895232,
+    "sha256": "7533c2ae584eeec92c5d419fb9c8f0f8cecfa1a9c603fa33f82be1b9625a2d61"
+  },
+  {
+    "path": "原理图\\铱星NTN物联网终端-20260924(1)-原理图.pdf",
+    "size": 571749,
+    "sha256": "7e99f89fa4105cce2b06fe317985840dd984338d568347b40d6e7ef8c0597c35"
+  },
+  {
+    "path": "原理图\\铱星终端MCU GPIO配置表-1024(1).xlsx",
+    "size": 19831,
+    "sha256": "65a4eb3d0429d038b51f02d70b42435a2bacae3616eaef4d51d82f37417a41c3"
+  },
+  {
+    "path": "work\\器件\\铱星终端MCU GPIO配置表-1024(1).xlsx",
+    "size": 19831,
+    "sha256": "65a4eb3d0429d038b51f02d70b42435a2bacae3616eaef4d51d82f37417a41c3"
+  },
+  {
+    "path": "work\\HC32F460_GPIO分配及硬件功能定义表.xlsx",
+    "size": 15367,
+    "sha256": "b4ac5b90b313feaba107559eb87f4acf958045fbfe831219f24ec7ee11807834"
+  },
+  {
+    "path": "ms150-升级工具\\MCDT_5.4_Deploy_20260702_150214\\MCDTV5.exe",
+    "size": 5320192,
+    "sha256": "91ce79dbe330a024e317e915230cf146db6724b9eb8e56918094f9a820d4df64"
+  },
+  {
+    "path": "ms150-升级工具\\MCDT_5.4_Deploy_20260702_150214\\mlink\\config\\sharkNTN\\flashPartition.ini",
+    "size": 1408,
+    "sha256": "7de20518ee06166481c7db0c7292c5e7db0db9c6ecc4d4fabdda9ff4c6df5514"
+  },
+  {
+    "path": "ms150-升级工具\\升级固件\\ST1000_V00_R005_CA033(1).rar",
+    "size": 1774897,
+    "sha256": "d628efc73f9828291808477d677225af6a0f3c083583fe58e8c0ced221967ebf"
+  },
+  {
+    "path": "ms150-升级工具\\升级固件\\ST1000_V00_R005_CA034(1).rar",
+    "size": 1779838,
+    "sha256": "2dfbd3cf9319369b3a14cae044bf2ccec7e391f8d9322af43f2c75e01761156f"
+  },
+  {
+    "path": "ms150-升级工具\\升级固件\\二级boot\\shark_ntn_second_boot_v1.3.bin",
+    "size": 122622,
+    "sha256": "cde23423dd56357bd3488ce3cab9db56637d77ff92e6140d1b88351704c57fad"
+  },
+  {
+    "path": "ms150-升级工具\\升级固件\\ST1000_V00_R005_CA033(1)\\ST1000_V00_R005_CA033\\shark_ntn_config_nv_v1.9.xml",
+    "size": 16135,
+    "sha256": "11e1945142a8acc9dca88c3b2989934f3a355879b30d0cf7a2b0839e5b23db30"
+  },
+  {
+    "path": "ms150-升级工具\\升级固件\\ST1000_V00_R005_CA033(1)\\ST1000_V00_R005_CA033\\shark_ntn_second_boot_v1.3.bin",
+    "size": 122622,
+    "sha256": "cde23423dd56357bd3488ce3cab9db56637d77ff92e6140d1b88351704c57fad"
+  },
+  {
+    "path": "ms150-升级工具\\升级固件\\ST1000_V00_R005_CA033(1)\\ST1000_V00_R005_CA033\\DSP\\SHARK-NTN_DSP_CHIP_ST1000_V00-R005-CA033_20261010144802.bin",
+    "size": 74519,
+    "sha256": "12d95de609a7275394e412d51535f94241cd4a752fabc3d1a2ab176e667e2589"
+  },
+  {
+    "path": "ms150-升级工具\\升级固件\\ST1000_V00_R005_CA033(1)\\ST1000_V00_R005_CA033\\E31\\SHARK-NTN_E31_CHIP_ST1000_V00-R005-CA033_20261010144323.tar.gz",
+    "size": 1649998,
+    "sha256": "1e04dbcfa31afeef9120ce668c56fb3bfe20d2be8deff04d57f7bb67436b463b"
+  },
+  {
+    "path": "ms150-升级工具\\升级固件\\ST1000_V00_R005_CA033(1)\\ST1000_V00_R005_CA033\\E31\\SHARK-NTN_E31_CHIP_ST1000_V00-R005-CA033_20261010144323\\SHARK-NTN_E31_CHIP_ST1000_V00-R005-CA033_20261010144323.bin",
+    "size": 2503207,
+    "sha256": "45df6733f1e680ea78e10d273c56626e08d329733c4ca3c23958b5354a2f78d2"
+  },
+  {
+    "path": "ms150-升级工具\\升级固件\\ST1000_V00_R005_CA033(1)\\ST1000_V00_R005_CA033\\E31\\SHARK-NTN_E31_CHIP_ST1000_V00-R005-CA033_20261010144323\\SHARK-NTN_E31_CHIP_ST1000_V00-R005-CA033_20261010144323_logmap.json",
+    "size": 3109713,
+    "sha256": "77a5e3d5116daf68a78ddbf08728f15c734e8ad255cfef11c2bfb4cb851f6460"
+  },
+  {
+    "path": "ms150-升级工具\\升级固件\\ST1000_V00_R005_CA034(1)\\ST1000_V00_R005_CA034\\shark_ntn_config_nv_v1.9.xml",
+    "size": 16135,
+    "sha256": "11e1945142a8acc9dca88c3b2989934f3a355879b30d0cf7a2b0839e5b23db30"
+  },
+  {
+    "path": "ms150-升级工具\\升级固件\\ST1000_V00_R005_CA034(1)\\ST1000_V00_R005_CA034\\shark_ntn_second_boot_v1.3.bin",
+    "size": 122622,
+    "sha256": "cde23423dd56357bd3488ce3cab9db56637d77ff92e6140d1b88351704c57fad"
+  },
+  {
+    "path": "ms150-升级工具\\升级固件\\ST1000_V00_R005_CA034(1)\\ST1000_V00_R005_CA034\\DSP\\SHARK-NTN_DSP_CHIP_ST1000_V00-R005-CA034_20261104111608.bin",
+    "size": 74519,
+    "sha256": "336c1e450fabe14c9ba344f30f751bbf4e76b88593c79a8b9e7106f1fe4dd2a7"
+  },
+  {
+    "path": "ms150-升级工具\\升级固件\\ST1000_V00_R005_CA034(1)\\ST1000_V00_R005_CA034\\E31\\SHARK-NTN_E31_CHIP_ST1000_V00-R005-CA034_20261104111216.tar.gz",
+    "size": 1654937,
+    "sha256": "253c30ecfda90f01d723766f3dfcb7b41a976abe0fe3a2bd0048722cb7293bb7"
+  },
+  {
+    "path": "ms150-升级工具\\升级固件\\ST1000_V00_R005_CA034(1)\\ST1000_V00_R005_CA034\\E31\\SHARK-NTN_E31_CHIP_ST1000_V00-R005-CA034_20261104111216\\SHARK-NTN_E31_CHIP_ST1000_V00-R005-CA034_20261104111216.bin",
+    "size": 2509271,
+    "sha256": "020a16241006c5b7267fc851435d7b10f1ddef5ccd8a0ca0e1f50ef6b77472b0"
+  },
+  {
+    "path": "ms150-升级工具\\升级固件\\ST1000_V00_R005_CA034(1)\\ST1000_V00_R005_CA034\\E31\\SHARK-NTN_E31_CHIP_ST1000_V00-R005-CA034_20261104111216\\SHARK-NTN_E31_CHIP_ST1000_V00-R005-CA034_20261104111216_logmap.json",
+    "size": 3122188,
+    "sha256": "66d1a95746f439b38e670ecfd97528d65958c343b23275cd56884d60db9daf46"
+  },
+  {
+    "path": "F:\\work-2026\\work_code\\rt-thread\\bsp\\hc32\\ev_hc32f460_lqfp100_v2\\board\\board_config.h",
+    "size": 12354,
+    "sha256": "49c1e3f7b1b3527c7dd44099d2248579ceff51fc35d0434cc63d5eae9037be53"
+  },
+  {
+    "path": "F:\\work-2026\\work_code\\rt-thread\\bsp\\hc32\\ev_hc32f460_lqfp100_v2\\applications\\ntn_ms150.c",
+    "size": 55992,
+    "sha256": "8246fc504f5f6b109d0fa9bfb8a4f11b8f0c57b263dfe7e162375b29944e3aea"
+  },
+  {
+    "path": "F:\\work-2026\\work_code\\rt-thread\\bsp\\hc32\\ev_hc32f460_lqfp100_v2\\applications\\hw_power.c",
+    "size": 15456,
+    "sha256": "36e3e8d8be1ac3b7cf430c6e9187f99738f4c4111368d172ba743e3fd7ba16ac"
+  },
+  {
+    "path": "F:\\work-2026\\work_code\\rt-thread\\bsp\\hc32\\ev_hc32f460_lqfp100_v2\\applications\\mcu_local_cmd.c",
+    "size": 37290,
+    "sha256": "d9d8f2c872b7713a01313d3070db992ff467ace8def4514412c25a34c4fcd11a"
+  },
+  {
+    "path": "F:\\work-2026\\work_code\\rt-thread\\bsp\\hc32\\ev_hc32f460_lqfp100_v2\\.config",
+    "size": 11848,
+    "sha256": "7733ffee2c077845e1177ad0c021dfe85ac14051602a5fc9f0c24411c456e918"
+  },
+  {
+    "path": "F:\\work-2026\\work_code\\rt-thread\\bsp\\hc32\\ev_hc32f460_lqfp100_v2\\board\\ports\\fal_cfg.h",
+    "size": 1984,
+    "sha256": "c14b7bccedbfd1eb88089f21ece96c1f9da91192c347940baa784060fd1212b7"
+  },
+  {
+    "path": "F:\\work-2026\\work_code\\rt-thread\\bsp\\hc32\\ev_hc32f460_lqfp100_v2\\board\\config\\uart_config.h",
+    "size": 18574,
+    "sha256": "a9e971dbdff7f10e20a2dd037c962370ba833f9d128d0093388e15bbb49dd929"
+  },
+  {
+    "path": "work\\软件需求书_V3.0_正式版_20261016《员工1》.md",
+    "size": 48575,
+    "sha256": "b31a9b3a1e46d966660acd0b4a7d6d530ec1ffbb7e4db107fb14745985169dc7"
+  },
+  {
+    "path": "work\\MCU编码前基线核查_20261016《员工1》.md",
+    "size": 13399,
+    "sha256": "317fd3a0b9a57037ababebd808f2eb15950dc20fa3f58926f4b11716be9390d0"
+  },
+  {
+    "path": "work\\三端源码提交标签与剩余工作_20261016《员工1》.md",
+    "size": 9520,
+    "sha256": "30faacf6eea67dcff3ddc247407c99837e037ef665285668647ced51d8d3a5cd"
+  },
+  {
+    "path": "work\\ota安全启动\\OTA安全启动_Flash与内存综合风险评估及蓝牙数传取舍_V1.0_20261028_员工1.md",
+    "size": 33920,
+    "sha256": "70d5f52b85f86c485e04a9900d89244f414777ffa96ab4a554ad7601e216327b"
+  },
+  {
+    "path": "work\\2026-11-11-ntn-上位机串口升级\\step1\\step1-issue.txt",
+    "size": 1174,
+    "sha256": "3fd11812f7d72c392c6190e2ca315eb11f54868aea8722ae12a56b0266254a62"
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "sha256": "91ce79dbe330a024e317e915230cf146db6724b9eb8e56918094f9a820d4df64",
+  "image_base": "0x140000000",
+  "hits": [
+    {
+      "string": "PageCRC",
+      "instruction": "0x1400d8017",
+      "function": [
+        "0x1400d7560",
+        "0x1400d81cb"
+      ]
+    },
+    {
+      "string": "unprotect1",
+      "instruction": "0x14013e08f",
+      "function": [
+        "0x14013dfd0",
+        "0x14013e48f"
+      ]
+    },
+    {
+      "string": "unprotect2",
+      "instruction": "0x14013e16d",
+      "function": [
+        "0x14013dfd0",
+        "0x14013e48f"
+      ]
+    },
+    {
+      "string": "PageCRC",
+      "instruction": "0x140148cfb",
+      "function": [
+        "0x140148ac0",
+        "0x140149045"
+      ]
+    },
+    {
+      "string": "Download.cpp",
+      "instruction": "0x14015eb24",
+      "function": [
+        "0x14015e680",
+        "0x14015f018"
+      ]
+    },
+    {
+      "string": "Download.cpp",
+      "instruction": "0x14015f1e8",
+      "function": [
+        "0x14015f180",
+        "0x14015f4bd"
+      ]
+    },
+    {
+      "string": "Download5G_newflash.cpp",
+      "instruction": "0x140168288",
+      "function": [
+        "0x140168160",
+        "0x14016833f"
+      ]
+    }
+  ]
+}

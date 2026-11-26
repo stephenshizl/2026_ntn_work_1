@@ -1,0 +1,70 @@
+
+FUNCTION 0x140136850
+0x140136850: movzx      edx, byte ptr [rcx + 2]
+0x140136854: movzx      eax, byte ptr [rcx + 3]
+0x140136858: shl        eax, 8
+0x14013685b: add        eax, edx
+0x14013685d: movzx      edx, byte ptr [rcx + 1]
+0x140136861: movzx      ecx, byte ptr [rcx]
+0x140136864: shl        eax, 8
+0x140136867: add        eax, edx
+0x140136869: shl        eax, 8
+0x14013686c: add        eax, ecx
+0x14013686e: ret        
+
+FUNCTION 0x140136b20
+0x140136b20: mov        rax, rcx
+0x140136b23: mov        byte ptr [rdx + 3], cl
+0x140136b26: shr        rax, 0x18
+0x140136b2a: mov        byte ptr [rdx], al
+0x140136b2c: mov        rax, rcx
+0x140136b2f: shr        rax, 0x10
+0x140136b33: mov        byte ptr [rdx + 1], al
+0x140136b36: mov        rax, rcx
+0x140136b39: shr        rax, 8
+0x140136b3d: mov        byte ptr [rdx + 2], al
+0x140136b40: ret        
+
+FUNCTION 0x14013ce00
+0x14013ce00: mov        r10, qword ptr [rcx + 0x10]
+0x14013ce04: xor        edx, edx
+0x14013ce06: mov        r9b, 0xff
+0x14013ce09: test       r10, r10
+0x14013ce0c: je         0x14013ce2f
+0x14013ce0e: mov        r11, qword ptr [rcx + 0x18]
+0x14013ce12: mov        r8d, edx
+0x14013ce15: mov        rax, rcx
+0x14013ce18: cmp        r11, 0x10
+0x14013ce1c: jb         0x14013ce21
+0x14013ce1e: mov        rax, qword ptr [rcx]
+0x14013ce21: xor        r9b, byte ptr [r8 + rax]
+0x14013ce25: inc        edx
+0x14013ce27: mov        r8d, edx
+0x14013ce2a: cmp        r8, r10
+0x14013ce2d: jb         0x14013ce15
+0x14013ce2f: mov        rdx, qword ptr [rcx + 0x18]
+0x14013ce33: cmp        r10, rdx
+0x14013ce36: jae        0x14013ce54
+0x14013ce38: lea        rax, [r10 + 1]
+0x14013ce3c: mov        qword ptr [rcx + 0x10], rax
+0x14013ce40: cmp        rdx, 0x10
+0x14013ce44: jb         0x14013ce49
+0x14013ce46: mov        rcx, qword ptr [rcx]
+0x14013ce49: mov        byte ptr [rcx + r10], r9b
+0x14013ce4d: mov        byte ptr [rcx + r10 + 1], 0
+0x14013ce53: ret        
+
+FUNCTION 0x14013da50
+0x14013da50: sub        rsp, 0x38
+0x14013da54: mov        rax, qword ptr [rsp + 0x60]
+0x14013da59: mov        qword ptr [rsp + 0x20], rax
+0x14013da5e: call       0x14013d6d0
+0x14013da63: test       al, al
+0x14013da65: setne      al
+0x14013da68: add        rsp, 0x38
+0x14013da6c: ret        
+receive mode 6: switch target 0x14013dd68
+receive mode 7: switch target 0x14013dd40
+receive mode 8: switch target 0x14013dd36
+receive mode 9: switch target 0x14013dd75
+receive mode 100: switch target 0x14013de2f
