@@ -1,0 +1,460 @@
+{
+  "audit_date": "2026-11-28",
+  "author": "员工3 (youyoutech)",
+  "captures": {
+    "e31": {
+      "capture_file": "e31下载.txt",
+      "capture_size": 13789607,
+      "capture_sha256": "8a5c1c5769a68e5a7e45509070aaef7295c584abc36893cb6a1cbe87b9276811",
+      "capture_lines": 78810,
+      "capture_events": 5264,
+      "rep_events": [
+        {
+          "cmd_id": 1,
+          "phase": "IN",
+          "rep": 282,
+          "line": 18,
+          "hex": "55"
+        }
+      ],
+      "target_file": "SHARK-NTN_E31_CHIP_ST1000_V00-R005-CA034_20261104111216.bin",
+      "unsol_in": {
+        "len": 109,
+        "chunks": 109,
+        "head_hex": "55 55 55 55 55 55 55 55 55 55 55 55 55 55 55 55",
+        "banner_present": false,
+        "u_count_after_banner": 109
+      },
+      "c0_rx_hex": "05 00",
+      "cmd_counts": {
+        "C0_STOP_U": 1,
+        "46_QSPI_INIT": 1,
+        "57_REG_WRITE": 2,
+        "55_CLK_CFG": 2,
+        "50_SET_BAUD": 2,
+        "20_ERASE_4K": 22,
+        "D8_ERASE_64K": 37,
+        "79_WRITE_64K": 38,
+        "7A_WRITE_VAR": 1,
+        "EB_READ_PAGE": 1,
+        "32_WRITE_TABLE": 1
+      },
+      "chk_errors": 0,
+      "rx_errors": 0,
+      "reg_writes_count": 2,
+      "reg_writes_sample": [
+        {
+          "tx_hex": "57 56 80 00 18 06 00 00 01 61",
+          "rx_len": 24,
+          "rx_hex": "0d 0a 35 36 38 30 30 30 31 38 20 3c 3d 3d 20 30 36 30 30 30 30 30 31 f9",
+          "rx_ascii_23": "\r\n56800018 <== 06000001",
+          "rx_trailer": "0xF9"
+        },
+        {
+          "tx_hex": "57 56 80 00 24 00 00 02 00 58",
+          "rx_len": 24,
+          "rx_hex": "0d 0a 35 36 38 30 30 30 32 34 20 3c 3d 3d 20 30 30 30 30 30 32 30 30 f9",
+          "rx_ascii_23": "\r\n56800024 <== 00000200",
+          "rx_trailer": "0xF9"
+        }
+      ],
+      "baud_changes": [
+        {
+          "tx_hex": "50 09 a6",
+          "baud_idx": "0x09",
+          "rx_hex": "06"
+        },
+        {
+          "tx_hex": "50 04 ab",
+          "baud_idx": "0x04",
+          "rx_hex": "06"
+        }
+      ],
+      "erased_ranges": [
+        {
+          "start": "0x00000000",
+          "end": "0x00001000",
+          "size": 4096
+        },
+        {
+          "start": "0x00028000",
+          "end": "0x0028D000",
+          "size": 2510848
+        }
+      ],
+      "write_79_count": 38,
+      "write_7a_blocks": [
+        {
+          "addr": "0x00288000",
+          "hdr_len_be32": 18903,
+          "payload_len": 18903,
+          "first_chunk_size": 9,
+          "rx_hex": "06"
+        }
+      ],
+      "payload_verify": {
+        "start_addr": "0x00028000",
+        "end_addr": "0x0028C9D7",
+        "wire_len": 2509271,
+        "target_len": 2509271,
+        "contiguous": true,
+        "exact_byte_match": true,
+        "wire_sha256": "020a16241006c5b7267fc851435d7b10f1ddef5ccd8a0ca0e1f50ef6b77472b0",
+        "target_sha256": "020a16241006c5b7267fc851435d7b10f1ddef5ccd8a0ca0e1f50ef6b77472b0"
+      },
+      "partition_table": {
+        "eb_read_sha256": "45816274bc518b673484a40982bb050c3ca85c536c2f5fc8cf78f665c1cf4361",
+        "wr32_sha256": "40dcffcd9d9dca50118bd5263eeb587c4bf0a907e70741f35802e1da966ea904",
+        "diffs": [
+          {
+            "offset": "0xE8",
+            "before": "0x6AD6D2C7",
+            "after": "0x6B0AD553"
+          }
+        ],
+        "stamp_before_hex": "0x6AD6D2C7",
+        "stamp_before_cst": "2026-10-20 10:32:39 +08:00",
+        "stamp_after_hex": "0x6B0AD553",
+        "stamp_after_cst": "2026-11-28 21:21:23 +08:00",
+        "firmware_mv_length_after": "0x00080000",
+        "dsp0_mv_length_after": "0x00000000",
+        "sec_mv_length_after": "0x00002000"
+      }
+    },
+    "dsp": {
+      "capture_file": "dsp下载.txt",
+      "capture_size": 434657,
+      "capture_sha256": "ca4dcbfb6ec70a4ee32e800d767197ee3b388639e288badf5f1677be12728ba9",
+      "capture_lines": 2496,
+      "capture_events": 281,
+      "rep_events": [],
+      "target_file": "SHARK-NTN_DSP_CHIP_ST1000_V00-R005-CA034_20261104111608.bin",
+      "unsol_in": {
+        "len": 75,
+        "chunks": 66,
+        "head_hex": "0a 56 45 52 3a 42 35 2e 30 0a 55 55 55 55 55 55",
+        "banner_present": true,
+        "u_count_after_banner": 65
+      },
+      "c0_rx_hex": "05 00",
+      "cmd_counts": {
+        "C0_STOP_U": 1,
+        "46_QSPI_INIT": 1,
+        "57_REG_WRITE": 2,
+        "55_CLK_CFG": 2,
+        "50_SET_BAUD": 2,
+        "20_ERASE_4K": 17,
+        "D8_ERASE_64K": 5,
+        "79_WRITE_64K": 1,
+        "7A_WRITE_VAR": 1,
+        "EB_READ_PAGE": 1,
+        "32_WRITE_TABLE": 1
+      },
+      "chk_errors": 0,
+      "rx_errors": 0,
+      "reg_writes_count": 2,
+      "reg_writes_sample": [
+        {
+          "tx_hex": "57 56 80 00 18 06 00 00 01 61",
+          "rx_len": 24,
+          "rx_hex": "0d 0a 35 36 38 30 30 30 31 38 20 3c 3d 3d 20 30 36 30 30 30 30 30 31 f9",
+          "rx_ascii_23": "\r\n56800018 <== 06000001",
+          "rx_trailer": "0xF9"
+        },
+        {
+          "tx_hex": "57 56 80 00 24 00 00 02 00 58",
+          "rx_len": 24,
+          "rx_hex": "0d 0a 35 36 38 30 30 30 32 34 20 3c 3d 3d 20 30 30 30 30 30 32 30 30 f9",
+          "rx_ascii_23": "\r\n56800024 <== 00000200",
+          "rx_trailer": "0xF9"
+        }
+      ],
+      "baud_changes": [
+        {
+          "tx_hex": "50 09 a6",
+          "baud_idx": "0x09",
+          "rx_hex": "06"
+        },
+        {
+          "tx_hex": "50 04 ab",
+          "baud_idx": "0x04",
+          "rx_hex": "06"
+        }
+      ],
+      "erased_ranges": [
+        {
+          "start": "0x00000000",
+          "end": "0x00001000",
+          "size": 4096
+        },
+        {
+          "start": "0x003A8000",
+          "end": "0x00408000",
+          "size": 393216
+        }
+      ],
+      "write_79_count": 1,
+      "write_7a_blocks": [
+        {
+          "addr": "0x003B8000",
+          "hdr_len_be32": 8983,
+          "payload_len": 8983,
+          "first_chunk_size": 9,
+          "rx_hex": "06"
+        }
+      ],
+      "payload_verify": {
+        "start_addr": "0x003A8000",
+        "end_addr": "0x003BA317",
+        "wire_len": 74519,
+        "target_len": 74519,
+        "contiguous": true,
+        "exact_byte_match": true,
+        "wire_sha256": "336c1e450fabe14c9ba344f30f751bbf4e76b88593c79a8b9e7106f1fe4dd2a7",
+        "target_sha256": "336c1e450fabe14c9ba344f30f751bbf4e76b88593c79a8b9e7106f1fe4dd2a7"
+      },
+      "partition_table": {
+        "eb_read_sha256": "40dcffcd9d9dca50118bd5263eeb587c4bf0a907e70741f35802e1da966ea904",
+        "wr32_sha256": "947200362c8429e690e5f33ef72bd272eff432e6e2d3977bb591815578162ac2",
+        "diffs": [
+          {
+            "offset": "0xE8",
+            "before": "0x6B0AD553",
+            "after": "0x6B0AD649"
+          }
+        ],
+        "stamp_before_hex": "0x6B0AD553",
+        "stamp_before_cst": "2026-11-28 21:21:23 +08:00",
+        "stamp_after_hex": "0x6B0AD649",
+        "stamp_after_cst": "2026-11-28 21:25:29 +08:00",
+        "firmware_mv_length_after": "0x00080000",
+        "dsp0_mv_length_after": "0x00000000",
+        "sec_mv_length_after": "0x00002000"
+      }
+    },
+    "nv": {
+      "capture_file": "nv下载.txt",
+      "capture_size": 17981,
+      "capture_sha256": "7e402bbac14c29721f5b241eae58cfb4a96b447b47bdf932b9b5f13990a0cd4e",
+      "capture_lines": 115,
+      "capture_events": 51,
+      "rep_events": [],
+      "target_file": "shark_ntn_config_nv_v1.9.xml",
+      "unsol_in": {
+        "len": 20,
+        "chunks": 11,
+        "head_hex": "0a 56 45 52 3a 42 35 2e 30 0a 55 55 55 55 55 55",
+        "banner_present": true,
+        "u_count_after_banner": 10
+      },
+      "c0_rx_hex": "05 00",
+      "cmd_counts": {
+        "C0_STOP_U": 1,
+        "46_QSPI_INIT": 1,
+        "57_REG_WRITE": 4,
+        "55_CLK_CFG": 2,
+        "50_SET_BAUD": 2,
+        "20_ERASE_4K": 4,
+        "02_PAGE_WRITE": 4,
+        "EB_READ_PAGE": 1,
+        "32_WRITE_TABLE": 1
+      },
+      "chk_errors": 0,
+      "rx_errors": 0,
+      "reg_writes_count": 4,
+      "reg_writes_sample": [
+        {
+          "tx_hex": "57 56 80 00 18 06 00 00 01 61",
+          "rx_len": 24,
+          "rx_hex": "0d 0a 35 36 38 30 30 30 31 38 20 3c 3d 3d 20 30 36 30 30 30 30 30 31 f9",
+          "rx_ascii_23": "\r\n56800018 <== 06000001",
+          "rx_trailer": "0xF9"
+        },
+        {
+          "tx_hex": "57 56 80 00 24 00 00 02 00 58",
+          "rx_len": 24,
+          "rx_hex": "0d 0a 35 36 38 30 30 30 32 34 20 3c 3d 3d 20 30 30 30 30 30 32 30 30 f9",
+          "rx_ascii_23": "\r\n56800024 <== 00000200",
+          "rx_trailer": "0xF9"
+        }
+      ],
+      "baud_changes": [
+        {
+          "tx_hex": "50 09 a6",
+          "baud_idx": "0x09",
+          "rx_hex": "06"
+        },
+        {
+          "tx_hex": "50 04 ab",
+          "baud_idx": "0x04",
+          "rx_hex": "06"
+        }
+      ],
+      "erased_ranges": [
+        {
+          "start": "0x00000000",
+          "end": "0x00001000",
+          "size": 4096
+        },
+        {
+          "start": "0x004C4000",
+          "end": "0x004C7000",
+          "size": 12288
+        }
+      ],
+      "write_79_count": 0,
+      "write_7a_blocks": [],
+      "payload_verify": {
+        "primary_addrs": [
+          "0x004C4000",
+          "0x004C4100"
+        ],
+        "backup_addrs": [
+          "0x004C6000",
+          "0x004C6100"
+        ],
+        "primary_equals_backup": true,
+        "wire_512_sha256": "bd2b65dccaf6ac773709932442a5a3e369225b09e718b95c63205143f6c7eab5",
+        "wire_423_sha256": "587fb357119d9618c2bc68175a0e79c7472ae172fa1dfa6dccd5093fa7f5d245",
+        "compiled_512_sha256": "bd2b65dccaf6ac773709932442a5a3e369225b09e718b95c63205143f6c7eab5",
+        "compiled_423_sha256": "587fb357119d9618c2bc68175a0e79c7472ae172fa1dfa6dccd5093fa7f5d245",
+        "page_crc_wire": "0x32",
+        "pageflag_wire_le32": "0x7FFFFFFF",
+        "tail_89_all_zero": true,
+        "exact_512_match_with_v2_compiler": true,
+        "xml_sha256": "f49ecff77de9069831445faa114626a4b699b20d3229d5d905f4081ac218f6a9"
+      },
+      "partition_table": {
+        "eb_read_sha256": "947200362c8429e690e5f33ef72bd272eff432e6e2d3977bb591815578162ac2",
+        "wr32_sha256": "0d45bde877e8c85fa26561901655d6aebd8ec3497ac88144e489f02822a89b8e",
+        "diffs": [
+          {
+            "offset": "0xE8",
+            "before": "0x6B0AD649",
+            "after": "0x6B0AD6A7"
+          }
+        ],
+        "stamp_before_hex": "0x6B0AD649",
+        "stamp_before_cst": "2026-11-28 21:25:29 +08:00",
+        "stamp_after_hex": "0x6B0AD6A7",
+        "stamp_after_cst": "2026-11-28 21:27:03 +08:00",
+        "firmware_mv_length_after": "0x00080000",
+        "dsp0_mv_length_after": "0x00000000",
+        "sec_mv_length_after": "0x00002000"
+      }
+    },
+    "sec_boot": {
+      "capture_file": "二级boot下载.txt",
+      "capture_size": 685612,
+      "capture_sha256": "345a2f0b3e3dd45adccc706c8a3a9709f90129d5f3090b57db0d7fc3863968c8",
+      "capture_lines": 3930,
+      "capture_events": 306,
+      "rep_events": [],
+      "target_file": "shark_ntn_second_boot_v1.3.bin",
+      "unsol_in": {
+        "len": 18,
+        "chunks": 9,
+        "head_hex": "0a 56 45 52 3a 42 35 2e 30 0a 55 55 55 55 55 55",
+        "banner_present": true,
+        "u_count_after_banner": 8
+      },
+      "c0_rx_hex": "05 00",
+      "cmd_counts": {
+        "C0_STOP_U": 1,
+        "46_QSPI_INIT": 1,
+        "57_REG_WRITE": 2,
+        "55_CLK_CFG": 2,
+        "50_SET_BAUD": 2,
+        "20_ERASE_4K": 15,
+        "D8_ERASE_64K": 1,
+        "79_WRITE_64K": 1,
+        "7A_WRITE_VAR": 1,
+        "EB_READ_PAGE": 1,
+        "32_WRITE_TABLE": 1
+      },
+      "chk_errors": 0,
+      "rx_errors": 0,
+      "reg_writes_count": 2,
+      "reg_writes_sample": [
+        {
+          "tx_hex": "57 56 80 00 18 06 00 00 01 61",
+          "rx_len": 24,
+          "rx_hex": "0d 0a 35 36 38 30 30 30 31 38 20 3c 3d 3d 20 30 36 30 30 30 30 30 31 f9",
+          "rx_ascii_23": "\r\n56800018 <== 06000001",
+          "rx_trailer": "0xF9"
+        },
+        {
+          "tx_hex": "57 56 80 00 24 00 00 02 00 58",
+          "rx_len": 24,
+          "rx_hex": "0d 0a 35 36 38 30 30 30 32 34 20 3c 3d 3d 20 30 30 30 30 30 32 30 30 f9",
+          "rx_ascii_23": "\r\n56800024 <== 00000200",
+          "rx_trailer": "0xF9"
+        }
+      ],
+      "baud_changes": [
+        {
+          "tx_hex": "50 09 a6",
+          "baud_idx": "0x09",
+          "rx_hex": "06"
+        },
+        {
+          "tx_hex": "50 04 ab",
+          "baud_idx": "0x04",
+          "rx_hex": "06"
+        }
+      ],
+      "erased_ranges": [
+        {
+          "start": "0x00000000",
+          "end": "0x00001000",
+          "size": 4096
+        },
+        {
+          "start": "0x00008000",
+          "end": "0x00026000",
+          "size": 122880
+        }
+      ],
+      "write_79_count": 1,
+      "write_7a_blocks": [
+        {
+          "addr": "0x00018000",
+          "hdr_len_be32": 57086,
+          "payload_len": 57086,
+          "first_chunk_size": 9,
+          "rx_hex": "06"
+        }
+      ],
+      "payload_verify": {
+        "start_addr": "0x00008000",
+        "end_addr": "0x00025EFE",
+        "wire_len": 122622,
+        "target_len": 122622,
+        "contiguous": true,
+        "exact_byte_match": true,
+        "wire_sha256": "cde23423dd56357bd3488ce3cab9db56637d77ff92e6140d1b88351704c57fad",
+        "target_sha256": "cde23423dd56357bd3488ce3cab9db56637d77ff92e6140d1b88351704c57fad"
+      },
+      "partition_table": {
+        "eb_read_sha256": "0d45bde877e8c85fa26561901655d6aebd8ec3497ac88144e489f02822a89b8e",
+        "wr32_sha256": "48c8c5777474aeff1be91b6963d7cbd4d614d3087c495423fb28e1da8dacc1f3",
+        "diffs": [
+          {
+            "offset": "0xE8",
+            "before": "0x6B0AD6A7",
+            "after": "0x6B0AD6F0"
+          }
+        ],
+        "stamp_before_hex": "0x6B0AD6A7",
+        "stamp_before_cst": "2026-11-28 21:27:03 +08:00",
+        "stamp_after_hex": "0x6B0AD6F0",
+        "stamp_after_cst": "2026-11-28 21:28:16 +08:00",
+        "firmware_mv_length_after": "0x00080000",
+        "dsp0_mv_length_after": "0x00000000",
+        "sec_mv_length_after": "0x00002000"
+      }
+    }
+  },
+  "chain_continuity_verified": true,
+  "all_passed": true
+}
