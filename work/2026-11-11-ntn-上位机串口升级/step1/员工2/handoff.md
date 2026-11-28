@@ -2,163 +2,81 @@
 
 | 项目 | 内容 |
 |---|---|
-| 日期 | 2026-11-26 |
+| 日期 | 2026-11-28 |
 | 交接人 | 员工2 |
-| 任务 | Step1静态确认 → Step2真实UART抓包及MCU源码审查 |
-| 当前技术基线 | [V1.1独立反汇编确认报告](员工2_20261126_NTN串口升级与MCDT独立反汇编确认报告_V1.1.md) |
-| V1.1提交 | e89389b54cdd86cd82dd1a047ff0f042b2c12336 |
+| 任务 | Step1静态确认 → Step2原厂UART抓包、Flash容量核实及MCU升级代理评审 |
+| 当前技术基线 | [V1.2复核报告](员工2_20261128_NTN串口升级与MCDT独立反汇编复核报告_V1.2.md) |
+| 历史基线 | [V1.1独立反汇编确认报告](员工2_20261126_NTN串口升级与MCDT独立反汇编确认报告_V1.1.md) |
 | 原始任务 | [step1-issue.txt](../step1-issue.txt) |
 | 主仓库 | https://github.com/stephenshizl/2026_ntn_work_1，master |
+| MCU基线 | https://github.com/stephenshizl/hc32f460_rtthread_ntn，work_v1_boot_fix @ 03b0abc3f4062178c1d5864100bdc98e9c87b905 |
 
 ## 1. 接手者先读
 
-1. 先读step1-issue.txt，确认最新任务；再读员工2 V1.1（以V1.1为当前技术基线，V1.0为历史）。
-2. 阅读员工1 README和协议核对、员工3协议勘误与工具；出现冲突按原EXE及实测证据解决，不按员工号或报告篇幅决定。
-3. 固件包选择CA033/CA034配套E31和DSP；不要默认刷新Boot、NV或文件系统。
-4. 当前目标是PC经终端RS232和HC32F460升级MS150，不是主MCU自身升级，不是卫星FOTA。
-5. 先读证据和采集真实日志，后做擦写。没有可恢复测试板和授权时仅做只读操作。
+1. 先读step1-issue.txt，再读员工2 V1.2；V1.1保留为历史静态反汇编基线。
+2. 阅读员工1 2026-11-28更新的README、可行性报告、协议报告、外部Flash方案、NV专项和Bus Hound指导。
+3. 不按报告之间的互相引用判定事实；协议以固定SHA原始EXE静态证据为参考，动态行为必须以原厂完整抓包和实板波形为准。
+4. 产品功能目标包含二级Boot、E31、DSP、NV四组件；首轮可以只做E31+DSP POC，但必须标注为部分升级，不能宣称四组件完成。
+5. 当前没有实板升级通过记录、完整UART抓包、NV黄金数据或自动回滚证据；没有可恢复测试板和授权时仅做只读操作。
 
-## 2. 已完成及不可忽略的结论
+## 2. 已确认技术基线
 
-已读取主仓库和任务、核对项目目录和历史报告、从项目经理上传原始EXE直接生成关键路径汇编、独立解析接收跳转表与波特率表、确认NV CRC局部算法，并提交V1.1。
-
-原EXE 5320192B，SHA256：
-91ce79dbe330a024e317e915230cf146db6724b9eb8e56918094f9a820d4df64
-ImageBase=0x140000000，x64 PE32+，ImageVersion5.4。复现命令和原始字节解析脚本见V1.1第2章。不要使用不同版本EXE的函数地址。
-
-| 项 | 必须遵守 |
+| 项目 | 当前口径 |
 |---|---|
-| 0x57 | TX两条10B；mode7累计至少2B；真实RX格式待抓包。不能写死单字节06或任意2B即成功 |
-| 0x50 | 115200索引04、1.5M索引09；mode8首字节06；本地改速前Sleep500ms，最多5次本地改速，非5次命令重发 |
-| 0x55 | 目标57600路径跳过；其他目标速率前置时钟配置，不能无条件重复 |
-| 0x79/7A | 固定64KiB头5B；变长头9B且LEN BE32；头后30ms；512B为主机写粒度，非协议ACK周期 |
-| 0xEB | 6B命令，返回256B路径；末尾14为XOR而非长度 |
-| CHK | 从FF对完整命令逐字节XOR；地址BE32、分区表字段LE32 |
-| NV | 已定位CRC计算路径，422B脚本未完成黄金样本验证；地址存在冲突，首版不写 |
-| GPIO | PA10/PA8均MCU侧高有效，外部反相后模组低有效；实测释放电平及复位时序 |
-| 速度 | 外部RS232建议115200，内部USART3独立提速；不能宣称整机20s |
-| 安全 | 先读取并备份目标表和相关数据，写前确认边界，禁止首扇区擦除探测和未经授权全擦 |
+| 原始EXE | MCDTV5.exe，SHA256 91ce79dbe330a024e317e915230cf146db6724b9eb8e56918094f9a820d4df64 |
+| 0x57 | 两条10 B TX；接收mode7累计至少2 B；完整RX格式未抓包，任意2 B不能视为成功 |
+| 0x50 | 13档波特率表；1.5M为50 09 A6；mode8检查首字节06；响应后有500 ms等待及最多5次本地改速配置，不是5次命令重发 |
+| 0x55 | 目标57600路径跳过；其他目标速率走前置时钟配置路径 |
+| 0x79/7A | 79固定64 KiB、头5 B；7A头9 B、LEN为BE32；静态路径有头后30 ms等待 |
+| 0xEB | EB+BE32地址+XOR；14是校验，原工具按256 B页读取 |
+| CHK | 初值FF逐字节XOR；命令地址/长度BE32；分区表字段按小端读取 |
+| NV | 员工3旧脚本422 B存在缺陷；员工1新423 B/CRC42仍是静态候选，禁止直接烧录 |
+| GPIO | PA10/PA8为MCU侧高有效，外部反相后模组端低有效；进入下载模式不能复用会清除BOOT的普通上电函数 |
+| MCU UART | 唯一UART读者；TX_EMPTY不等于TX_CPLT；1.5 Mbps及U22信号质量待实测 |
+| 恢复 | 外部缓存不等于MS150 A/B回滚；破坏性擦除后失败需进入ROM恢复态 |
 
-## 3. 接手前准备与阻塞清单
+## 3. 当前P0阻塞项
 
-| ID | 事项 | 建议负责人 | 关闭条件 |
-|---|---|---|---|
-| B01 | MCU指定分支可读 | 项目经理/MCU负责人 | GitHub能读work_v1_boot_fix及指定SHA；记录实际commit |
-| B02 | 厂家可恢复测试板、备份、USB-UART | 硬件/测试 | 完整原厂恢复流程可用、目标板及电平确认 |
-| B03 | 完整双向UART抓包 | 测试/协议负责人 | 无截断原始记录、速率切换和所有关键RX |
-| B04 | SP3232E具体料号、USART3波形 | 硬件 | BOM/规格及板级115200、1.5M测试 |
-| B05 | NV及回滚机制 | 厂家/协议负责人 | 原厂实际写页黄金数据、主备地址、可验证恢复方式 |
-| B06 | 0x57完整回复 | 协议负责人 | 两条指令完整TX/RX、消费边界、错误响应 |
-| B07 | 固件及分区版本匹配 | MCU/测试 | 固件SHA、实际目标分区表、E31/DSP配套确认 |
-
-B01历史状态：V1.0检查时MCU仓库返回409 empty；本轮未重新验证是否已推送，接手必须重新检查。主仓库Gitlink为03b0abc3f4062178c1d5864100bdc98e9c87b905。
-
-```bash
-git ls-remote --heads https://github.com/stephenshizl/hc32f460_rtthread_ntn.git
-git clone -b work_v1_boot_fix https://github.com/stephenshizl/hc32f460_rtthread_ntn.git
-cd hc32f460_rtthread_ntn
-git rev-parse HEAD
-git status --short
-```
-
-若无法读取，请负责人从本地正确工程推送该分支；不要强制推送、不覆盖其他员工分支。若最新HEAD与Gitlink不同，先记录差异并由负责人确定基线。
-
-## 4. Step2：Bus Hound + 逻辑分析仪实测SOP
-
-### 4.1 测试环境
-
-Windows 10/11、原版MCDTV5.exe、厂家支持MS150下载的USB-UART/测试板、Bus Hound（https://perisoft.net/bushound/）、至少24MHz逻辑分析仪（采样率只是建议，实际需验证解码质量）。原厂工具必须来自授权来源。不要让两个串口驱动同时驱动同一线。TTL探头只连接符合电压范围的逻辑电平，不连接RS232高压侧；共地、高阻采集。
-
-记录板号、版本、COM号、USB VID/PID及适配器型号、固件SHA256、原工具设置、日期和操作者。在MCDT打开COM前先启动监控；软件监控不应作为另一个应用抢占COM口。
-
-### 4.2 软件抓包
-
-1. Bus Hound设备列表选择实际COM或USB-UART设备，打开双向数据及可见控制/配置事件、时间戳；具体菜单以现场版本为准。
-2. 验证采集有完整TX/RX，检查单次数据长度、容量、循环覆盖及截断。先做短时间只读握手；免费版容量不足则分场景捕获或使用适合的授权版本。
-3. 保存原始捕获文件及可导出的HEX文本；不要仅截图。USB-UART包头/状态字节、操作系统I/O边界和UART协议帧不同，解码时保留原始数据。
-4. 同步启动逻辑分析仪，CH0主机TX，CH1模组TX，另采BOOTSEL/RESETN；115200和1.5M分别解码。软件时间戳不是物理线间隔。
-5. 先只读验证进入ROM、版本和读页；获准后用原厂工具在可恢复测试板执行CA033→CA034。明确选择E31/DSP，不选未经审批的Boot、NV。
-6. 保存升级前后ATI/AT+CGMR、入网及数据收发记录；成功升级并不能代替全部异常测试。
-
-### 4.3 重点捕获矩阵
-
-| Case | 采集内容 | PASS条件 |
+| ID | 事项 | 关闭条件 |
 |---|---|---|
-| CAP01 | BOOT/RESET、连续U、C0 | 明确电平时序、起始速率、停止U及完整RX |
-| CAP02 | 两条57 | 完整10B TX、RX逐字节及间隔；明确是文本/ACK/组合、帧结束和错误分支 |
-| CAP03 | 55、50 09 A6、50 04 AB | ACK在线速率，500ms主机改速事件，第一条新速率指令可正确解码 |
-| CAP04 | EB读页 | 发送6B，原始响应长度与数据边界；重复读取一致 |
-| CAP05 | 79/7A | 头5/9B、BE32 LEN、真实头尾间隔、数据+CHK及最终响应 |
-| CAP06 | 20/D8、写页及分区表 | 对照实际分区范围、读取校验与提交前后；仅在获准测试板 |
-| CAP07 | 完整升级 | 配套版本正确，重启AT、入网注册和数据收发 |
-| CAP08 | 异常恢复 | 有可靠恢复手段后再做掉线、断电、校验失败、重复升级 |
-| CAP09 | NV专项 | 仅额外授权后测试，保存原厂写页黄金样本，逐字节复核脚本 |
+| B01 | MCU源码基线可读 | 已关闭：GitHub work_v1_boot_fix指向指定commit 03b0abc3f4062178c1d5864100bdc98e9c87b905 |
+| B02 | 当前板外置NOR究竟是2 MiB还是8 MiB | 正式BOM/PCBA变更记录、U11实物标记、flash_info输出、JEDEC/SFDP容量 |
+| B03 | FAL分区与容量保护 | 8 MiB容量校验、最大分区结束地址检查、OTA/NTN缓存互斥；2 MiB板严禁访问0x212000及以上 |
+| B04 | 原厂双向UART抓包 | CAP01～CAP05原始文件、完整HEX/CSV、逻辑分析仪记录及hash |
+| B05 | 0x57/0x50/EB/79/7A完整响应 | 57完整RX、50 ACK物理速率、EB精确256 B边界、写块尾应答和30 ms物理间隔 |
+| B06 | NV黄金样本 | 423 B候选与MCDT 02帧逐字节比较，确认主/备份、CRC、尾页填充 |
+| B07 | Boot/NV/分区兼容和恢复 | 实际分区表、备份、厂家恢复流程及完整profile验证 |
+| B08 | USART3高速和电平质量 | 115200/1.5 Mbps波形、TX_CPLT、RX错误统计、U22信号完整性 |
 
-CAP02/03/04/05属于P0，不关闭这些争议不能冻结生产协议。不可将预期值写成实测值；每项记录PASS/FAIL/BLOCKED和证据路径。
+## 4. 外部Flash方案的使用规则
 
-## 5. 日志及交付目录建议
+员工1提出的缓存布局：meta A [0x212000,0x213000)，meta B [0x213000,0x214000)，数据 [0x214000,0x514000)，容量3 MiB。该布局只适用于实际确认8 MiB、OTA FAL布局正确且专用分区完成落地的板卡。
 
-在项目经理确认的新阶段目录（例如work/2026-11-11-ntn-上位机串口升级/step2/员工X/）提交：
+原理图U11标注ZD25WQ16CEIGR（16 Mbit/2 MiB），当前MCU源码则以BY25Q64ES（64 Mbit/8 MiB、JEDEC 68 40 17）为目标。员工3提到当前V30样板换料，但本项目材料尚缺实板JEDEC/SFDP或正式BOM变更证据。未关闭B02/B03前，不得启用整包缓存，不得擦写0x212000以上地址。
 
-```text
-README.md
-handoff.md
-manifest.json
-capture/
-  bus_hound_original.*
-  bus_hound_export.txt
-  logic_original.*
-  logic_uart_decoded.csv
-  mcdt_log.txt
-analysis/
-  decoded_frames.csv
-  protocol_diffs.md
-  protocol_spec.md
-  test_results.md
-  checksum_tests.py
-  golden_vectors.json
-```
+若板卡为2 MiB，首轮采用PC在线供数+MCU 4 KiB RAM整块缓存；PC需在安装/恢复期间保持连接，不能承诺PC掉线后自动继续。若需要整包离线暂存，应先正式升级外置NOR容量并更新硬件/BOM/FAL/驱动。
 
-大型抓包可用受控附件或LFS，明确文件哈希和可访问位置；不要公开未经审核的客户设备标识、配置及供应商保密数据。
+## 5. Step2抓包建议
 
-manifest至少记录test_id、board_revision、module_version_before/after、tool_sha256、firmware_sha256、adapter、COM、baud、capture软件/硬件版本、capture_sha256、测试时间、操作者。
+1. 使用原厂MCDT直连可恢复测试板UART0，先抓只读握手、初始化、0x57、0x50和EB读页。
+2. 再抓79/7A写入、擦除、读回及最终响应；破坏性操作必须经授权并有原厂恢复手段。
+3. NV单独抓包，避免长镜像数据覆盖短NV记录。
+4. Bus Hound起始配置可参考员工1指导：64 MiB总缓冲、128 KiB单阶段/记录、IN/OUT/控制事件、满缓冲停止；实际版本单位和截断状态必须现场确认。
+5. 同步逻辑分析仪观察UART0_TX/RX、BOOTSEL、RESETN；只抓PC RS232只能得到PC↔MCU会话，不能替代板内UART3记录。
+6. 记录MCDT/固件SHA、板号、芯片型号、JEDEC/SFDP、COM/适配器、波特率、完整原始文件hash和测试结果。
 
-decoded_frames.csv列：
-test_id,seq,timestamp_us,direction,baud,raw_hex,opcode,address,length,checksum_calc,checksum_wire,rx_hex,response_kind,status,evidence_file,evidence_offset,notes
+## 6. MCU开发要求
 
-按命令和长度重组原始数据；对同一数据分别核对软件及硬件时间，保留不明字节，不丢弃矛盾证据。
+- 先实现维护会话独占和唯一UART接收者，再实现MS150二进制状态机。
+- 正常AT/URC/透传与升级模式严格互斥。
+- 使用专用BOOT/RESET控制接口，不复用会清除BOOT选择的普通上电函数。
+- 每个4 KiB块先完整缓存并检查PC帧CRC32、会话ID、序号和目标范围，再向MS150写入。
+- 发送头部后等待TX_CPLT，再计30 ms；切速、复位也必须排空TX。
+- 对0x57、擦除、写入ACK丢失采取重新同步/读回判断，禁止盲目重发擦除。
+- task_wdt和BL1 SWDT必须保持有效；升级期间暂停业务动作但保留监控心跳。
+- 主MCU OTA和MS150升级互斥；外部NOR分区互斥并增加容量校验。
+- PC收到的最终进度以MS150目标读回一致为准，不以MCU收到数据为准。
 
-## 6. MCU开发接手要求（抓包关闭之后）
+## 7. 交接范围
 
-在实际源码中定位board_config.h、ntn_ms150.c、hw_power相关代码、RS232收发、UART DMA/ISR、RT-Thread线程和FAL分区。以下为建议检索，不代表本轮已获取源码。
-
-```bash
-git grep -n -E 'ntn_rx_thread_entry|hw_power_ntn_set|MCU_NTN_BOOT|MCU_NTN_RESET|UART3|USART3|MCUUPG'
-git grep -n -i -E 'rs232|fal_partition|uart.*dma'
-```
-
-设计要求：
-- 唯一UART3接收者，明确正常AT/URC与二进制升级模式互斥；RS232独立115200。
-- GPIO进入下载模式专用接口，不复用会清除BOOT的正常上电路径；复位/电源时序以实测为准。
-- 维护会话包含会话ID、序号、长度、CRC32、状态码；PC收到的进度以模组成功读回为准，不以MCU收到包为准。
-- 先备份目标分区表和保留区域、验证地址及镜像匹配；只授权E31/DSP写范围；不默认更新NV/boot。
-- 状态机：IDLE→PRECHECK→ENTER_BOOT→SYNC→INIT→READ_TABLE→PLAN→ERASE→WRITE→VERIFY→COMMIT_TABLE→REBOOT→CHECK_VERSION→DONE；失败ERROR/RECOVERY。
-- 4KiB缓存方案优先用于POC；整包外置Flash方案需核实FAL实际容量和回滚，不承诺双备份。
-- 错误场景下禁止盲目重发擦写命令；记录最后确认状态，读回/重新同步后决定恢复。
-- 编写单元测试：校验、端序、边界溢出、分片/拼包、超时、断开、禁止地址、错误版本、异常恢复。
-
-## 7. 后续工作与责任边界
-
-建议顺序：
-1. 测试负责人完成CAP01—CAP07的原始抓包及报告。
-2. 协议负责人依据V1.1+抓包关闭争议，生成唯一协议规范。
-3. MCU负责人恢复指定源码可访问并完成独占升级代理设计审查。
-4. PC负责人编写Python原厂UART直接POC，随后开发代理模式POC。
-5. MCU与PC联调整机；异常恢复必须在有恢复能力的测试板上执行。
-6. 项目经理确认验收及量产范围后再做正式工具和后续BLE/Web扩展。
-
-本次交接不代表完成动态验证、完整EXE反编译、生产源码修改、NV烧录或实板验证。员工2报告中VA为静态定位，源代码名称为人工功能性命名。完整汇编可用V1.1脚本复现；实际EXE不在本次新增文件中。保留V1.0、员工1/3和员工2目录原有员工5报告，避免覆盖历史证据。
-
-## 8. 给下一位员工的任务指令
-
-请以V1.1为技术基线，不重复做无关UI反编译。先核实MCU分支及现场资源，然后采集原厂真实UART下载过程，逐项对照CAP矩阵。特别确认0x57的完整应答，不要再假设单字节ACK。输出带员工号、日期、Git commit基线和证据路径的协议修订报告；无法实测则明确BLOCKED，不得虚构日志。完成后将成果提交到项目指定目录、工作分支，并交接下一阶段。
+员工2 V1.2为当前交叉复核结论；本轮没有修改员工1/3/5报告、没有修改MCU生产源码、没有运行MCDT或实板烧录。下一阶段必须补充原始抓包和硬件实测证据；未能实测的项目标注BLOCKED，不得用静态报告替代。
