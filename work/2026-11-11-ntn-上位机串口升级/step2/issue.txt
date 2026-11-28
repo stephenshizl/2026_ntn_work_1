@@ -1,0 +1,12 @@
+1：本地工作目录位于：F:\work-2026\2026-9-9-智联安铱星NTN物联网智能终端\work\2026-11-11-ntn-上位机串口升级\step1\员工3  ，
+2：局域网工作共享位于: ssh youyou@192.168.9.104  密码：qwer1234,局域网代码位置:/mnt/data3t/builddata/src/work/2026_ntn_work_1
+3：外网工作协调  我们将仓库提交到github
+
+
+HUS Hound抓取的协议
+dsp下载.txt ---->ST1000_V00_R005_CA034(1)/ST1000_V00_R005_CA034/DSP/SHARK-NTN_DSP_CHIP_ST1000_V00-R005-CA034_20261104111608.bin
+e31下载.txt--->ST1000_V00_R005_CA034(1)/ST1000_V00_R005_CA034/E31/SHARK-NTN_E31_CHIP_ST1000_V00-R005-CA034_20261104111216/SHARK-NTN_E31_CHIP_ST1000_V00-R005-CA034_20261104111216.bin
+nv下载.txt--->ST1000_V00_R005_CA034(1)/ST1000_V00_R005_CA034/shark_ntn_config_nv_v1.9.xml
+二级boot下载.txt--->ST1000_V00_R005_CA034(1)/ST1000_V00_R005_CA034/shark_ntn_second_boot_v1.3.bin
+结合F:\work-2026\2026-9-9-智联安铱星NTN物联网智能终端\work\2026-11-11-ntn-上位机串口升级\step1的所有报告
+参考实际下载的协议抓取数据，给出正式版本实现方案和计划
