@@ -13,10 +13,10 @@
 ## 1. 已确认基线
 
 1. 四份 Bus Hound 抓包已归档，员工3审计 JSON 记录 E31、DSP、二级 Boot TX 载荷与目标文件一致，NV 512B 主备与 V2.0 编译器一致。
-2. 协议关键字节层基线：\`C0 3F → 05 00\`；\`46 B9 → 06\`；两条 \`0x57\` 写保护请求对应 24B ASCII 回显并以 \`F9\` 结束；\`0x55 AA\`、\`0x50\`、擦除、写入和 \`0x32\` 的 ACK 为 \`06\`；\`0xEB\` 地址0读取返回 256B。
-3. 分区表四次演变均只改变 \`0xE8..0xEB\` stamp；必须保留 \`firmware.mv_length=0x80000\`、\`dsp0_code.mv_length=0\`、\`sec_mv_length=0x2000\`。
+2. 协议关键字节层基线：`C0 3F → 05 00`；`46 B9 → 06`；两条 `0x57` 写保护请求对应 24B ASCII 回显并以 `F9` 结束；`0x55 AA`、`0x50`、擦除、写入和 `0x32` 的 ACK 为 `06`；`0xEB` 地址0读取返回 256B。
+3. 分区表四次演变均只改变 `0xE8..0xEB` stamp；必须保留 `firmware.mv_length=0x80000`、`dsp0_code.mv_length=0`、`sec_mv_length=0x2000`。
 4. NV CA034 黄金数据为 423B 有效区 + 89B 零填充 = 512B；PageCRC=0x32，Pageflag线上值为0x7FFFFFFF。
-5. V30当前实机 NOR 记录为 BY25Q64ES (SFDP)、JEDEC 68 40 17、8MiB；NTN reserved 范围为 \`[0x212000,0x800000)\`。
+5. V30当前实机 NOR 记录为 BY25Q64ES (SFDP)、JEDEC 68 40 17、8MiB；NTN reserved 范围为 `[0x212000,0x800000)`。
 
 ## 2. 不得误判的证据边界
 
@@ -29,7 +29,7 @@
 
 ## 3. 编码前必须关闭的P0
 
-1. 修正 \`ntn_meta_record_t\`：当前字段合计252B；将 \`rsvd[24]\` 改为 \`rsvd[28]\`，增加 \`sizeof==256\` 编译期断言，并明确CRC/commit偏移。
+1. 修正 `ntn_meta_record_t`：当前字段合计252B；将 `rsvd[24]` 改为 `rsvd[28]`，增加 `sizeof==256` 编译期断言，并明确CRC/commit偏移。
 2. 首扇区备份必须覆盖全部4KiB/16页；为完整表扇区备份和NV黄金/原NV备份规划互不覆盖的持久空间。
 3. 冻结NUPG v1：解决22B固定开销与时序图16B开销描述不一致，明确字段偏移、CRC、payload上限、分片、重传和幂等规则。
 4. 增强Bus Hound解析脚本：对C0=05 00、全部57响应24B/F9、79/7A帧边界、命令顺序、地址连续性、长度和ACK逐项断言。
