@@ -1,0 +1,66 @@
+{
+  "review_date": "2026-11-28",
+  "main_repository": "https://github.com/stephenshizl/2026_ntn_work_1",
+  "main_branch": "master",
+  "main_baseline": "0e1cf06a65c8e8ae905202733788dc0da818c542",
+  "mcu_branch": "work_v1_boot_fix",
+  "mcu_commit": "03b0abc3f4062178c1d5864100bdc98e9c87b905",
+  "lan_checkout": "/mnt/data3t/builddata/src/work/2026_ntn_work_1",
+  "files_before_edit": [
+    {
+      "path": "work/2026-11-11-ntn-上位机串口升级/step1/step1-issue.txt",
+      "size": 1295,
+      "sha256": "f082efcdc5b8d334b9351a3be2cad4c31e5461c657aa495d12e798e33d8a980d"
+    },
+    {
+      "path": "work/2026-11-11-ntn-上位机串口升级/step1/员工1/NTN串口升级可行性与工作报告_员工1.md",
+      "size": 16781,
+      "sha256": "4a72d9a09897566294ad9f8f75c771c0f0e92f272d0c1de6ed54ec0c1c478854"
+    },
+    {
+      "path": "work/2026-11-11-ntn-上位机串口升级/step1/员工1/NTN串口升级实施方案_员工1.md",
+      "size": 19000,
+      "sha256": "53c55e2c05f06952904321e780c256430b09ddfe0eabdeb390c1fb6dacc58a31"
+    },
+    {
+      "path": "work/2026-11-11-ntn-上位机串口升级/step1/员工1/README_员工1.md",
+      "size": 1412,
+      "sha256": "1f8e15e86fa4ccd9c4a34f6b4792a4eb6623e1ae68534ba86242cddfdf5e4a28"
+    },
+    {
+      "path": "work/2026-11-11-ntn-上位机串口升级/step1/员工1/协议核对与参考工具分析_员工1.md",
+      "size": 9403,
+      "sha256": "37fa57ba6bb502b786d3fedd4b110ec223533d553960529dff994e4f77fbb540"
+    },
+    {
+      "path": "work/2026-11-11-ntn-上位机串口升级/step1/员工2/handoff.md",
+      "size": 11102,
+      "sha256": "0908379ffddc79337b32610ef38128e6d30b560618658d3b830c598c88fe7972"
+    },
+    {
+      "path": "work/2026-11-11-ntn-上位机串口升级/step1/员工2/员工2_20261126_NTN串口升级与MCDT独立反汇编确认报告_V1.1.md",
+      "size": 16587,
+      "sha256": "4b23769df8bf172f6255b7c719edb8a143ef435a8fca3b92f37b75190bd9d78c"
+    },
+    {
+      "path": "work/2026-11-11-ntn-上位机串口升级/step1/员工3/员工3_20261126_NTN串口升级复盘评估与BusHound抓包方案.md",
+      "size": 15971,
+      "sha256": "36debd497ee23485c22597def3ab5322fcb81acb42bd7d23baded7f53f4b1699"
+    },
+    {
+      "path": "work/2026-11-11-ntn-上位机串口升级/step1/员工3/MS150升级协议反汇编全量解析与勘误规范_员工3.md",
+      "size": 21171,
+      "sha256": "401bfa5d72d87a3308944553e66085daa8337d9dbff241fffd2c151c9da3803a"
+    },
+    {
+      "path": "work/2026-11-11-ntn-上位机串口升级/step1/员工3/tools/compile_nv_xml.py",
+      "size": 4694,
+      "sha256": "4bc1c8052aa1c5de80e8aae847258632b2dce9fab1d29775964b89426154228b"
+    },
+    {
+      "path": "work/2026-11-11-ntn-上位机串口升级/step1/员工5/NTN上位机串口升级工作报告与实现方案_员工5.md",
+      "size": 7842,
+      "sha256": "bee6d142a6d53ea5f3785c07cbf1cb5a1e368232d3cc82baf86060b70edf4192"
+    }
+  ]
+}

@@ -1,0 +1,2812 @@
+{
+  "status": "STATIC_CANDIDATE_NOT_FOR_FLASHING",
+  "hardware_tested": false,
+  "mcdt_wire_bytes_compared": false,
+  "binary_output_written": false,
+  "results": [
+    {
+      "release": "CA033",
+      "xml_size": 15841,
+      "xml_sha256": "f49ecff77de9069831445faa114626a4b699b20d3229d5d905f4081ac218f6a9",
+      "xml_crlf_restored_sha256": "11e1945142a8acc9dca88c3b2989934f3a355879b30d0cf7a2b0839e5b23db30",
+      "candidate_length": 423,
+      "candidate_sha256": "e9d897e2f06b3a434f09711a9a778ea4da1bd651766c43c5f33c5453f6a99585",
+      "crc_offset": 422,
+      "crc": "0x42",
+      "prefix_hex": "00 00 01 01 31 2e 36 00 0f ff ff ff 01 00 01 00",
+      "tail_hex": "00 01 00 01 00 00 00 01 00 01 00 00 00 01 01 42",
+      "fields": [
+        {
+          "name": "Magic",
+          "type": "U32",
+          "offset": 0,
+          "size": 4
+        },
+        {
+          "name": "CurrentVersion",
+          "type": "STRING",
+          "offset": 4,
+          "size": 4
+        },
+        {
+          "name": "Pageflag",
+          "type": "U32",
+          "offset": 8,
+          "size": 4
+        },
+        {
+          "name": "nv_DebugMode",
+          "type": "U8",
+          "offset": 12,
+          "size": 1
+        },
+        {
+          "name": "nv_OpenMCU",
+          "type": "U8",
+          "offset": 13,
+          "size": 1
+        },
+        {
+          "name": "nv_OpenCoap",
+          "type": "U8",
+          "offset": 14,
+          "size": 1
+        },
+        {
+          "name": "nv_AutoTestFlag",
+          "type": "U8",
+          "offset": 15,
+          "size": 1
+        },
+        {
+          "name": "nv_PsmMode",
+          "type": "U8",
+          "offset": 16,
+          "size": 1
+        },
+        {
+          "name": "nv_EdrxModeOpen",
+          "type": "U8",
+          "offset": 17,
+          "size": 1
+        },
+        {
+          "name": "nv_IdrxModeOpen",
+          "type": "U8",
+          "offset": 18,
+          "size": 1
+        },
+        {
+          "name": "nv_OpenLog",
+          "type": "U8",
+          "offset": 19,
+          "size": 1
+        },
+        {
+          "name": "nv_LogLevel_mc",
+          "type": "U8",
+          "offset": 20,
+          "size": 1
+        },
+        {
+          "name": "nv_LogLevel_usim",
+          "type": "U8",
+          "offset": 21,
+          "size": 1
+        },
+        {
+          "name": "nv_LogLevel_esm",
+          "type": "U8",
+          "offset": 22,
+          "size": 1
+        },
+        {
+          "name": "nv_LogLevel_emm",
+          "type": "U8",
+          "offset": 23,
+          "size": 1
+        },
+        {
+          "name": "nv_LogLevel_rrc",
+          "type": "U8",
+          "offset": 24,
+          "size": 1
+        },
+        {
+          "name": "nv_LogLevel_dmac",
+          "type": "U8",
+          "offset": 25,
+          "size": 1
+        },
+        {
+          "name": "nv_LogLevel_umac",
+          "type": "U8",
+          "offset": 26,
+          "size": 1
+        },
+        {
+          "name": "nv_LogLevel_l1c",
+          "type": "U8",
+          "offset": 27,
+          "size": 1
+        },
+        {
+          "name": "nv_LogLevel_drlc",
+          "type": "U8",
+          "offset": 28,
+          "size": 1
+        },
+        {
+          "name": "nv_LogLevel_urlc",
+          "type": "U8",
+          "offset": 29,
+          "size": 1
+        },
+        {
+          "name": "nv_LogLevel_dpdcp",
+          "type": "U8",
+          "offset": 30,
+          "size": 1
+        },
+        {
+          "name": "nv_LogLevel_updcp",
+          "type": "U8",
+          "offset": 31,
+          "size": 1
+        },
+        {
+          "name": "nv_LogLevel_sms",
+          "type": "U8",
+          "offset": 32,
+          "size": 1
+        },
+        {
+          "name": "nv_UsimType",
+          "type": "U8",
+          "offset": 33,
+          "size": 1
+        },
+        {
+          "name": "nv_Uart0Print",
+          "type": "U8",
+          "offset": 34,
+          "size": 1
+        },
+        {
+          "name": "nv_resetNvValueFlag",
+          "type": "U8",
+          "offset": 35,
+          "size": 1
+        },
+        {
+          "name": "MsgPrintLevel",
+          "type": "U8",
+          "offset": 36,
+          "size": 1
+        },
+        {
+          "name": "nv_plReserve2",
+          "type": "U8",
+          "offset": 37,
+          "size": 1
+        },
+        {
+          "name": "cptestSRAMadc",
+          "type": "U16",
+          "offset": 38,
+          "size": 2
+        },
+        {
+          "name": "cptesttemp25adc",
+          "type": "U16",
+          "offset": 40,
+          "size": 2
+        },
+        {
+          "name": "cptesttemp85adc",
+          "type": "U16",
+          "offset": 42,
+          "size": 2
+        },
+        {
+          "name": "nv_AutoStart",
+          "type": "U8",
+          "offset": 44,
+          "size": 1
+        },
+        {
+          "name": "nv_AutoAttach",
+          "type": "U8",
+          "offset": 45,
+          "size": 1
+        },
+        {
+          "name": "nv_PlmnMode",
+          "type": "U8",
+          "offset": 46,
+          "size": 1
+        },
+        {
+          "name": "nv_PdnType",
+          "type": "U8",
+          "offset": 47,
+          "size": 1
+        },
+        {
+          "name": "nv_ApnName",
+          "type": "STRING",
+          "offset": 48,
+          "size": 32
+        },
+        {
+          "name": "nv_DnsMode",
+          "type": "U32",
+          "offset": 80,
+          "size": 4
+        },
+        {
+          "name": "nv_DnsIpv4Address",
+          "type": "STRING",
+          "offset": 84,
+          "size": 16
+        },
+        {
+          "name": "nv_SecondDnsIpv4Address",
+          "type": "STRING",
+          "offset": 100,
+          "size": 16
+        },
+        {
+          "name": "nv_PsmWaitTimeValue",
+          "type": "U8",
+          "offset": 116,
+          "size": 1
+        },
+        {
+          "name": "nv_NasCiotConfig",
+          "type": "U8",
+          "offset": 117,
+          "size": 1
+        },
+        {
+          "name": "nv_NasCiotCfgSecond",
+          "type": "U8",
+          "offset": 118,
+          "size": 1
+        },
+        {
+          "name": "nv_PingRetrans",
+          "type": "U8",
+          "offset": 119,
+          "size": 1
+        },
+        {
+          "name": "nv_rfMode",
+          "type": "U8",
+          "offset": 120,
+          "size": 1
+        },
+        {
+          "name": "nv_ueMode",
+          "type": "U8",
+          "offset": 121,
+          "size": 1
+        },
+        {
+          "name": "nv_PlmnSearchPowerLevel",
+          "type": "U8",
+          "offset": 122,
+          "size": 1
+        },
+        {
+          "name": "nv_nasReserve4",
+          "type": "U8",
+          "offset": 123,
+          "size": 1
+        },
+        {
+          "name": "nv_nasReserve5",
+          "type": "U16",
+          "offset": 124,
+          "size": 2
+        },
+        {
+          "name": "nv_nasReserve6",
+          "type": "U16",
+          "offset": 126,
+          "size": 2
+        },
+        {
+          "name": "band1",
+          "type": "U8",
+          "offset": 128,
+          "size": 1
+        },
+        {
+          "name": "band3",
+          "type": "U8",
+          "offset": 129,
+          "size": 1
+        },
+        {
+          "name": "band5",
+          "type": "U8",
+          "offset": 130,
+          "size": 1
+        },
+        {
+          "name": "band8",
+          "type": "U8",
+          "offset": 131,
+          "size": 1
+        },
+        {
+          "name": "multiToneSupported",
+          "type": "U8",
+          "offset": 132,
+          "size": 1
+        },
+        {
+          "name": "multiCarrierSupported",
+          "type": "U8",
+          "offset": 133,
+          "size": 1
+        },
+        {
+          "name": "U8accessStratumRelease",
+          "type": "U8",
+          "offset": 134,
+          "size": 1
+        },
+        {
+          "name": "U8RohcSupport",
+          "type": "U8",
+          "offset": 135,
+          "size": 1
+        },
+        {
+          "name": "nv_MinReleaseDelay",
+          "type": "U16",
+          "offset": 136,
+          "size": 2
+        },
+        {
+          "name": "reserve15",
+          "type": "U8",
+          "offset": 138,
+          "size": 1
+        },
+        {
+          "name": "nv_PsmrMode",
+          "type": "U8",
+          "offset": 139,
+          "size": 1
+        },
+        {
+          "name": "lockEearfcnMode",
+          "type": "U8",
+          "offset": 140,
+          "size": 1
+        },
+        {
+          "name": "lockEearfcnNum",
+          "type": "U8",
+          "offset": 141,
+          "size": 1
+        },
+        {
+          "name": "nv_rrcReserve1",
+          "type": "U16",
+          "offset": 142,
+          "size": 2
+        },
+        {
+          "name": "lockEearfcn1",
+          "type": "U32",
+          "offset": 144,
+          "size": 4
+        },
+        {
+          "name": "lockEearfcn2",
+          "type": "U32",
+          "offset": 148,
+          "size": 4
+        },
+        {
+          "name": "lockEearfcn3",
+          "type": "U32",
+          "offset": 152,
+          "size": 4
+        },
+        {
+          "name": "lockEearfcn4",
+          "type": "U32",
+          "offset": 156,
+          "size": 4
+        },
+        {
+          "name": "lockEearfcn5",
+          "type": "U32",
+          "offset": 160,
+          "size": 4
+        },
+        {
+          "name": "lockEearfcn6",
+          "type": "U32",
+          "offset": 164,
+          "size": 4
+        },
+        {
+          "name": "bandScanOptimize",
+          "type": "U8",
+          "offset": 168,
+          "size": 1
+        },
+        {
+          "name": "nonSkyloLab",
+          "type": "U8",
+          "offset": 169,
+          "size": 1
+        },
+        {
+          "name": "cellBarSecond",
+          "type": "U8",
+          "offset": 170,
+          "size": 1
+        },
+        {
+          "name": "doublebandsupport",
+          "type": "U8",
+          "offset": 171,
+          "size": 1
+        },
+        {
+          "name": "nv_twoharqsupport",
+          "type": "U8",
+          "offset": 172,
+          "size": 1
+        },
+        {
+          "name": "nbiotRai",
+          "type": "U8",
+          "offset": 173,
+          "size": 1
+        },
+        {
+          "name": "rrcUeCapability1",
+          "type": "U16",
+          "offset": 174,
+          "size": 2
+        },
+        {
+          "name": "rrcUeCapability2",
+          "type": "U16",
+          "offset": 176,
+          "size": 2
+        },
+        {
+          "name": "nv_RachMaxNum",
+          "type": "U8",
+          "offset": 178,
+          "size": 1
+        },
+        {
+          "name": "nv_UmacDataInactiveTimer",
+          "type": "U8",
+          "offset": 179,
+          "size": 1
+        },
+        {
+          "name": "nv_l2Reserve1",
+          "type": "U8",
+          "offset": 180,
+          "size": 1
+        },
+        {
+          "name": "nv_l2Reserve2",
+          "type": "U8",
+          "offset": 181,
+          "size": 1
+        },
+        {
+          "name": "nv_l2Reserve3",
+          "type": "U8",
+          "offset": 182,
+          "size": 1
+        },
+        {
+          "name": "nv_l2Reserve4",
+          "type": "U8",
+          "offset": 183,
+          "size": 1
+        },
+        {
+          "name": "nv_l2Reserve5",
+          "type": "U16",
+          "offset": 184,
+          "size": 2
+        },
+        {
+          "name": "nv_l2Reserve6",
+          "type": "U16",
+          "offset": 186,
+          "size": 2
+        },
+        {
+          "name": "PhyLogBitMap",
+          "type": "U8",
+          "offset": 188,
+          "size": 1
+        },
+        {
+          "name": "PhyTxMaxPwrMode",
+          "type": "S8",
+          "offset": 189,
+          "size": 1
+        },
+        {
+          "name": "PhyNvPctRrmOpen",
+          "type": "U8",
+          "offset": 190,
+          "size": 1
+        },
+        {
+          "name": "PhyNvLpcOpen",
+          "type": "U8",
+          "offset": 191,
+          "size": 1
+        },
+        {
+          "name": "phyNpdcchErrDecThr1",
+          "type": "U8",
+          "offset": 192,
+          "size": 1
+        },
+        {
+          "name": "phyNpdcchErrDecThr2",
+          "type": "U8",
+          "offset": 193,
+          "size": 1
+        },
+        {
+          "name": "PssCtime",
+          "type": "U8",
+          "offset": 194,
+          "size": 1
+        },
+        {
+          "name": "PssFtime",
+          "type": "U8",
+          "offset": 195,
+          "size": 1
+        },
+        {
+          "name": "Ssstime",
+          "type": "U8",
+          "offset": 196,
+          "size": 1
+        },
+        {
+          "name": "RatCaculate",
+          "type": "U8",
+          "offset": 197,
+          "size": 1
+        },
+        {
+          "name": "CellInterval",
+          "type": "U8",
+          "offset": 198,
+          "size": 1
+        },
+        {
+          "name": "CdrxModeOpen",
+          "type": "U8",
+          "offset": 199,
+          "size": 1
+        },
+        {
+          "name": "PdcchReport",
+          "type": "U8",
+          "offset": 200,
+          "size": 1
+        },
+        {
+          "name": "CTNon100KFlag",
+          "type": "U8",
+          "offset": 201,
+          "size": 1
+        },
+        {
+          "name": "PhyNpusch15DelayTs",
+          "type": "S16",
+          "offset": 202,
+          "size": 2
+        },
+        {
+          "name": "PhyNpusch375DelayTs",
+          "type": "S16",
+          "offset": 204,
+          "size": 2
+        },
+        {
+          "name": "PhyNprachDelayTs",
+          "type": "S16",
+          "offset": 206,
+          "size": 2
+        },
+        {
+          "name": "timeAgcMode",
+          "type": "U8",
+          "offset": 208,
+          "size": 1
+        },
+        {
+          "name": "agcSubfNum",
+          "type": "U8",
+          "offset": 209,
+          "size": 1
+        },
+        {
+          "name": "agcGainFixCtrl",
+          "type": "U8",
+          "offset": 210,
+          "size": 1
+        },
+        {
+          "name": "agcGainFixValue",
+          "type": "U8",
+          "offset": 211,
+          "size": 1
+        },
+        {
+          "name": "phySkyloTestFlag",
+          "type": "U8",
+          "offset": 212,
+          "size": 1
+        },
+        {
+          "name": "phyPdcchPreNumSubfn",
+          "type": "U8",
+          "offset": 213,
+          "size": 1
+        },
+        {
+          "name": "phyNtnDopFTaOffFlag",
+          "type": "U8",
+          "offset": 214,
+          "size": 1
+        },
+        {
+          "name": "phyScaleOpen",
+          "type": "U8",
+          "offset": 215,
+          "size": 1
+        },
+        {
+          "name": "PhyLeoFlag",
+          "type": "U8",
+          "offset": 216,
+          "size": 1
+        },
+        {
+          "name": "phyLeoSateTerminalFlag",
+          "type": "U8",
+          "offset": 217,
+          "size": 1
+        },
+        {
+          "name": "U16LpcAheadT",
+          "type": "U16",
+          "offset": 218,
+          "size": 2
+        },
+        {
+          "name": "U16BootT",
+          "type": "U16",
+          "offset": 220,
+          "size": 2
+        },
+        {
+          "name": "nv_NewPaFlag",
+          "type": "U8",
+          "offset": 222,
+          "size": 1
+        },
+        {
+          "name": "dcxoAdjustFlag",
+          "type": "U8",
+          "offset": 223,
+          "size": 1
+        },
+        {
+          "name": "dcxoAdjustTempFlag",
+          "type": "U8",
+          "offset": 224,
+          "size": 1
+        },
+        {
+          "name": "testMode",
+          "type": "U8",
+          "offset": 225,
+          "size": 1
+        },
+        {
+          "name": "txPower",
+          "type": "U16",
+          "offset": 226,
+          "size": 2
+        },
+        {
+          "name": "phyTdTargetPower",
+          "type": "U16",
+          "offset": 228,
+          "size": 2
+        },
+        {
+          "name": "ulTaControl",
+          "type": "U8",
+          "offset": 230,
+          "size": 1
+        },
+        {
+          "name": "idrxDeep",
+          "type": "U8",
+          "offset": 231,
+          "size": 1
+        },
+        {
+          "name": "rsrpError",
+          "type": "S16",
+          "offset": 232,
+          "size": 2
+        },
+        {
+          "name": "phyFixGainMode",
+          "type": "U16",
+          "offset": 234,
+          "size": 2
+        },
+        {
+          "name": "phyOverloadDetect",
+          "type": "U16",
+          "offset": 236,
+          "size": 2
+        },
+        {
+          "name": "phySpectrumShiftFlag",
+          "type": "U16",
+          "offset": 238,
+          "size": 2
+        },
+        {
+          "name": "u16SlpcWakeupPre",
+          "type": "U16",
+          "offset": 240,
+          "size": 2
+        },
+        {
+          "name": "nv_l1cReserve2",
+          "type": "U16",
+          "offset": 242,
+          "size": 2
+        },
+        {
+          "name": "band8_preEarfcnDis1",
+          "type": "U32",
+          "offset": 244,
+          "size": 4
+        },
+        {
+          "name": "band8_preEarfcnDis2",
+          "type": "U32",
+          "offset": 248,
+          "size": 4
+        },
+        {
+          "name": "band8_preEarfcnDis3",
+          "type": "U32",
+          "offset": 252,
+          "size": 4
+        },
+        {
+          "name": "band8_preEarfcnDis4",
+          "type": "U32",
+          "offset": 256,
+          "size": 4
+        },
+        {
+          "name": "band8_preEarfcnDis5",
+          "type": "U32",
+          "offset": 260,
+          "size": 4
+        },
+        {
+          "name": "band8_preEarfcnDis6",
+          "type": "U32",
+          "offset": 264,
+          "size": 4
+        },
+        {
+          "name": "band8_preEarfcnSer1_start",
+          "type": "U32",
+          "offset": 268,
+          "size": 4
+        },
+        {
+          "name": "band8_preEarfcnSer1_len",
+          "type": "U8",
+          "offset": 272,
+          "size": 1
+        },
+        {
+          "name": "band8_preEarfcnSer1_gap",
+          "type": "U8",
+          "offset": 273,
+          "size": 1
+        },
+        {
+          "name": "nv_newReserve1",
+          "type": "U16",
+          "offset": 274,
+          "size": 2
+        },
+        {
+          "name": "band8_preEarfcnSer2_start",
+          "type": "U32",
+          "offset": 276,
+          "size": 4
+        },
+        {
+          "name": "band8_preEarfcnSer2_len",
+          "type": "U8",
+          "offset": 280,
+          "size": 1
+        },
+        {
+          "name": "band8_preEarfcnSer2_gap",
+          "type": "U8",
+          "offset": 281,
+          "size": 1
+        },
+        {
+          "name": "nv_newReserve2",
+          "type": "U16",
+          "offset": 282,
+          "size": 2
+        },
+        {
+          "name": "band8_preEarfcnSer3_start",
+          "type": "U32",
+          "offset": 284,
+          "size": 4
+        },
+        {
+          "name": "band8_preEarfcnSer3_len",
+          "type": "U8",
+          "offset": 288,
+          "size": 1
+        },
+        {
+          "name": "band8_preEarfcnSer3_gap",
+          "type": "U8",
+          "offset": 289,
+          "size": 1
+        },
+        {
+          "name": "nv_newReserve3",
+          "type": "U16",
+          "offset": 290,
+          "size": 2
+        },
+        {
+          "name": "band5_preEarfcnDis1",
+          "type": "U32",
+          "offset": 292,
+          "size": 4
+        },
+        {
+          "name": "band5_preEarfcnDis2",
+          "type": "U32",
+          "offset": 296,
+          "size": 4
+        },
+        {
+          "name": "band5_preEarfcnDis3",
+          "type": "U32",
+          "offset": 300,
+          "size": 4
+        },
+        {
+          "name": "band5_preEarfcnDis4",
+          "type": "U32",
+          "offset": 304,
+          "size": 4
+        },
+        {
+          "name": "band5_preEarfcnDis5",
+          "type": "U32",
+          "offset": 308,
+          "size": 4
+        },
+        {
+          "name": "band5_preEarfcnDis6",
+          "type": "U32",
+          "offset": 312,
+          "size": 4
+        },
+        {
+          "name": "band5_preEarfcnSer1_start",
+          "type": "U32",
+          "offset": 316,
+          "size": 4
+        },
+        {
+          "name": "band5_preEarfcnSer1_len",
+          "type": "U8",
+          "offset": 320,
+          "size": 1
+        },
+        {
+          "name": "band5_preEarfcnSer1_gap",
+          "type": "U8",
+          "offset": 321,
+          "size": 1
+        },
+        {
+          "name": "nv_newReserve4",
+          "type": "U16",
+          "offset": 322,
+          "size": 2
+        },
+        {
+          "name": "band5_preEarfcnSer2_start",
+          "type": "U32",
+          "offset": 324,
+          "size": 4
+        },
+        {
+          "name": "band5_preEarfcnSer2_len",
+          "type": "U8",
+          "offset": 328,
+          "size": 1
+        },
+        {
+          "name": "band5_preEarfcnSer2_gap",
+          "type": "U8",
+          "offset": 329,
+          "size": 1
+        },
+        {
+          "name": "nv_newReserve5",
+          "type": "U16",
+          "offset": 330,
+          "size": 2
+        },
+        {
+          "name": "band5_preEarfcnSer3_start",
+          "type": "U32",
+          "offset": 332,
+          "size": 4
+        },
+        {
+          "name": "band5_preEarfcnSer3_len",
+          "type": "U8",
+          "offset": 336,
+          "size": 1
+        },
+        {
+          "name": "band5_preEarfcnSer3_gap",
+          "type": "U8",
+          "offset": 337,
+          "size": 1
+        },
+        {
+          "name": "nv_newReserve6",
+          "type": "U16",
+          "offset": 338,
+          "size": 2
+        },
+        {
+          "name": "nv_TelecomMode",
+          "type": "U8",
+          "offset": 340,
+          "size": 1
+        },
+        {
+          "name": "nv_otherReserve1",
+          "type": "U8",
+          "offset": 341,
+          "size": 1
+        },
+        {
+          "name": "nv_otherReserve2",
+          "type": "U8",
+          "offset": 342,
+          "size": 1
+        },
+        {
+          "name": "nv_otherReserve3",
+          "type": "U8",
+          "offset": 343,
+          "size": 1
+        },
+        {
+          "name": "BaudValue",
+          "type": "U32",
+          "offset": 344,
+          "size": 4
+        },
+        {
+          "name": "nv_otherReserve1",
+          "type": "U8",
+          "offset": 348,
+          "size": 1
+        },
+        {
+          "name": "nv_echoMode",
+          "type": "U8",
+          "offset": 349,
+          "size": 1
+        },
+        {
+          "name": "nv_otherReserve3",
+          "type": "U8",
+          "offset": 350,
+          "size": 1
+        },
+        {
+          "name": "nv_otherReserve4",
+          "type": "U8",
+          "offset": 351,
+          "size": 1
+        },
+        {
+          "name": "nv_otherReserve5",
+          "type": "U16",
+          "offset": 352,
+          "size": 2
+        },
+        {
+          "name": "nv_otherReserve6",
+          "type": "U16",
+          "offset": 354,
+          "size": 2
+        },
+        {
+          "name": "nv_b5_v24_base_comp",
+          "type": "S16",
+          "offset": 356,
+          "size": 2
+        },
+        {
+          "name": "nv_b5_v23_base_comp",
+          "type": "S16",
+          "offset": 358,
+          "size": 2
+        },
+        {
+          "name": "nv_b5_v22_base_comp",
+          "type": "S16",
+          "offset": 360,
+          "size": 2
+        },
+        {
+          "name": "nv_b8_v24_base_comp",
+          "type": "S16",
+          "offset": 362,
+          "size": 2
+        },
+        {
+          "name": "nv_b8_v23_base_comp",
+          "type": "S16",
+          "offset": 364,
+          "size": 2
+        },
+        {
+          "name": "nv_b8_v22_base_comp",
+          "type": "S16",
+          "offset": 366,
+          "size": 2
+        },
+        {
+          "name": "nv_b5_lowTemp_base_comp",
+          "type": "S16",
+          "offset": 368,
+          "size": 2
+        },
+        {
+          "name": "nv_b8_lowTemp_base_comp",
+          "type": "S16",
+          "offset": 370,
+          "size": 2
+        },
+        {
+          "name": "uart_rx_pu_en",
+          "type": "U8",
+          "offset": 372,
+          "size": 1
+        },
+        {
+          "name": "u8oosSLeepFlag",
+          "type": "U8",
+          "offset": 373,
+          "size": 1
+        },
+        {
+          "name": "nv_selCust",
+          "type": "U16",
+          "offset": 374,
+          "size": 2
+        },
+        {
+          "name": "nv_cfun0slp",
+          "type": "U8",
+          "offset": 376,
+          "size": 1
+        },
+        {
+          "name": "ucBand23Support",
+          "type": "U8",
+          "offset": 377,
+          "size": 1
+        },
+        {
+          "name": "ucBand255Support",
+          "type": "U8",
+          "offset": 378,
+          "size": 1
+        },
+        {
+          "name": "ucNtnBandSupport",
+          "type": "U8",
+          "offset": 379,
+          "size": 1
+        },
+        {
+          "name": "ucNTNSupport",
+          "type": "U8",
+          "offset": 380,
+          "size": 1
+        },
+        {
+          "name": "ucDisContiCoverSupport",
+          "type": "U8",
+          "offset": 381,
+          "size": 1
+        },
+        {
+          "name": "ucNTNConnEPCSupport",
+          "type": "U8",
+          "offset": 382,
+          "size": 1
+        },
+        {
+          "name": "ucNTNTaRptSupport",
+          "type": "U8",
+          "offset": 383,
+          "size": 1
+        },
+        {
+          "name": "ucNTNPURTDelaySupport",
+          "type": "U8",
+          "offset": 384,
+          "size": 1
+        },
+        {
+          "name": "ucNTNOffsetTimingEnhSupport",
+          "type": "U8",
+          "offset": 385,
+          "size": 1
+        },
+        {
+          "name": "ucNTNScenaSupport",
+          "type": "U8",
+          "offset": 386,
+          "size": 1
+        },
+        {
+          "name": "ucNTNSegPrecompenGapsSupport",
+          "type": "U8",
+          "offset": 387,
+          "size": 1
+        },
+        {
+          "name": "ucLocaType",
+          "type": "U8",
+          "offset": 388,
+          "size": 1
+        },
+        {
+          "name": "nv_ntnReserve1",
+          "type": "U8",
+          "offset": 389,
+          "size": 1
+        },
+        {
+          "name": "nv_ntnReserve2",
+          "type": "U8",
+          "offset": 390,
+          "size": 1
+        },
+        {
+          "name": "nv_ntnReserve3",
+          "type": "U8",
+          "offset": 391,
+          "size": 1
+        },
+        {
+          "name": "iLatitude",
+          "type": "S32",
+          "offset": 392,
+          "size": 4
+        },
+        {
+          "name": "iLongitude",
+          "type": "S32",
+          "offset": 396,
+          "size": 4
+        },
+        {
+          "name": "iAltitude",
+          "type": "S32",
+          "offset": 400,
+          "size": 4
+        },
+        {
+          "name": "ucEDTSupport",
+          "type": "U8",
+          "offset": 404,
+          "size": 1
+        },
+        {
+          "name": "ucLocationBasedMeasTriggerEFCSuppor",
+          "type": "U8",
+          "offset": 405,
+          "size": 1
+        },
+        {
+          "name": "ucLocationBasedMeasTriggerEMCSupport",
+          "type": "U8",
+          "offset": 406,
+          "size": 1
+        },
+        {
+          "name": "ucTimeBasedMeasTriggerSupport",
+          "type": "U8",
+          "offset": 407,
+          "size": 1
+        },
+        {
+          "name": "ucRRCHarqDisableSingleTBSupport",
+          "type": "U8",
+          "offset": 408,
+          "size": 1
+        },
+        {
+          "name": "ucOverriddenHarqDisableSingleTBSupport",
+          "type": "U8",
+          "offset": 409,
+          "size": 1
+        },
+        {
+          "name": "ucDCIHarqDisableSingleTBSupport",
+          "type": "U8",
+          "offset": 410,
+          "size": 1
+        },
+        {
+          "name": "ucRRCHarqDisableMultiTBSupport",
+          "type": "U8",
+          "offset": 411,
+          "size": 1
+        },
+        {
+          "name": "ucOverriddenHarqDisableMultiTBSupport",
+          "type": "U8",
+          "offset": 412,
+          "size": 1
+        },
+        {
+          "name": "ucDCIHarqDisableMultiTBSupport",
+          "type": "U8",
+          "offset": 413,
+          "size": 1
+        },
+        {
+          "name": "ucUplinkHarqModeBSingleTBSupport",
+          "type": "U8",
+          "offset": 414,
+          "size": 1
+        },
+        {
+          "name": "ucUplinkHarqModeBMultiTBSupport",
+          "type": "U8",
+          "offset": 415,
+          "size": 1
+        },
+        {
+          "name": "ucHarqEnhScenarioSuppo",
+          "type": "U8",
+          "offset": 416,
+          "size": 1
+        },
+        {
+          "name": "ucTriggeredGNSSFixSupport",
+          "type": "U8",
+          "offset": 417,
+          "size": 1
+        },
+        {
+          "name": "ucAutonomousGNSSFixSupport",
+          "type": "U8",
+          "offset": 418,
+          "size": 1
+        },
+        {
+          "name": "ucUplinkTxExtensionSupport",
+          "type": "U8",
+          "offset": 419,
+          "size": 1
+        },
+        {
+          "name": "ucGNSSEnhScenarioSupport",
+          "type": "U8",
+          "offset": 420,
+          "size": 1
+        },
+        {
+          "name": "ucSkyloTestFlag",
+          "type": "U8",
+          "offset": 421,
+          "size": 1
+        },
+        {
+          "name": "PageCRC",
+          "type": "U8",
+          "offset": 422,
+          "size": 1
+        }
+      ],
+      "page_plan": [
+        {
+          "target_address_reference_only": "0x4c4000",
+          "valid_bytes": 256,
+          "zero_padding": 0,
+          "tx_frame_length": 262,
+          "tx_header_hex": "02 00 4c 40 00",
+          "frame_xor": "0xbd",
+          "page_sha256": "0dc7a32ce64041e6cbb96f016260d22dadb700bd61511ed3b08acae82f5b7362"
+        },
+        {
+          "target_address_reference_only": "0x4c6000",
+          "valid_bytes": 256,
+          "zero_padding": 0,
+          "tx_frame_length": 262,
+          "tx_header_hex": "02 00 4c 60 00",
+          "frame_xor": "0x9d",
+          "page_sha256": "0dc7a32ce64041e6cbb96f016260d22dadb700bd61511ed3b08acae82f5b7362"
+        },
+        {
+          "target_address_reference_only": "0x4c4100",
+          "valid_bytes": 167,
+          "zero_padding": 89,
+          "tx_frame_length": 262,
+          "tx_header_hex": "02 00 4c 41 00",
+          "frame_xor": "0x43",
+          "page_sha256": "503cb75564d7cc04e45c65fc9334534277918c84d58de17ebc12f7f6cf6242dc"
+        },
+        {
+          "target_address_reference_only": "0x4c6100",
+          "valid_bytes": 167,
+          "zero_padding": 89,
+          "tx_frame_length": 262,
+          "tx_header_hex": "02 00 4c 61 00",
+          "frame_xor": "0x63",
+          "page_sha256": "503cb75564d7cc04e45c65fc9334534277918c84d58de17ebc12f7f6cf6242dc"
+        }
+      ]
+    },
+    {
+      "release": "CA034",
+      "xml_size": 15841,
+      "xml_sha256": "f49ecff77de9069831445faa114626a4b699b20d3229d5d905f4081ac218f6a9",
+      "xml_crlf_restored_sha256": "11e1945142a8acc9dca88c3b2989934f3a355879b30d0cf7a2b0839e5b23db30",
+      "candidate_length": 423,
+      "candidate_sha256": "e9d897e2f06b3a434f09711a9a778ea4da1bd651766c43c5f33c5453f6a99585",
+      "crc_offset": 422,
+      "crc": "0x42",
+      "prefix_hex": "00 00 01 01 31 2e 36 00 0f ff ff ff 01 00 01 00",
+      "tail_hex": "00 01 00 01 00 00 00 01 00 01 00 00 00 01 01 42",
+      "fields": [
+        {
+          "name": "Magic",
+          "type": "U32",
+          "offset": 0,
+          "size": 4
+        },
+        {
+          "name": "CurrentVersion",
+          "type": "STRING",
+          "offset": 4,
+          "size": 4
+        },
+        {
+          "name": "Pageflag",
+          "type": "U32",
+          "offset": 8,
+          "size": 4
+        },
+        {
+          "name": "nv_DebugMode",
+          "type": "U8",
+          "offset": 12,
+          "size": 1
+        },
+        {
+          "name": "nv_OpenMCU",
+          "type": "U8",
+          "offset": 13,
+          "size": 1
+        },
+        {
+          "name": "nv_OpenCoap",
+          "type": "U8",
+          "offset": 14,
+          "size": 1
+        },
+        {
+          "name": "nv_AutoTestFlag",
+          "type": "U8",
+          "offset": 15,
+          "size": 1
+        },
+        {
+          "name": "nv_PsmMode",
+          "type": "U8",
+          "offset": 16,
+          "size": 1
+        },
+        {
+          "name": "nv_EdrxModeOpen",
+          "type": "U8",
+          "offset": 17,
+          "size": 1
+        },
+        {
+          "name": "nv_IdrxModeOpen",
+          "type": "U8",
+          "offset": 18,
+          "size": 1
+        },
+        {
+          "name": "nv_OpenLog",
+          "type": "U8",
+          "offset": 19,
+          "size": 1
+        },
+        {
+          "name": "nv_LogLevel_mc",
+          "type": "U8",
+          "offset": 20,
+          "size": 1
+        },
+        {
+          "name": "nv_LogLevel_usim",
+          "type": "U8",
+          "offset": 21,
+          "size": 1
+        },
+        {
+          "name": "nv_LogLevel_esm",
+          "type": "U8",
+          "offset": 22,
+          "size": 1
+        },
+        {
+          "name": "nv_LogLevel_emm",
+          "type": "U8",
+          "offset": 23,
+          "size": 1
+        },
+        {
+          "name": "nv_LogLevel_rrc",
+          "type": "U8",
+          "offset": 24,
+          "size": 1
+        },
+        {
+          "name": "nv_LogLevel_dmac",
+          "type": "U8",
+          "offset": 25,
+          "size": 1
+        },
+        {
+          "name": "nv_LogLevel_umac",
+          "type": "U8",
+          "offset": 26,
+          "size": 1
+        },
+        {
+          "name": "nv_LogLevel_l1c",
+          "type": "U8",
+          "offset": 27,
+          "size": 1
+        },
+        {
+          "name": "nv_LogLevel_drlc",
+          "type": "U8",
+          "offset": 28,
+          "size": 1
+        },
+        {
+          "name": "nv_LogLevel_urlc",
+          "type": "U8",
+          "offset": 29,
+          "size": 1
+        },
+        {
+          "name": "nv_LogLevel_dpdcp",
+          "type": "U8",
+          "offset": 30,
+          "size": 1
+        },
+        {
+          "name": "nv_LogLevel_updcp",
+          "type": "U8",
+          "offset": 31,
+          "size": 1
+        },
+        {
+          "name": "nv_LogLevel_sms",
+          "type": "U8",
+          "offset": 32,
+          "size": 1
+        },
+        {
+          "name": "nv_UsimType",
+          "type": "U8",
+          "offset": 33,
+          "size": 1
+        },
+        {
+          "name": "nv_Uart0Print",
+          "type": "U8",
+          "offset": 34,
+          "size": 1
+        },
+        {
+          "name": "nv_resetNvValueFlag",
+          "type": "U8",
+          "offset": 35,
+          "size": 1
+        },
+        {
+          "name": "MsgPrintLevel",
+          "type": "U8",
+          "offset": 36,
+          "size": 1
+        },
+        {
+          "name": "nv_plReserve2",
+          "type": "U8",
+          "offset": 37,
+          "size": 1
+        },
+        {
+          "name": "cptestSRAMadc",
+          "type": "U16",
+          "offset": 38,
+          "size": 2
+        },
+        {
+          "name": "cptesttemp25adc",
+          "type": "U16",
+          "offset": 40,
+          "size": 2
+        },
+        {
+          "name": "cptesttemp85adc",
+          "type": "U16",
+          "offset": 42,
+          "size": 2
+        },
+        {
+          "name": "nv_AutoStart",
+          "type": "U8",
+          "offset": 44,
+          "size": 1
+        },
+        {
+          "name": "nv_AutoAttach",
+          "type": "U8",
+          "offset": 45,
+          "size": 1
+        },
+        {
+          "name": "nv_PlmnMode",
+          "type": "U8",
+          "offset": 46,
+          "size": 1
+        },
+        {
+          "name": "nv_PdnType",
+          "type": "U8",
+          "offset": 47,
+          "size": 1
+        },
+        {
+          "name": "nv_ApnName",
+          "type": "STRING",
+          "offset": 48,
+          "size": 32
+        },
+        {
+          "name": "nv_DnsMode",
+          "type": "U32",
+          "offset": 80,
+          "size": 4
+        },
+        {
+          "name": "nv_DnsIpv4Address",
+          "type": "STRING",
+          "offset": 84,
+          "size": 16
+        },
+        {
+          "name": "nv_SecondDnsIpv4Address",
+          "type": "STRING",
+          "offset": 100,
+          "size": 16
+        },
+        {
+          "name": "nv_PsmWaitTimeValue",
+          "type": "U8",
+          "offset": 116,
+          "size": 1
+        },
+        {
+          "name": "nv_NasCiotConfig",
+          "type": "U8",
+          "offset": 117,
+          "size": 1
+        },
+        {
+          "name": "nv_NasCiotCfgSecond",
+          "type": "U8",
+          "offset": 118,
+          "size": 1
+        },
+        {
+          "name": "nv_PingRetrans",
+          "type": "U8",
+          "offset": 119,
+          "size": 1
+        },
+        {
+          "name": "nv_rfMode",
+          "type": "U8",
+          "offset": 120,
+          "size": 1
+        },
+        {
+          "name": "nv_ueMode",
+          "type": "U8",
+          "offset": 121,
+          "size": 1
+        },
+        {
+          "name": "nv_PlmnSearchPowerLevel",
+          "type": "U8",
+          "offset": 122,
+          "size": 1
+        },
+        {
+          "name": "nv_nasReserve4",
+          "type": "U8",
+          "offset": 123,
+          "size": 1
+        },
+        {
+          "name": "nv_nasReserve5",
+          "type": "U16",
+          "offset": 124,
+          "size": 2
+        },
+        {
+          "name": "nv_nasReserve6",
+          "type": "U16",
+          "offset": 126,
+          "size": 2
+        },
+        {
+          "name": "band1",
+          "type": "U8",
+          "offset": 128,
+          "size": 1
+        },
+        {
+          "name": "band3",
+          "type": "U8",
+          "offset": 129,
+          "size": 1
+        },
+        {
+          "name": "band5",
+          "type": "U8",
+          "offset": 130,
+          "size": 1
+        },
+        {
+          "name": "band8",
+          "type": "U8",
+          "offset": 131,
+          "size": 1
+        },
+        {
+          "name": "multiToneSupported",
+          "type": "U8",
+          "offset": 132,
+          "size": 1
+        },
+        {
+          "name": "multiCarrierSupported",
+          "type": "U8",
+          "offset": 133,
+          "size": 1
+        },
+        {
+          "name": "U8accessStratumRelease",
+          "type": "U8",
+          "offset": 134,
+          "size": 1
+        },
+        {
+          "name": "U8RohcSupport",
+          "type": "U8",
+          "offset": 135,
+          "size": 1
+        },
+        {
+          "name": "nv_MinReleaseDelay",
+          "type": "U16",
+          "offset": 136,
+          "size": 2
+        },
+        {
+          "name": "reserve15",
+          "type": "U8",
+          "offset": 138,
+          "size": 1
+        },
+        {
+          "name": "nv_PsmrMode",
+          "type": "U8",
+          "offset": 139,
+          "size": 1
+        },
+        {
+          "name": "lockEearfcnMode",
+          "type": "U8",
+          "offset": 140,
+          "size": 1
+        },
+        {
+          "name": "lockEearfcnNum",
+          "type": "U8",
+          "offset": 141,
+          "size": 1
+        },
+        {
+          "name": "nv_rrcReserve1",
+          "type": "U16",
+          "offset": 142,
+          "size": 2
+        },
+        {
+          "name": "lockEearfcn1",
+          "type": "U32",
+          "offset": 144,
+          "size": 4
+        },
+        {
+          "name": "lockEearfcn2",
+          "type": "U32",
+          "offset": 148,
+          "size": 4
+        },
+        {
+          "name": "lockEearfcn3",
+          "type": "U32",
+          "offset": 152,
+          "size": 4
+        },
+        {
+          "name": "lockEearfcn4",
+          "type": "U32",
+          "offset": 156,
+          "size": 4
+        },
+        {
+          "name": "lockEearfcn5",
+          "type": "U32",
+          "offset": 160,
+          "size": 4
+        },
+        {
+          "name": "lockEearfcn6",
+          "type": "U32",
+          "offset": 164,
+          "size": 4
+        },
+        {
+          "name": "bandScanOptimize",
+          "type": "U8",
+          "offset": 168,
+          "size": 1
+        },
+        {
+          "name": "nonSkyloLab",
+          "type": "U8",
+          "offset": 169,
+          "size": 1
+        },
+        {
+          "name": "cellBarSecond",
+          "type": "U8",
+          "offset": 170,
+          "size": 1
+        },
+        {
+          "name": "doublebandsupport",
+          "type": "U8",
+          "offset": 171,
+          "size": 1
+        },
+        {
+          "name": "nv_twoharqsupport",
+          "type": "U8",
+          "offset": 172,
+          "size": 1
+        },
+        {
+          "name": "nbiotRai",
+          "type": "U8",
+          "offset": 173,
+          "size": 1
+        },
+        {
+          "name": "rrcUeCapability1",
+          "type": "U16",
+          "offset": 174,
+          "size": 2
+        },
+        {
+          "name": "rrcUeCapability2",
+          "type": "U16",
+          "offset": 176,
+          "size": 2
+        },
+        {
+          "name": "nv_RachMaxNum",
+          "type": "U8",
+          "offset": 178,
+          "size": 1
+        },
+        {
+          "name": "nv_UmacDataInactiveTimer",
+          "type": "U8",
+          "offset": 179,
+          "size": 1
+        },
+        {
+          "name": "nv_l2Reserve1",
+          "type": "U8",
+          "offset": 180,
+          "size": 1
+        },
+        {
+          "name": "nv_l2Reserve2",
+          "type": "U8",
+          "offset": 181,
+          "size": 1
+        },
+        {
+          "name": "nv_l2Reserve3",
+          "type": "U8",
+          "offset": 182,
+          "size": 1
+        },
+        {
+          "name": "nv_l2Reserve4",
+          "type": "U8",
+          "offset": 183,
+          "size": 1
+        },
+        {
+          "name": "nv_l2Reserve5",
+          "type": "U16",
+          "offset": 184,
+          "size": 2
+        },
+        {
+          "name": "nv_l2Reserve6",
+          "type": "U16",
+          "offset": 186,
+          "size": 2
+        },
+        {
+          "name": "PhyLogBitMap",
+          "type": "U8",
+          "offset": 188,
+          "size": 1
+        },
+        {
+          "name": "PhyTxMaxPwrMode",
+          "type": "S8",
+          "offset": 189,
+          "size": 1
+        },
+        {
+          "name": "PhyNvPctRrmOpen",
+          "type": "U8",
+          "offset": 190,
+          "size": 1
+        },
+        {
+          "name": "PhyNvLpcOpen",
+          "type": "U8",
+          "offset": 191,
+          "size": 1
+        },
+        {
+          "name": "phyNpdcchErrDecThr1",
+          "type": "U8",
+          "offset": 192,
+          "size": 1
+        },
+        {
+          "name": "phyNpdcchErrDecThr2",
+          "type": "U8",
+          "offset": 193,
+          "size": 1
+        },
+        {
+          "name": "PssCtime",
+          "type": "U8",
+          "offset": 194,
+          "size": 1
+        },
+        {
+          "name": "PssFtime",
+          "type": "U8",
+          "offset": 195,
+          "size": 1
+        },
+        {
+          "name": "Ssstime",
+          "type": "U8",
+          "offset": 196,
+          "size": 1
+        },
+        {
+          "name": "RatCaculate",
+          "type": "U8",
+          "offset": 197,
+          "size": 1
+        },
+        {
+          "name": "CellInterval",
+          "type": "U8",
+          "offset": 198,
+          "size": 1
+        },
+        {
+          "name": "CdrxModeOpen",
+          "type": "U8",
+          "offset": 199,
+          "size": 1
+        },
+        {
+          "name": "PdcchReport",
+          "type": "U8",
+          "offset": 200,
+          "size": 1
+        },
+        {
+          "name": "CTNon100KFlag",
+          "type": "U8",
+          "offset": 201,
+          "size": 1
+        },
+        {
+          "name": "PhyNpusch15DelayTs",
+          "type": "S16",
+          "offset": 202,
+          "size": 2
+        },
+        {
+          "name": "PhyNpusch375DelayTs",
+          "type": "S16",
+          "offset": 204,
+          "size": 2
+        },
+        {
+          "name": "PhyNprachDelayTs",
+          "type": "S16",
+          "offset": 206,
+          "size": 2
+        },
+        {
+          "name": "timeAgcMode",
+          "type": "U8",
+          "offset": 208,
+          "size": 1
+        },
+        {
+          "name": "agcSubfNum",
+          "type": "U8",
+          "offset": 209,
+          "size": 1
+        },
+        {
+          "name": "agcGainFixCtrl",
+          "type": "U8",
+          "offset": 210,
+          "size": 1
+        },
+        {
+          "name": "agcGainFixValue",
+          "type": "U8",
+          "offset": 211,
+          "size": 1
+        },
+        {
+          "name": "phySkyloTestFlag",
+          "type": "U8",
+          "offset": 212,
+          "size": 1
+        },
+        {
+          "name": "phyPdcchPreNumSubfn",
+          "type": "U8",
+          "offset": 213,
+          "size": 1
+        },
+        {
+          "name": "phyNtnDopFTaOffFlag",
+          "type": "U8",
+          "offset": 214,
+          "size": 1
+        },
+        {
+          "name": "phyScaleOpen",
+          "type": "U8",
+          "offset": 215,
+          "size": 1
+        },
+        {
+          "name": "PhyLeoFlag",
+          "type": "U8",
+          "offset": 216,
+          "size": 1
+        },
+        {
+          "name": "phyLeoSateTerminalFlag",
+          "type": "U8",
+          "offset": 217,
+          "size": 1
+        },
+        {
+          "name": "U16LpcAheadT",
+          "type": "U16",
+          "offset": 218,
+          "size": 2
+        },
+        {
+          "name": "U16BootT",
+          "type": "U16",
+          "offset": 220,
+          "size": 2
+        },
+        {
+          "name": "nv_NewPaFlag",
+          "type": "U8",
+          "offset": 222,
+          "size": 1
+        },
+        {
+          "name": "dcxoAdjustFlag",
+          "type": "U8",
+          "offset": 223,
+          "size": 1
+        },
+        {
+          "name": "dcxoAdjustTempFlag",
+          "type": "U8",
+          "offset": 224,
+          "size": 1
+        },
+        {
+          "name": "testMode",
+          "type": "U8",
+          "offset": 225,
+          "size": 1
+        },
+        {
+          "name": "txPower",
+          "type": "U16",
+          "offset": 226,
+          "size": 2
+        },
+        {
+          "name": "phyTdTargetPower",
+          "type": "U16",
+          "offset": 228,
+          "size": 2
+        },
+        {
+          "name": "ulTaControl",
+          "type": "U8",
+          "offset": 230,
+          "size": 1
+        },
+        {
+          "name": "idrxDeep",
+          "type": "U8",
+          "offset": 231,
+          "size": 1
+        },
+        {
+          "name": "rsrpError",
+          "type": "S16",
+          "offset": 232,
+          "size": 2
+        },
+        {
+          "name": "phyFixGainMode",
+          "type": "U16",
+          "offset": 234,
+          "size": 2
+        },
+        {
+          "name": "phyOverloadDetect",
+          "type": "U16",
+          "offset": 236,
+          "size": 2
+        },
+        {
+          "name": "phySpectrumShiftFlag",
+          "type": "U16",
+          "offset": 238,
+          "size": 2
+        },
+        {
+          "name": "u16SlpcWakeupPre",
+          "type": "U16",
+          "offset": 240,
+          "size": 2
+        },
+        {
+          "name": "nv_l1cReserve2",
+          "type": "U16",
+          "offset": 242,
+          "size": 2
+        },
+        {
+          "name": "band8_preEarfcnDis1",
+          "type": "U32",
+          "offset": 244,
+          "size": 4
+        },
+        {
+          "name": "band8_preEarfcnDis2",
+          "type": "U32",
+          "offset": 248,
+          "size": 4
+        },
+        {
+          "name": "band8_preEarfcnDis3",
+          "type": "U32",
+          "offset": 252,
+          "size": 4
+        },
+        {
+          "name": "band8_preEarfcnDis4",
+          "type": "U32",
+          "offset": 256,
+          "size": 4
+        },
+        {
+          "name": "band8_preEarfcnDis5",
+          "type": "U32",
+          "offset": 260,
+          "size": 4
+        },
+        {
+          "name": "band8_preEarfcnDis6",
+          "type": "U32",
+          "offset": 264,
+          "size": 4
+        },
+        {
+          "name": "band8_preEarfcnSer1_start",
+          "type": "U32",
+          "offset": 268,
+          "size": 4
+        },
+        {
+          "name": "band8_preEarfcnSer1_len",
+          "type": "U8",
+          "offset": 272,
+          "size": 1
+        },
+        {
+          "name": "band8_preEarfcnSer1_gap",
+          "type": "U8",
+          "offset": 273,
+          "size": 1
+        },
+        {
+          "name": "nv_newReserve1",
+          "type": "U16",
+          "offset": 274,
+          "size": 2
+        },
+        {
+          "name": "band8_preEarfcnSer2_start",
+          "type": "U32",
+          "offset": 276,
+          "size": 4
+        },
+        {
+          "name": "band8_preEarfcnSer2_len",
+          "type": "U8",
+          "offset": 280,
+          "size": 1
+        },
+        {
+          "name": "band8_preEarfcnSer2_gap",
+          "type": "U8",
+          "offset": 281,
+          "size": 1
+        },
+        {
+          "name": "nv_newReserve2",
+          "type": "U16",
+          "offset": 282,
+          "size": 2
+        },
+        {
+          "name": "band8_preEarfcnSer3_start",
+          "type": "U32",
+          "offset": 284,
+          "size": 4
+        },
+        {
+          "name": "band8_preEarfcnSer3_len",
+          "type": "U8",
+          "offset": 288,
+          "size": 1
+        },
+        {
+          "name": "band8_preEarfcnSer3_gap",
+          "type": "U8",
+          "offset": 289,
+          "size": 1
+        },
+        {
+          "name": "nv_newReserve3",
+          "type": "U16",
+          "offset": 290,
+          "size": 2
+        },
+        {
+          "name": "band5_preEarfcnDis1",
+          "type": "U32",
+          "offset": 292,
+          "size": 4
+        },
+        {
+          "name": "band5_preEarfcnDis2",
+          "type": "U32",
+          "offset": 296,
+          "size": 4
+        },
+        {
+          "name": "band5_preEarfcnDis3",
+          "type": "U32",
+          "offset": 300,
+          "size": 4
+        },
+        {
+          "name": "band5_preEarfcnDis4",
+          "type": "U32",
+          "offset": 304,
+          "size": 4
+        },
+        {
+          "name": "band5_preEarfcnDis5",
+          "type": "U32",
+          "offset": 308,
+          "size": 4
+        },
+        {
+          "name": "band5_preEarfcnDis6",
+          "type": "U32",
+          "offset": 312,
+          "size": 4
+        },
+        {
+          "name": "band5_preEarfcnSer1_start",
+          "type": "U32",
+          "offset": 316,
+          "size": 4
+        },
+        {
+          "name": "band5_preEarfcnSer1_len",
+          "type": "U8",
+          "offset": 320,
+          "size": 1
+        },
+        {
+          "name": "band5_preEarfcnSer1_gap",
+          "type": "U8",
+          "offset": 321,
+          "size": 1
+        },
+        {
+          "name": "nv_newReserve4",
+          "type": "U16",
+          "offset": 322,
+          "size": 2
+        },
+        {
+          "name": "band5_preEarfcnSer2_start",
+          "type": "U32",
+          "offset": 324,
+          "size": 4
+        },
+        {
+          "name": "band5_preEarfcnSer2_len",
+          "type": "U8",
+          "offset": 328,
+          "size": 1
+        },
+        {
+          "name": "band5_preEarfcnSer2_gap",
+          "type": "U8",
+          "offset": 329,
+          "size": 1
+        },
+        {
+          "name": "nv_newReserve5",
+          "type": "U16",
+          "offset": 330,
+          "size": 2
+        },
+        {
+          "name": "band5_preEarfcnSer3_start",
+          "type": "U32",
+          "offset": 332,
+          "size": 4
+        },
+        {
+          "name": "band5_preEarfcnSer3_len",
+          "type": "U8",
+          "offset": 336,
+          "size": 1
+        },
+        {
+          "name": "band5_preEarfcnSer3_gap",
+          "type": "U8",
+          "offset": 337,
+          "size": 1
+        },
+        {
+          "name": "nv_newReserve6",
+          "type": "U16",
+          "offset": 338,
+          "size": 2
+        },
+        {
+          "name": "nv_TelecomMode",
+          "type": "U8",
+          "offset": 340,
+          "size": 1
+        },
+        {
+          "name": "nv_otherReserve1",
+          "type": "U8",
+          "offset": 341,
+          "size": 1
+        },
+        {
+          "name": "nv_otherReserve2",
+          "type": "U8",
+          "offset": 342,
+          "size": 1
+        },
+        {
+          "name": "nv_otherReserve3",
+          "type": "U8",
+          "offset": 343,
+          "size": 1
+        },
+        {
+          "name": "BaudValue",
+          "type": "U32",
+          "offset": 344,
+          "size": 4
+        },
+        {
+          "name": "nv_otherReserve1",
+          "type": "U8",
+          "offset": 348,
+          "size": 1
+        },
+        {
+          "name": "nv_echoMode",
+          "type": "U8",
+          "offset": 349,
+          "size": 1
+        },
+        {
+          "name": "nv_otherReserve3",
+          "type": "U8",
+          "offset": 350,
+          "size": 1
+        },
+        {
+          "name": "nv_otherReserve4",
+          "type": "U8",
+          "offset": 351,
+          "size": 1
+        },
+        {
+          "name": "nv_otherReserve5",
+          "type": "U16",
+          "offset": 352,
+          "size": 2
+        },
+        {
+          "name": "nv_otherReserve6",
+          "type": "U16",
+          "offset": 354,
+          "size": 2
+        },
+        {
+          "name": "nv_b5_v24_base_comp",
+          "type": "S16",
+          "offset": 356,
+          "size": 2
+        },
+        {
+          "name": "nv_b5_v23_base_comp",
+          "type": "S16",
+          "offset": 358,
+          "size": 2
+        },
+        {
+          "name": "nv_b5_v22_base_comp",
+          "type": "S16",
+          "offset": 360,
+          "size": 2
+        },
+        {
+          "name": "nv_b8_v24_base_comp",
+          "type": "S16",
+          "offset": 362,
+          "size": 2
+        },
+        {
+          "name": "nv_b8_v23_base_comp",
+          "type": "S16",
+          "offset": 364,
+          "size": 2
+        },
+        {
+          "name": "nv_b8_v22_base_comp",
+          "type": "S16",
+          "offset": 366,
+          "size": 2
+        },
+        {
+          "name": "nv_b5_lowTemp_base_comp",
+          "type": "S16",
+          "offset": 368,
+          "size": 2
+        },
+        {
+          "name": "nv_b8_lowTemp_base_comp",
+          "type": "S16",
+          "offset": 370,
+          "size": 2
+        },
+        {
+          "name": "uart_rx_pu_en",
+          "type": "U8",
+          "offset": 372,
+          "size": 1
+        },
+        {
+          "name": "u8oosSLeepFlag",
+          "type": "U8",
+          "offset": 373,
+          "size": 1
+        },
+        {
+          "name": "nv_selCust",
+          "type": "U16",
+          "offset": 374,
+          "size": 2
+        },
+        {
+          "name": "nv_cfun0slp",
+          "type": "U8",
+          "offset": 376,
+          "size": 1
+        },
+        {
+          "name": "ucBand23Support",
+          "type": "U8",
+          "offset": 377,
+          "size": 1
+        },
+        {
+          "name": "ucBand255Support",
+          "type": "U8",
+          "offset": 378,
+          "size": 1
+        },
+        {
+          "name": "ucNtnBandSupport",
+          "type": "U8",
+          "offset": 379,
+          "size": 1
+        },
+        {
+          "name": "ucNTNSupport",
+          "type": "U8",
+          "offset": 380,
+          "size": 1
+        },
+        {
+          "name": "ucDisContiCoverSupport",
+          "type": "U8",
+          "offset": 381,
+          "size": 1
+        },
+        {
+          "name": "ucNTNConnEPCSupport",
+          "type": "U8",
+          "offset": 382,
+          "size": 1
+        },
+        {
+          "name": "ucNTNTaRptSupport",
+          "type": "U8",
+          "offset": 383,
+          "size": 1
+        },
+        {
+          "name": "ucNTNPURTDelaySupport",
+          "type": "U8",
+          "offset": 384,
+          "size": 1
+        },
+        {
+          "name": "ucNTNOffsetTimingEnhSupport",
+          "type": "U8",
+          "offset": 385,
+          "size": 1
+        },
+        {
+          "name": "ucNTNScenaSupport",
+          "type": "U8",
+          "offset": 386,
+          "size": 1
+        },
+        {
+          "name": "ucNTNSegPrecompenGapsSupport",
+          "type": "U8",
+          "offset": 387,
+          "size": 1
+        },
+        {
+          "name": "ucLocaType",
+          "type": "U8",
+          "offset": 388,
+          "size": 1
+        },
+        {
+          "name": "nv_ntnReserve1",
+          "type": "U8",
+          "offset": 389,
+          "size": 1
+        },
+        {
+          "name": "nv_ntnReserve2",
+          "type": "U8",
+          "offset": 390,
+          "size": 1
+        },
+        {
+          "name": "nv_ntnReserve3",
+          "type": "U8",
+          "offset": 391,
+          "size": 1
+        },
+        {
+          "name": "iLatitude",
+          "type": "S32",
+          "offset": 392,
+          "size": 4
+        },
+        {
+          "name": "iLongitude",
+          "type": "S32",
+          "offset": 396,
+          "size": 4
+        },
+        {
+          "name": "iAltitude",
+          "type": "S32",
+          "offset": 400,
+          "size": 4
+        },
+        {
+          "name": "ucEDTSupport",
+          "type": "U8",
+          "offset": 404,
+          "size": 1
+        },
+        {
+          "name": "ucLocationBasedMeasTriggerEFCSuppor",
+          "type": "U8",
+          "offset": 405,
+          "size": 1
+        },
+        {
+          "name": "ucLocationBasedMeasTriggerEMCSupport",
+          "type": "U8",
+          "offset": 406,
+          "size": 1
+        },
+        {
+          "name": "ucTimeBasedMeasTriggerSupport",
+          "type": "U8",
+          "offset": 407,
+          "size": 1
+        },
+        {
+          "name": "ucRRCHarqDisableSingleTBSupport",
+          "type": "U8",
+          "offset": 408,
+          "size": 1
+        },
+        {
+          "name": "ucOverriddenHarqDisableSingleTBSupport",
+          "type": "U8",
+          "offset": 409,
+          "size": 1
+        },
+        {
+          "name": "ucDCIHarqDisableSingleTBSupport",
+          "type": "U8",
+          "offset": 410,
+          "size": 1
+        },
+        {
+          "name": "ucRRCHarqDisableMultiTBSupport",
+          "type": "U8",
+          "offset": 411,
+          "size": 1
+        },
+        {
+          "name": "ucOverriddenHarqDisableMultiTBSupport",
+          "type": "U8",
+          "offset": 412,
+          "size": 1
+        },
+        {
+          "name": "ucDCIHarqDisableMultiTBSupport",
+          "type": "U8",
+          "offset": 413,
+          "size": 1
+        },
+        {
+          "name": "ucUplinkHarqModeBSingleTBSupport",
+          "type": "U8",
+          "offset": 414,
+          "size": 1
+        },
+        {
+          "name": "ucUplinkHarqModeBMultiTBSupport",
+          "type": "U8",
+          "offset": 415,
+          "size": 1
+        },
+        {
+          "name": "ucHarqEnhScenarioSuppo",
+          "type": "U8",
+          "offset": 416,
+          "size": 1
+        },
+        {
+          "name": "ucTriggeredGNSSFixSupport",
+          "type": "U8",
+          "offset": 417,
+          "size": 1
+        },
+        {
+          "name": "ucAutonomousGNSSFixSupport",
+          "type": "U8",
+          "offset": 418,
+          "size": 1
+        },
+        {
+          "name": "ucUplinkTxExtensionSupport",
+          "type": "U8",
+          "offset": 419,
+          "size": 1
+        },
+        {
+          "name": "ucGNSSEnhScenarioSupport",
+          "type": "U8",
+          "offset": 420,
+          "size": 1
+        },
+        {
+          "name": "ucSkyloTestFlag",
+          "type": "U8",
+          "offset": 421,
+          "size": 1
+        },
+        {
+          "name": "PageCRC",
+          "type": "U8",
+          "offset": 422,
+          "size": 1
+        }
+      ],
+      "page_plan": [
+        {
+          "target_address_reference_only": "0x4c4000",
+          "valid_bytes": 256,
+          "zero_padding": 0,
+          "tx_frame_length": 262,
+          "tx_header_hex": "02 00 4c 40 00",
+          "frame_xor": "0xbd",
+          "page_sha256": "0dc7a32ce64041e6cbb96f016260d22dadb700bd61511ed3b08acae82f5b7362"
+        },
+        {
+          "target_address_reference_only": "0x4c6000",
+          "valid_bytes": 256,
+          "zero_padding": 0,
+          "tx_frame_length": 262,
+          "tx_header_hex": "02 00 4c 60 00",
+          "frame_xor": "0x9d",
+          "page_sha256": "0dc7a32ce64041e6cbb96f016260d22dadb700bd61511ed3b08acae82f5b7362"
+        },
+        {
+          "target_address_reference_only": "0x4c4100",
+          "valid_bytes": 167,
+          "zero_padding": 89,
+          "tx_frame_length": 262,
+          "tx_header_hex": "02 00 4c 41 00",
+          "frame_xor": "0x43",
+          "page_sha256": "503cb75564d7cc04e45c65fc9334534277918c84d58de17ebc12f7f6cf6242dc"
+        },
+        {
+          "target_address_reference_only": "0x4c6100",
+          "valid_bytes": 167,
+          "zero_padding": 89,
+          "tx_frame_length": 262,
+          "tx_header_hex": "02 00 4c 61 00",
+          "frame_xor": "0x63",
+          "page_sha256": "503cb75564d7cc04e45c65fc9334534277918c84d58de17ebc12f7f6cf6242dc"
+        }
+      ]
+    }
+  ]
+}

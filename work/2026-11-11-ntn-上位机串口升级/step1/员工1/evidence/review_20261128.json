@@ -1,0 +1,318 @@
+{
+  "review_date": "2026-11-28",
+  "status": "PASS_STATIC_REVIEW_WITH_NV_DEFECT_CONFIRMED",
+  "hardware_tested": false,
+  "exe_sha256": "91ce79dbe330a024e317e915230cf146db6724b9eb8e56918094f9a820d4df64",
+  "receive_modes": {
+    "6": "0x14013dd68",
+    "7": "0x14013dd40",
+    "8": "0x14013dd36",
+    "9": "0x14013dd75"
+  },
+  "baud_table": [
+    {
+      "index": 0,
+      "baud": 9600,
+      "tx_hex": "50 00 af"
+    },
+    {
+      "index": 1,
+      "baud": 19200,
+      "tx_hex": "50 01 ae"
+    },
+    {
+      "index": 2,
+      "baud": 38400,
+      "tx_hex": "50 02 ad"
+    },
+    {
+      "index": 3,
+      "baud": 57600,
+      "tx_hex": "50 03 ac"
+    },
+    {
+      "index": 4,
+      "baud": 115200,
+      "tx_hex": "50 04 ab"
+    },
+    {
+      "index": 5,
+      "baud": 230400,
+      "tx_hex": "50 05 aa"
+    },
+    {
+      "index": 6,
+      "baud": 460800,
+      "tx_hex": "50 06 a9"
+    },
+    {
+      "index": 7,
+      "baud": 921600,
+      "tx_hex": "50 07 a8"
+    },
+    {
+      "index": 8,
+      "baud": 1000000,
+      "tx_hex": "50 08 a7"
+    },
+    {
+      "index": 9,
+      "baud": 1500000,
+      "tx_hex": "50 09 a6"
+    },
+    {
+      "index": 10,
+      "baud": 2000000,
+      "tx_hex": "50 0a a5"
+    },
+    {
+      "index": 11,
+      "baud": 3000000,
+      "tx_hex": "50 0b a4"
+    },
+    {
+      "index": 12,
+      "baud": 4000000,
+      "tx_hex": "50 0c a3"
+    }
+  ],
+  "checked_instructions": {
+    "unprotect1_mode7": {
+      "va": "0x14013e0d1",
+      "bytes": "c745ef07000000"
+    },
+    "unprotect2_mode7": {
+      "va": "0x14013e1b3",
+      "bytes": "c745ef07000000"
+    },
+    "mode7_at_least_two": {
+      "va": "0x14013dd40",
+      "bytes": "83fb02"
+    },
+    "mode6_exact_256": {
+      "va": "0x14013dd68",
+      "bytes": "81fb00010000"
+    },
+    "baud_skip_clock_if_57600": {
+      "va": "0x14013cbab",
+      "bytes": "4181f800e10000"
+    },
+    "baud_receive_mode8": {
+      "va": "0x14013cc7d",
+      "bytes": "c744242008000000"
+    },
+    "baud_wait_500ms": {
+      "va": "0x14013cd40",
+      "bytes": "b9f4010000"
+    },
+    "baud_local_attempt_limit5": {
+      "va": "0x14013cd7a",
+      "bytes": "83fb05"
+    },
+    "nv_crc_seed_ff": {
+      "va": "0x140148930",
+      "bytes": "b2ff"
+    },
+    "nv_crc_count_from_object": {
+      "va": "0x140148932",
+      "bytes": "4c638610020000"
+    }
+  },
+  "peer_nv": {
+    "peer_script_sha256": "4bc1c8052aa1c5de80e8aae847258632b2dce9fab1d29775964b89426154228b",
+    "output_len": 422,
+    "prefix_hex": "00 00 01 01 0f ff ff ff 01 00 01 00",
+    "expected_version_at_offset4": "31 2e 36 00",
+    "version_present_at_offset4": false,
+    "vendor_golden_verified": false
+  },
+  "external_flash_plan": {
+    "status": "DESIGN_ONLY_NOT_ALLOCATED",
+    "user_file_list_release": "CA033",
+    "user_screenshot_release": "CA034",
+    "meta_a": [
+      "0x212000",
+      "0x213000"
+    ],
+    "meta_b": [
+      "0x213000",
+      "0x214000"
+    ],
+    "data": [
+      "0x214000",
+      "0x514000"
+    ],
+    "nv_binary_reserve": [
+      "0x513000",
+      "0x514000"
+    ],
+    "packages": [
+      {
+        "version": "CA033",
+        "components": [
+          {
+            "kind": "E31",
+            "filename": "SHARK-NTN_E31_CHIP_ST1000_V00-R005-CA033_20261010144323.bin",
+            "size": 2503207,
+            "sha256": "45df6733f1e680ea78e10d273c56626e08d329733c4ca3c23958b5354a2f78d2",
+            "cache_offset": "0x214000",
+            "data_end_exclusive": "0x477227",
+            "erase_end_exclusive": "0x478000",
+            "install_policy": "paired_component"
+          },
+          {
+            "kind": "DSP",
+            "filename": "SHARK-NTN_DSP_CHIP_ST1000_V00-R005-CA033_20261010144802.bin",
+            "size": 74519,
+            "sha256": "12d95de609a7275394e412d51535f94241cd4a752fabc3d1a2ab176e667e2589",
+            "cache_offset": "0x478000",
+            "data_end_exclusive": "0x48a317",
+            "erase_end_exclusive": "0x48b000",
+            "install_policy": "paired_component"
+          },
+          {
+            "kind": "SECOND_BOOT",
+            "filename": "shark_ntn_second_boot_v1.3.bin",
+            "size": 122622,
+            "sha256": "cde23423dd56357bd3488ce3cab9db56637d77ff92e6140d1b88351704c57fad",
+            "cache_offset": "0x48b000",
+            "data_end_exclusive": "0x4a8efe",
+            "erase_end_exclusive": "0x4a9000",
+            "install_policy": "full_profile_component_pending_validation"
+          },
+          {
+            "kind": "NV_XML",
+            "filename": "shark_ntn_config_nv_v1.9.xml",
+            "size": 15841,
+            "sha256": "f49ecff77de9069831445faa114626a4b699b20d3229d5d905f4081ac218f6a9",
+            "cache_offset": "0x4a9000",
+            "data_end_exclusive": "0x4acde1",
+            "erase_end_exclusive": "0x4ad000",
+            "install_policy": "compile_then_validate_NV_BIN_for_full_profile"
+          }
+        ],
+        "four_file_bytes": 2716189,
+        "cache_used_aligned": 2723840,
+        "cache_margin": 421888,
+        "logmap": {
+          "filename": "SHARK-NTN_E31_CHIP_ST1000_V00-R005-CA033_20261010144323_logmap.json",
+          "size": 3109713,
+          "sha256": "77a5e3d5116daf68a78ddbf08728f15c734e8ad255cfef11c2bfb4cb851f6460",
+          "storage": "PC_ONLY"
+        },
+        "five_file_raw_total": 5825902
+      },
+      {
+        "version": "CA034",
+        "components": [
+          {
+            "kind": "E31",
+            "filename": "SHARK-NTN_E31_CHIP_ST1000_V00-R005-CA034_20261104111216.bin",
+            "size": 2509271,
+            "sha256": "020a16241006c5b7267fc851435d7b10f1ddef5ccd8a0ca0e1f50ef6b77472b0",
+            "cache_offset": "0x214000",
+            "data_end_exclusive": "0x4789d7",
+            "erase_end_exclusive": "0x479000",
+            "install_policy": "paired_component"
+          },
+          {
+            "kind": "DSP",
+            "filename": "SHARK-NTN_DSP_CHIP_ST1000_V00-R005-CA034_20261104111608.bin",
+            "size": 74519,
+            "sha256": "336c1e450fabe14c9ba344f30f751bbf4e76b88593c79a8b9e7106f1fe4dd2a7",
+            "cache_offset": "0x479000",
+            "data_end_exclusive": "0x48b317",
+            "erase_end_exclusive": "0x48c000",
+            "install_policy": "paired_component"
+          },
+          {
+            "kind": "SECOND_BOOT",
+            "filename": "shark_ntn_second_boot_v1.3.bin",
+            "size": 122622,
+            "sha256": "cde23423dd56357bd3488ce3cab9db56637d77ff92e6140d1b88351704c57fad",
+            "cache_offset": "0x48c000",
+            "data_end_exclusive": "0x4a9efe",
+            "erase_end_exclusive": "0x4aa000",
+            "install_policy": "full_profile_component_pending_validation"
+          },
+          {
+            "kind": "NV_XML",
+            "filename": "shark_ntn_config_nv_v1.9.xml",
+            "size": 15841,
+            "sha256": "f49ecff77de9069831445faa114626a4b699b20d3229d5d905f4081ac218f6a9",
+            "cache_offset": "0x4aa000",
+            "data_end_exclusive": "0x4adde1",
+            "erase_end_exclusive": "0x4ae000",
+            "install_policy": "compile_then_validate_NV_BIN_for_full_profile"
+          }
+        ],
+        "four_file_bytes": 2722253,
+        "cache_used_aligned": 2727936,
+        "cache_margin": 417792,
+        "logmap": {
+          "filename": "SHARK-NTN_E31_CHIP_ST1000_V00-R005-CA034_20261104111216_logmap.json",
+          "size": 3122188,
+          "sha256": "66d1a95746f439b38e670ecfd97528d65958c343b23275cd56884d60db9daf46",
+          "storage": "PC_ONLY"
+        },
+        "five_file_raw_total": 5844441
+      }
+    ]
+  },
+  "mcu": {
+    "head": "03b0abc3f4062178c1d5864100bdc98e9c87b905",
+    "branch": "work_v1_boot_fix",
+    "sources": [
+      {
+        "path": "bsp/hc32/ev_hc32f460_lqfp100_v2/boot/ota_layout.h",
+        "sha256_lf": "dd4864f55e8a24d0eb2876bcbf0f87538b1d43737bbf1a54e2dd2556f78338d7",
+        "matches_head": true
+      },
+      {
+        "path": "bsp/hc32/ev_hc32f460_lqfp100_v2/boot/ota_icg.h",
+        "sha256_lf": "43f4efec23b66d0789b1b2440f7ac99d557eae04f872193cfda7de5581e38865",
+        "matches_head": true
+      },
+      {
+        "path": "bsp/hc32/ev_hc32f460_lqfp100_v2/board/ports/fal_cfg.h",
+        "sha256_lf": "96a43d2884ae88aef6587e56765ba759e999ab94ad080d8648c4a1e534a655b9",
+        "matches_head": true
+      },
+      {
+        "path": "bsp/hc32/ev_hc32f460_lqfp100_v2/applications/app_flash.c",
+        "sha256_lf": "8d3b7d27e97f58ddcd3159047835e1bc6b26c95417e4cf305c5429faeb3696e2",
+        "matches_head": true
+      },
+      {
+        "path": "bsp/hc32/ev_hc32f460_lqfp100_v2/applications/hw_power.c",
+        "sha256_lf": "7813e43e4621d51bb26e835700601fb15148347b4ebcea7b41337a7be44affaa",
+        "matches_head": true
+      },
+      {
+        "path": "bsp/hc32/ev_hc32f460_lqfp100_v2/applications/mcu_local_cmd.c",
+        "sha256_lf": "e31a1d05bc6cb5beab25a08267ce7f3e95687253ee38e566008b918e1c99778c",
+        "matches_head": true
+      },
+      {
+        "path": "bsp/hc32/ev_hc32f460_lqfp100_v2/applications/task_wdt.c",
+        "sha256_lf": "bbf3c164c6d5e99ea961a601aa220559d9357714987eacd35fe7101d3273e5af",
+        "matches_head": true
+      },
+      {
+        "path": "bsp/hc32/ev_hc32f460_lqfp100_v2/.config",
+        "sha256_lf": "3ac67a4a0b58f494bf26e05a573034c8fceb2da09628d25fa67f4f9ad0e71e58",
+        "matches_head": true
+      },
+      {
+        "path": "bsp/hc32/libraries/hc32_drivers/drv_usart.c",
+        "sha256_lf": "fdff89d5ed808c06de29a3b3e641ea73b5a914e867b14169a1263b62d33730fe",
+        "matches_head": true
+      }
+    ],
+    "ota_reserved": {
+      "start": "0x212000",
+      "end_exclusive": "0x800000",
+      "size": 6217728
+    }
+  }
+}

@@ -1,0 +1,163 @@
+[
+  {
+    "rva": "0x147bf0",
+    "end_rva": "0x148a2e",
+    "file": "nv_147bf0_20261128.asm",
+    "direct_callees": [
+      "0x13000",
+      "0x13860",
+      "0x2c6c0",
+      "0x89140",
+      "0x14afc0",
+      "0x2f9854",
+      "0x2f9e50",
+      "0x2facf4",
+      "0x2fad12"
+    ]
+  },
+  {
+    "rva": "0x148ac0",
+    "end_rva": "0x149045",
+    "file": "nv_148ac0_20261128.asm",
+    "direct_callees": [
+      "0x14df0",
+      "0x141c10",
+      "0x142510",
+      "0x1425b0",
+      "0x144c30",
+      "0x144c40",
+      "0x147490",
+      "0x147b30",
+      "0x148ac0",
+      "0x2f9854",
+      "0x2f9e50",
+      "0x2fad06"
+    ]
+  },
+  {
+    "rva": "0x14aab0",
+    "end_rva": "0x14ad5d",
+    "file": "nv_14aab0_20261128.asm",
+    "direct_callees": [
+      "0x13000",
+      "0x13860",
+      "0x13dfd0",
+      "0x148a30",
+      "0x149330",
+      "0x14a2e0",
+      "0x14ad60",
+      "0x2f9854",
+      "0x2fa128",
+      "0x2fad12"
+    ]
+  },
+  {
+    "rva": "0x147820",
+    "end_rva": "0x147b30",
+    "file": "nv_147820_20261128.asm",
+    "direct_callees": [
+      "0xc220",
+      "0xca00",
+      "0xd810",
+      "0xdf30",
+      "0x136870",
+      "0x2f9e9c",
+      "0x2fad12"
+    ]
+  },
+  {
+    "rva": "0x15f180",
+    "end_rva": "0x15f4bd",
+    "file": "nv_15f180_20261128.asm",
+    "direct_callees": [
+      "0x12d00",
+      "0x13000",
+      "0x1c750",
+      "0x87730",
+      "0x88ef0",
+      "0xcc390",
+      "0x147820",
+      "0x14aab0",
+      "0x2f9854",
+      "0x2f9e50",
+      "0x2fad0c"
+    ]
+  },
+  {
+    "rva": "0x13ca90",
+    "end_rva": "0x13cdfa",
+    "file": "nv_13ca90_20261128.asm",
+    "direct_callees": [
+      "0x139cc0",
+      "0x13d410",
+      "0x13d990",
+      "0x13da70",
+      "0x13e490",
+      "0x13f7e0",
+      "0x13fc60",
+      "0x2f9854",
+      "0x2f9a94",
+      "0x2f9bd4",
+      "0x2f9c34",
+      "0x2f9e50",
+      "0x2fa140",
+      "0x2fad0c",
+      "0x2fad12"
+    ]
+  },
+  {
+    "rva": "0x14a2e0",
+    "end_rva": "0x14a4dd",
+    "file": "nv_14a2e0_20261128.asm",
+    "direct_callees": [
+      "0x13000",
+      "0x2f9854",
+      "0x2f9e50"
+    ]
+  },
+  {
+    "rva": "0x149330",
+    "end_rva": "0x149435",
+    "file": "nv_149330_20261128.asm",
+    "direct_callees": [
+      "0x14df0",
+      "0x89140",
+      "0x140360",
+      "0x1408f0",
+      "0x141c10",
+      "0x1428c0",
+      "0x147bf0",
+      "0x148ac0"
+    ]
+  },
+  {
+    "rva": "0x148a30",
+    "end_rva": "0x148ab3",
+    "file": "nv_148a30_20261128.asm",
+    "direct_callees": [
+      "0x13ce60"
+    ]
+  },
+  {
+    "rva": "0x14ad60",
+    "end_rva": "0x14af74",
+    "file": "nv_14ad60_20261128.asm",
+    "direct_callees": [
+      "0x14df0",
+      "0x136b20",
+      "0x13d550",
+      "0x2f9854",
+      "0x2f9e50",
+      "0x2facf4",
+      "0x2fad12"
+    ]
+  },
+  {
+    "rva": "0x14afc0",
+    "end_rva": "0x14afd1",
+    "file": "nv_14afc0_20261128.asm",
+    "direct_callees": [
+      "0x2f9682"
+    ]
+  }
+]
